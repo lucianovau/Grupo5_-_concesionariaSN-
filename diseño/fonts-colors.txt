@@ -1,0 +1,16 @@
+FONTS
+
+https://fonts.google.com/specimen/Mulish?query=mulish
+
+En el texto es la Mulish light 
+En el subtítulo es la Mulish medium
+Y en el título es la Mulish ExtraBold
+
+-----------------------------------------------------------
+
+COLORS
+
+1- 000000
+2- 8D99AE
+3- FFFFFF
+4- E90027
