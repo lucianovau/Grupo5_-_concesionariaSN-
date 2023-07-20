@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crea tu cuenta</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="contenedor">
+    <div class="logo">
+      <img src="ruta_del_logo.png" alt="Logo" width="50" height="50">
+    </div>
+    <div class="enlace-inicio-sesion">
+      <a href="#">¿Ya estás registrado? Ingresa aquí</a>
+    </div>
+    <h1>Crea tu cuenta</h1>
+    <form>
+      <div class="grupo-formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="grupo-formulario">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+      </div>
+      <div class="grupo-formulario">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="grupo-formulario">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+      </div>
+      <div class="contraseña2">
+        <div class="grupo-formulario" style="float: left; width: 45%;">
+          <label for="contraseña">Contraseña:</label>
+          <input type="contraseña" id="contraseña" name="contraseña" required>
+        </div>
+        <div class="grupo-formulario" style="float: right; width: 45%;">
+          <label for="confirmar-contraseña">Confirmar contraseña:</label>
+          <input type="contraseña" id="confirmar-contraseña" name="confirmar-contraseña" required>
+        </div>
+      </div>
+      <div class="grupo-formulario">
+        <input type="checkbox" id="terminos" name="terminos" required>
+        <label for="terminos" class="etiqueta-checkbox">Acepto los términos y condiciones</label>
+      </div>
+      <button type="submit">Crear cuenta</button>
+    </form>
+    <div class="botones-sociales">
+      <button>Unirse con Facebook</button>
+      <button>Unirse con Google</button>
+    </div>
+    <div class="pie-de-pagina">
+      <p>© 2023 ConcesionariaSN</p>
+    </div>
+  </div>
+</body>
+</html>
