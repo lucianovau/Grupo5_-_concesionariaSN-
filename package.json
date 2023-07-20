@@ -1,0 +1,28 @@
+{
+  "name": "grupo5_-_concesionariasn-",
+  "version": "1.0.0",
+  "description": "Tematica del sitio: servicio de renta y/o venta de automotores.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucianovau/Grupo5_-_concesionariaSN-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucianovau/Grupo5_-_concesionariaSN-/issues"
+  },
+  "homepage": "https://github.com/lucianovau/Grupo5_-_concesionariaSN-#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
