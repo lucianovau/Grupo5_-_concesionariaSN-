@@ -5,12 +5,9 @@
 section{
     display: flex;
     flex-direction: column;
-    
     justify-content: center;
     align-items: center;
-    padding: 20px;
     width: 80%;
-    margin-bottom: 1px;
 }
 #Iniciar{
     height: 100%;
@@ -18,11 +15,15 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-   
+    padding-top: 5px;
+    
 }
 .inicio{
     margin: 5px;
+    padding: 5px;
+    width: 90%;
+    border: none;
+  
 }
 main{
     display: flex;
@@ -32,5 +33,46 @@ main{
     padding: 10px 0px;
 }
 #invitado {
-    border-top: solid 2px #8D99AE;
+    height: 400px ;
+    border-top: solid 3px #ffffff;
+    padding-top: 5px;
+    background-image: url('../img/invitado.jpg');
+    justify-content: space-evenly;
+}
+#login{
+    height: 400px ;
+    background-image: url('../img/inicio.jpg');
+    justify-content: space-evenly;
+}
+h2{
+    color: white;
+    text-align: center;
+}
+#boton1{
+    background-color: #E90027;
+    color: white;
+    font-weight: bold;
+}
+#boton2{
+    background-color: #E90027;
+    color: white;
+    font-weight: bold;
+    width: 80%;
+    border: none;
+    padding: 5px;
+}
+
+@media (min-width: 768px){
+   main{
+        flex-direction: row;
+    }
+    section{
+        margin: 5px;
+    }
+    #invitado{
+        border: none;
+    }
+    #Iniciar{
+        width: 100%;
+    }
 }

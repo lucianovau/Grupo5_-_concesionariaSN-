@@ -33,33 +33,33 @@
     </div>
   </header>
   <main>
-      <section>
+      <section id="login">
           <h2>Iniciar Sesión</h2>
-          <form id="Iniciar">
+          <div>
+            <form id="Iniciar">
               <input type="email" id="email" name="email" required class="inicio" placeholder="Email">
       
               <input type="contraseña" id="contraseña" name="contraseña" required class="inicio" placeholder="Contraseña">
             
-            <p>
-              <input type="checkbox" id="sesion-iniciada" name="sesion-iniciada" class="inicio"> 
+            <p class="inicio">
+              <input type="checkbox" id="sesion-iniciada" name="sesion-iniciada" > 
               <label for="sesion-iniciada">Mantener sesión iniciada</label>
             
             </p>
             
-            <button type="submit" class="inicio">Iniciar Sesión</button>
+            <button type="submit" class="inicio" id="boton1">Iniciar Sesión</button>
 
             <p class="inicio">
-              No tenes cuenta todavia,<a href="register.html"> registrate acá </a>
+              <a href="register.html">No tenes cuenta todavia, registrate acá </a>
             </p>
           </form>
+          </div>
+          
       </section>
-  
-      
 
       <section id="invitado">
-       
-            <h3>Continuar como invitado</h3>
-            <input type="submit" name="inivitado" value="invitado" >
+            <h2>Continuar como invitado</h2>
+            <input type="submit" name="inivitado" value="Invitado" id="boton2" >
       </section>
   </main>
  
