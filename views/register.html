@@ -33,55 +33,56 @@ rel="stylesheet" />
       </form>
     </div>
   </header>
-  <div class="contenedor">
-    <div class="logo">
-      <img src="ruta_del_logo.png" alt="Logo" width="50" height="50">
-    </div>
-    <div class="enlace-inicio-sesion">
-      <a href="#">¿Ya estás registrado? Ingresa aquí</a>
-    </div>
-    <h1>Crea tu cuenta</h1>
-    <form>
-      <div class="grupo-formulario">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-      </div>
-      <div class="grupo-formulario">
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" required>
-      </div>
-      <div class="grupo-formulario">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="grupo-formulario">
-        <label for="direccion">Dirección:</label>
-        <input type="text" id="direccion" name="direccion" required>
-      </div>
-      <div class="contraseña2">
-        <div class="grupo-formulario" style="float: left; width: 45%;">
-          <label for="contraseña">Contraseña:</label>
-          <input type="contraseña" id="contraseña" name="contraseña" required>
+  <main>
+    <section id="izquierda">
+      
+      <div id="triangulo1"></div>
+      <div id="triangulo3"></div>
+      <div id="triangulo2"></div>
+     
+    </section>
+    <section id="derecha">
+      <p id="ingresa"><a href="login.html">¿Ya estás registrado? Ingresa aquí</a></p>
+      <p> <h1>Crea tu cuenta</h1></p>
+    <div>
+      <form id="registro">
+        <div class="grupo-formulario">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
         </div>
-        <div class="grupo-formulario" style="float: right; width: 45%;">
-          <label for="confirmar-contraseña">Confirmar contraseña:</label>
-          <input type="contraseña" id="confirmar-contraseña" name="confirmar-contraseña" required>
+        <div class="grupo-formulario">
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" required>
         </div>
-      </div>
-      <div class="grupo-formulario">
-        <input type="checkbox" id="terminos" name="terminos" required>
-        <label for="terminos" class="etiqueta-checkbox">Acepto los términos y condiciones</label>
-      </div>
-      <button type="submit">Crear cuenta</button>
-    </form>
-    <div class="botones-sociales">
-      <button>Unirse con Facebook</button>
-      <button>Unirse con Google</button>
+        <div class="grupo-formulario">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="grupo-formulario">
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" name="direccion" required>
+        </div>
+        <div class="grupo-formulario">
+            <label for="contraseña">Contraseña:</label>
+            <input type="contraseña" id="contraseña" name="contraseña" required>
+        </div>
+        <div class="grupo-formulario" >
+            <label for="confirmar-contraseña">Confirmar contraseña:</label>
+            <input type="contraseña" id="confirmar-contraseña" name="confirmar-contraseña" required>
+        </div>
+        <div class="grupo-formulario">
+          <input type="checkbox" id="terminos" name="terminos" required>
+          <label for="terminos" class="etiqueta-checkbox">Acepto los términos y condiciones</label>
+        </div>
+        <button type="submit" id="boton1">Crear cuenta</button>
+        <div class="grupo-formulario" id="redes">
+          <button type="submit" class="boton2">Ingresa con Facebook <i class="fab fa-facebook-f" style="color: #ffffff;"></i></button>
+          <button type="submit" class="boton2">Ingresa con Google <i class="fab fa-google" style="color: #ffffff;"></i></button>
+        </div>
+      </form>
     </div>
-    <div class="pie-de-pagina">
-      <p>© 2023 ConcesionariaSN</p>
-    </div>
-  </div>
+    </section>
+  </main>
   <footer>
     <div id="Copyright">
       <h4>Copyright 2023 ConcesionariaSN</h4>
