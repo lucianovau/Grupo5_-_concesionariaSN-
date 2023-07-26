@@ -35,6 +35,10 @@ form{
     border: none;
     background-color: #ffffff;
 }
+li a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.644);
+}
 
 @media (min-width: 768px){
     #barra{

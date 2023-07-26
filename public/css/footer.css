@@ -32,17 +32,3 @@ a{
     font-size: 1.5rem;
     
 }
-
-@media (min-width: 768px){
-    footer{
-        height: 6rem;
-    }
-    p{
-        font-size: 16px;
-    }
-    #sociales{
-        width: 30%;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-}
