@@ -1,3 +1,186 @@
 @import url(centralize.css);
 @import url(header.css);
 @import url(footer.css);
+
+body{
+    background-color: #FFFFFF;
+}
+
+/* ----------> SECTION <---------- */
+
+section, .tituloProducto, .envioProducto{
+    margin: 0px 10px;
+    border: solid 2px #8D99AE;
+    padding: 10px;
+}
+
+.tituloProducto{
+    margin-top: 20px;
+    border: solid 2px #bdbdbd;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.envioProducto{
+    margin-bottom: 20px;
+    border: solid 2px #bdbdbd;
+}
+
+/* SECTION PRODUCTO  */
+
+.contenedorProducto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.contenedorIzq, .contenedorDer{
+    display: flex;
+    align-items: center;
+}
+
+.contenedorIzq{
+    margin: 40px 0px;
+    width: 60%;
+    border: solid 2px #bdbdbd;
+}
+
+.contenedorIzqImg{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+}
+
+.contenedorIzqTexto{
+    margin-left: 3px;
+}
+
+.contenedorDer{
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    align-items: end;
+}
+
+/* FONT SIZE PRODUCTOS  */
+.contenedorDerinputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8px;
+    text-transform: uppercase;
+    width: 95%;
+    border: solid 2px #bdbdbd;
+    margin: 7px 0px;
+    padding: 4px;
+}
+
+.contenedorDer input{
+    width: 25px;
+    text-align: right;
+    border: none;
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.contenedorIzq h3{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.contenedorIzq h4{
+    font-size: 11px;
+}
+
+.contenedorIzq p{
+    font-size: 10px;
+}
+
+/* CAJA ENVIO TOTAL  */
+
+.envioProducto{
+    display: flex;
+    justify-content: space-between;
+}
+
+.envioTextoProducto p{
+    text-transform: uppercase;
+}
+
+.precioTextoProducto{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.precioTextoProducto p{
+    padding: 0px 3px;    
+}
+
+
+/* ----------> RESUMEN DE COMPRA <--------- */
+
+.contenedorCompra{
+    display: flex;
+    margin-bottom: 30px;
+    background-color: #bdbdbd;
+    flex-direction: column;
+    /* align-content: space-around; */
+    align-items: stretch;
+}
+
+.contenedorCompra h3{
+    background-color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+    border: solid 1px #8D99AE;
+    padding: 2px 4px;
+}
+
+.itemResumen, .itemResumen input, .itemResumen label{
+    background-color:#bdbdbd;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.resumenCompra{
+    padding: 0px 5px;
+}
+
+.contenedorItemResumen{
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+}
+
+.itemResumen{
+    display: flex;
+    margin: 5px 0px;
+}
+
+.itemResumen input{
+    border: none;
+    text-align: right;
+    width: 40%;
+}
+
+.itemResumen label{
+    width: 60%;
+}
+
+.contenedorCompra button{
+    margin: 15px 0px;
+    padding: 5px 0px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 75%;
+    color: white;
+    background-color:midnightblue;
+    border: solid 1px #8D99AE;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
