@@ -1,0 +1,126 @@
+@import url(centralize.css);
+@import url(header.css);
+@import url(footer.css);
+main{
+    margin: 10px;
+}
+.triangulo{
+    width: 0px; 
+    height: 0px; 
+    border-left: 300px solid #8d99ae;
+    border-top: 150px solid transparent;
+    border-bottom: 150px solid transparent; 
+    rotate: -90deg;
+    position: absolute;
+    left: 38.7%;
+}
+.product-info {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }  
+.product-details{
+    background-color: #8d99ae;
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+}
+.product-title {
+    font-size: 30px;
+    font-weight: bold;
+  }
+.product-description{
+    font-size: 20px;
+}
+.product-price {
+    font-size: 18px;
+    padding: 10px;
+  }
+.product-p{
+    font-size: 25px;
+    font-weight: bold;
+  }
+.product-image{
+    position: absolute;
+    right: 45%;
+    top: 40%;
+    z-index: 1;
+}
+.compartir{
+    border: solid 2px black;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+ }
+main{
+    position: relative;
+ }
+#fotos{
+    position: absolute;
+    bottom: 62%;
+    display: flex;
+}
+#fotos img{
+    margin: 10px;
+    position: relative;
+    left: 10%;
+}
+#fotos button{
+    position: relative;
+    left: 22%;
+    margin: 0px 30px;
+}
+.consultar {
+    background-color: white;
+    border: solid 2px black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+.reservar{
+    background-color: #888;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+ }
+.bloque{
+  border: solid 2px black;
+  padding: 120px 100px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.cajas{
+    display: flex;
+    justify-content: space-around;
+}
+#nombres{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+#nombres p{
+    font-size: 20px;
+    width: 33%;
+    text-align: center;
+}
+.ficha{
+  width: 84%;
+  border: solid 2px black;
+  padding: 20px;
+  font-size: 16px;
+  margin: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+.ficha-tecnica{
+    display: flex;
+    justify-content: center;
+}

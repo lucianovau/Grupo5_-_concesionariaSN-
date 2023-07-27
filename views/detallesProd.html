@@ -4,173 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles del Producto</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../public/css/detallesProd.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
-    
 <body>
-    <header>
-        <section>
-    <div class="product-info">
-      <div class="product-image"> <img src="ruta_imagen_producto.jpg" alt="Imagen del Producto"></div>
-      <div class="product-details">
-        <div class="product-title"><h1>auto modelo</h1></div>
-        <div class="product-description">especificaciones</div>
-        <div class="product-price">Precio:</div>
-        <div class="product-$">$150000</div>
-        <div class="compartir">compartir</div>
-        <br>
-        <br>
-        <a href=# class="consultar">consultar</a>
-        <a href=# class="reservar">reservar</a>
-      </div>
+  <header>
+    <div class="head">
+      <img src="../public/img/Logo.png" alt="Logo"  width= "30%">
+        <div>
+        <a href="login.html"><i class="fas fa-user-circle" style="color: #ffffff;"></i></a>
+        <a href="productCart.html"><i class="fas fa-shopping-cart" style="color: #ffffff;"></i></a>
+        <a href="" id="burger"><i class="fas fa-bars" style="color: #ffffff;"></i></a> 
+      </div>   
     </div>
-        </section>
-    </header>
-    <br>
-    <br>
+    <div id="barra">
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+      </nav>
+      <form action="/" method="POST">
+        <button type="submit" id="boton"><i class="fas fa-search" style="color: #000000;"></i></button>
+        <input type="text" placeholder="Buscar..." name="Buscar" id="buscar">
+      </form>
+    </div>
+  </header>
     <main>
+      <section class="product-info">
+         <img src="ruta_imagen_producto.jpg" alt="Imagen del Producto" class="product-image">
+         <div class="triangulo">
+        </div>
+         <div class="product-details">
+              <h1 class="product-title">auto modelo</h1>
+              <p class="product-description">especificaciones</p>
+              <p class="product-price">Precio:</p>
+              <p class="product-p">$150000</p>
+              <div class="compartir">
+                Compartir
+                <a href="#"><i class="fab fa-facebook-f" style="color: #ffffff;"></i></a>
+                <a href="#"><i class="fab fa-instagram" style="color: #ffffff;"></i></a>
+                <a href="#"><i class="fab fa-whatsapp" style="color: #ffffff;"></i></a>
+              </div>
+          </div>
+      </section>
+      <section id="fotos">
+        <div>
+        <img src="" alt="foto-lateral">
+        <img src="" alt="foto-lateral2">
+        <img src="" alt="foto-atras">
+        <img src="" alt="foto-adelante">
+        <img src="" alt="foto-360">
+        </div>
+        <button type="submit" class="consultar">consultar</button>
+        <button type="submit" class="reservar">reservar</button>
+      </section>
+      <section>
+        <div id="nombres">
+          <p>Caracterizticas tecnicas</p>
+          <p>Confort</p>
+          <p>Seguridad</p>
+        </div>
         <div class="cajas">
-        <div class="bloque1">car</div>
-        <div class="bloque1">con</div>
-        <div class="bloque1">seg</div>
-        </div>
-        <br>
-        <hr>
-
-        <div class="ficha-tecnica">
-            <div class="ficha">ficha tecnica</div>
-        </div>
+          <div class="bloque">car</div>
+          <div class="bloque">con</div>
+          <div class="bloque">seg</div>
+          </div>
+          <div class="ficha-tecnica">
+              <div class="ficha">ficha tecnica</div>
+          </div>
+      </section>
     </main>
-    <br>
-    <br>
-    <br>
     <footer>
-        <section>
-        <div class="copy">
-            <p>copyright 2023 ConsecionariaSN</p>
-            <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Labore veritatis, natus quaerat pariatur harum doloribus impedit 
-                praesentium sed perspiciatis eum, ipsa nobis cum debitis error! 
-                Culpa voluptates reiciendis expedita eaque.</p>
-        </div>
-        </section>
+      <div id="Copyright">
+        <h4>Copyright 2023 ConcesionariaSN</h4>
+        <p>Todos los contenidos de este Sitio (Incluyendo, pero no limitado a, texto, logotipos, contenido, fotografías, audio, botones, nombres comerciales y vídeo) 
+          están sujetos a derechos de propiedad por las leyes de Derechos de Autor </p>
+      </div>
+      <div id="sociales">
+        <a href="#"><i class="fab fa-facebook-f" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fab fa-instagram" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fab fa-whatsapp" style="color: #ffffff;"></i></a>
+      </div>
     </footer>
 </body>
 </html>
 
-
-//estilos
-
-/*body*/
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-  }
-  
-/*header*/
-
-  .product-info {
-    display: flex;
-    margin-top: 20px;
-  }
-  .product-image {
-    flex: 0 0 200px;
-    margin-right: 650px;
-  }
-  
-  .product-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0px;
-  }
-  .product-price {
-    font-size: 18px;
-    color: #888;
-    margin-bottom: 10px;
-  }
-  .compartir{
-    border: none;
-    color: black;
-    border: solid;
-    padding: 10px 20px;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
- }
-  .consultar {
-    background-color: white;
-    border: solid;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
-  }
- .reservar{
-    background-color: #888;
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
- }
-
-/*main*/
-
-.bloque1{
-  border: none;
-  color: black;
-  border: solid;
-  padding: 120px 100px;
-  text-align: left;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-.cajas{
-    display: flex;
-    justify-content: space-around;
-}
-
-.ficha{
-  border: none;
-  color: black;
-  border: solid;
-  padding: 20px 100px;
-  text-align: left;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  font-size: 16px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-/*footer*/
-
-footer{
-  margin: 0%;
-  padding: 0%;
-}
-
-.lorem{
-  width: 30%;
-  display: inline-block;
-  text-align: left;
-}
-
-estilos//
