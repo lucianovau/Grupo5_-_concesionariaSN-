@@ -1,10 +1,10 @@
+@import url(centralize.css);
 @import url(header.css);
 @import url(footer.css);
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    font-family: 'Mulish'
 }
 body{
     background: #8d99ae;
