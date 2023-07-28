@@ -18,7 +18,7 @@ main{
     display: flex;
     justify-content: flex-end;
     position: relative;
-  }  
+}  
 .product-details{
     background-color: #8d99ae;
     width: 50%;
@@ -44,6 +44,12 @@ main{
     font-size: 25px;
     font-weight: bold;
   }
+
+.img-principal{
+    width: 50%;
+    height: 50%;
+    display: flex;
+}
 .product-image{
     position: absolute;
     right: 45%;
