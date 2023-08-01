@@ -30,6 +30,11 @@ app.get('/home', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
 })
 
+app.get('/productos', (req, res) => {
+    res.sendFile(__dirname + '/views/productos.html');
+})
+
+
 app.listen(3000, ()=> 
     console.log('servidor corriendo'));
 
