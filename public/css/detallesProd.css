@@ -1,9 +1,9 @@
 @import url(centralize.css);
 @import url(header.css);
 @import url(footer.css);
-main{
+/*main{
     margin: 10px;
-}
+}*/
 /*.triangulo{
     width: 0px; 
     height: 0px; 
@@ -16,11 +16,11 @@ main{
 }*/
 .product-info {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     position: relative;
 }  
 .product-details{
-    width: 40%;
+    width: 50%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -31,8 +31,9 @@ main{
     color: #f9fcff;
 }
 .contenedor{
-    background-image: url(../img/background2.jpg);
-    background-size: 100%;
+    background-image: url(../img/background3.jpg);
+    background-size: cover;
+    object-fit: contain;
 }
 .product-title {
     font-size: 30px;
@@ -54,6 +55,8 @@ main{
     width: 50%;
     height: 50%;
     display: flex;
+    margin: 10px;
+    padding: 5px 20px 5px 50px;
 }
 .product-image{
     position: absolute;
@@ -76,6 +79,7 @@ main{
 }
 main{
     position: relative;
+    height: auto;
 }
 #fotos{
     position: relative;
@@ -142,7 +146,8 @@ main{
 }
 
 .carac-tecn{
-    background: linear-gradient(#65656688, #ffffff);;
+    margin: 0px;
+    height: 100%;
 }
 
 .bloque{
@@ -155,21 +160,22 @@ main{
     justify-content: center;
     font-size: 16px;
     margin-top: 10px;
-    background-color: #fcfdfd;
-    color: #474747;
-    box-shadow: 12px 5px 6px rgba(0, 0, 0, 0.603);
+    background: radial-gradient(#000000, #E90027);
+    color: #cfd3d8;
+    box-shadow: 12px 5px 6px rgba(157, 157, 167, 0.829);
 }
 .cajas{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90%;
-    margin: 20px 0px;
+    margin: 0px;
+    padding: 50px 50px 20px 50px;
 }
 
 .cajas h2{
     width: auto;
-    color: #474747;
+    color: #cfd3d8;
     text-orientation: upright;
     transform: rotate(-0.25turn);
     margin: 2px 0;
@@ -183,9 +189,9 @@ main{
     padding: 20px;
     justify-content: center;
     text-align: center;
-    background-color: #fcfdfd;
-    color: #474747;
-    box-shadow: 12px 5px 6px rgba(0, 0, 0, 0.603);
+    background: radial-gradient(#000000, #E90027);
+    color:  #cfd3d8;
+    box-shadow: 12px 5px 6px rgba(157, 157, 167, 0.829);
     border: solid 1px #474747;
     border-radius: 8px;
     margin: 50px;
