@@ -1,4 +1,4 @@
-Tematica del sitio: servicio de renta y/o venta de automotores.
+Tematica del sitio: servicio de venta de automotores.
 
 Publico objetivo: personas mayores de 18 años con licencia de conducir vigente.
 
