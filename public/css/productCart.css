@@ -2,10 +2,6 @@
 @import url(header.css);
 @import url(footer.css);
 
-body{
-    background-color: #FFFFFF;
-}
-
 /* ----------> SECTION <---------- */
 
 .contenedorProducto, .tituloProducto, .envioProducto{
