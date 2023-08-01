@@ -6,8 +6,12 @@
     font-family: 'Mulish'; 
     list-style: none;
     box-sizing: border-box;
+    
 }
 a{
     color: black;
     text-decoration: none;
+}
+body{
+    background-color: black;
 }
