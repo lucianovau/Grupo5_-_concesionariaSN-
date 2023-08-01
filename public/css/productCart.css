@@ -203,11 +203,11 @@ body{
 
 /* ------------------------------> RESPONSIVE <------------------------------ */
 
-@media (max-width: 360px){
+/* @media (max-width: 360px){
 
     /* FOOTER */
 
-    footer{
+    /* footer{
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-start;
@@ -224,15 +224,15 @@ body{
     
     #Copyright, #Copyright p{
         width: 100%;
-    }
+    } */ 
 
     /* TERMINA FOOTER */
-}
+/* } */
 
 /* ------------------------------> TABLET <------------------------------ */
 
 @media (min-width: 361px){
-    footer{
+    /* footer{
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-start;
@@ -246,7 +246,7 @@ body{
  
  #Copyright, #Copyright p{
     width: 100%;
-    }
+    } */
     
     
     /* MAIN */
@@ -299,13 +299,13 @@ body{
     
     /* HEAD  */
     
-    #barra nav ul li a, form input{
+    /* #barra nav ul li a, form input{
         font-size: 2rem;
-    }
+    } */
 
     /* FOOTER */
     
-    footer{
+    /* footer{
         width: 100%;
         font-size: 1rem;
     }
@@ -325,7 +325,7 @@ body{
         font-size: 35px;
         margin: 0px 15px;
     }
-    
+     */
 /* TERMINA FOOTER */
 
 /* ----------> MAIN <----------*/
@@ -354,6 +354,10 @@ body{
         font-size: 2rem;
     }
     
+    .sectionProducto{   
+        width: 70%;
+    }
+
     .contenedorIzq {
         margin-top: auto;
         margin-left: auto;
