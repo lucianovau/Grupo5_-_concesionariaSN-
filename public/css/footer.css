@@ -1,9 +1,10 @@
 footer{
-    background: linear-gradient(black, 40% , #E90027 );
+    background: linear-gradient(black, 80% , #E90027 );
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 250px;
+    color: white;
 }
 
 #Copyright{
