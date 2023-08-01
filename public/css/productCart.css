@@ -8,10 +8,14 @@ body{
 
 /* ----------> SECTION <---------- */
 
-section, .tituloProducto, .envioProducto{
+.contenedorProducto, .tituloProducto, .envioProducto{
     margin: 0px 10px;
     border: solid 2px #8D99AE;
     padding: 10px;
+}
+
+.resumenCompra, .sectionCompra{
+    margin: 0px 10px;
 }
 
 .tituloProducto{
@@ -183,4 +187,260 @@ section, .tituloProducto, .envioProducto{
     border: solid 1px #8D99AE;
     border-radius: 15px;
     text-transform: uppercase;
+}
+
+
+.contenedorCompra button:hover{
+    background-color: white;
+    color: blue;
+    border: solid 1px blue;
+}
+
+/* FOOTER  */
+
+
+
+
+/* ------------------------------> RESPONSIVE <------------------------------ */
+
+/* @media (max-width: 360px){
+
+    /* FOOTER */
+
+    /* footer{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+    
+    #sociales {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-bottom: 5px;
+    }
+    
+    #Copyright, #Copyright p{
+        width: 100%;
+    } */ 
+
+    /* TERMINA FOOTER */
+/* } */
+
+/* ------------------------------> TABLET <------------------------------ */
+
+@media (min-width: 361px){
+    /* footer{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+ 
+    #sociales {
+        justify-content: end;
+        margin-left: auto;
+    }
+ 
+ #Copyright, #Copyright p{
+    width: 100%;
+    } */
+    
+    
+    /* MAIN */
+    
+    main{
+        display:flex;
+        flex-direction: row;
+        margin: 30px 20px;
+    }
+
+    /* PRODUCTO */
+
+    .tituloProducto {
+        margin-top: 0px;
+        font-size: 13px;
+    }
+
+    .sectionProducto{
+        width: 55%;
+    }
+
+    .envioProducto{
+        margin-bottom: 0px;
+    }
+
+    /* COMPRA RESUMEN */
+
+    .sectionCompra{
+        width: 45%;
+    }
+
+    .contenedorCompra h3{
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .contenedorCompra{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0px;
+    }
+    
+}
+
+/* ------------------------------> DESKTOP <------------------------------*/
+
+
+
+@media (min-width: 769px){
+    
+    /* HEAD  */
+    
+    /* #barra nav ul li a, form input{
+        font-size: 2rem;
+    } */
+
+    /* FOOTER */
+    
+    /* footer{
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    
+
+    #Copyright{
+        justify-content: flex-end;
+        height: 4rem;
+    }
+
+    #Copyright p{
+        font-size: 14px;
+    }
+
+    #sociales i{
+        font-size: 35px;
+        margin: 0px 15px;
+    }
+     */
+/* TERMINA FOOTER */
+
+/* ----------> MAIN <----------*/
+
+    main{
+        display:flex;
+        flex-direction: row;
+        margin: 50px 20px;
+    }
+    
+/* PRODUCTO */
+    
+    .envioProducto{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    
+    .contenedorSectionProducto{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+    }
+    
+    .tituloProducto {
+        margin-top: 0px;
+        font-size: 2rem;
+    }
+    
+    .sectionProducto{   
+        width: 70%;
+    }
+
+    .contenedorIzq {
+        margin-top: auto;
+        margin-left: auto;
+        border: none;
+        width: 60%;
+        width: 70%;
+        padding: 15px;
+    }
+    .contenedorIzqImg{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .contenedorIzqTexto h4, .contenedorIzqTexto p{
+        display: none;        
+    }
+    
+    .contenedorIzqTexto{
+        padding-left: 10px;
+    }
+    
+    .contenedorDer{
+        flex-direction: row;
+        width: 40%;
+        align-items: center;
+    }
+    .contenedorDerinputs{
+        border: none;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    #contenedorDerPrecioEnvio{
+        display: none;
+    }
+    
+    .contenedorDerinputs label, .contenedorDerinputs input{
+        display: none;
+    }
+    
+    #cantidadDeProducto{
+        width: 100%;
+        display: block;
+        font-size: 2rem;
+        text-align: center;
+        border: solid 2px #8D99AE;
+        border-radius: 10px
+    }
+
+    #precioProducto{
+        display: block;
+        width: 100%;
+        font-size: 2rem;
+        text-align: end;
+        margin-left: 10%;
+    }
+    
+    /* RESUMEN COMPRA */
+    
+    .sectionCompra{
+        width: 30%;
+    }
+    
+    .contenedorCompra {
+        height: 100%;
+        margin-bottom: 0px;
+    }
+    
+    .contenedorCompra h3{
+        margin-top: 0px;
+        font-size: 20px;
+    }
+    
+    
+    .contenedorCompra button{
+        margin-top: auto;
+    }
+    
+    .itemResumen, .itemResumen input, .itemResumen label, .contenedorCompra button{
+        font-size: 20px;
+    }
+    
+    .envioProducto {
+        margin-bottom: 0px;
+    }
 }

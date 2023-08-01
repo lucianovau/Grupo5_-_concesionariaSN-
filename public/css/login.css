@@ -19,11 +19,19 @@ section{
     
 }
 .inicio{
+    color: #ffffff;
     margin: 5px;
     padding: 5px;
     width: 90%;
     border: none;
-  
+    font-weight: bolder;
+    text-align: center;
+}
+.inicio a{
+    color: #ffffff;
+}
+.inicio :hover{
+    color: red;
 }
 main{
     display: flex;
@@ -38,6 +46,7 @@ main{
     padding-top: 5px;
     background-image: url('../img/invitado.jpg');
     justify-content: space-evenly;
+    background-size: cover;
 }
 #login{
     height: 400px ;
@@ -47,19 +56,26 @@ main{
 h2{
     color: white;
     text-align: center;
+    font-size: 30px;
 }
 #boton1{
     background-color: #E90027;
     color: white;
     font-weight: bold;
+    height: 30px;
+    border-radius: 50px;
 }
 #boton2{
     background-color: #E90027;
     color: white;
     font-weight: bold;
     width: 80%;
+    height: 30px;
     border: none;
     padding: 5px;
+    position: relative;
+    top: -90px;
+    border-radius: 50px;
 }
 
 @media (min-width: 768px){

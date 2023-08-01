@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles del Producto</title>
+    <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/detallesProd.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="head">
-      <img src="/img/Logo.png" alt="Logo"  width= "30%">
-        <div>
-        <a href="login"><i class="fas fa-user-circle" style="color: #ffffff;"></i></a>
-        <a href="productCart"><i class="fas fa-shopping-cart" style="color: #ffffff;"></i></a>
-        <a href="" id="burger"><i class="fas fa-bars" style="color: #ffffff;"></i></a> 
+      <img src="/img/logo2.png" alt="Logo">
+        <div class="iconos">
+        <a href="login"><i class="fas fa-user-circle" style="color: #ff0000;"></i></a>
+        <a href="productCart"><i class="fas fa-shopping-cart" style="color: #ff0000;"></i></a>
+        <a href="" id="burger"><i class="fas fa-bars" style="color: #ff0000;"></i></a> 
       </div>   
     </div>
     <div id="barra">
@@ -26,56 +27,60 @@
           <li><a href="#">Ayuda</a></li>
         </ul>
       </nav>
-      <form action="/" method="get">
-        <button type="submit" id="boton"><i class="fas fa-search" style="color: #000000;"></i></button>
+      <form action="/" method="POST">
+        <button type="submit" id="boton"><i class="fas fa-search" style="color: #ff0000;"></i></button>
         <input type="text" placeholder="Buscar..." name="Buscar" id="buscar">
       </form>
     </div>
+
+    <video muted autoplay loop>
+      <source src="/img/video.mp4" type="video/mp4">
+    </video>
+    <div class="capa"></div>
   </header>
+  <!-- fin header -->
     <main>
+      <div class="contenedor">
       <section class="product-info">
-         <img src="ruta_imagen_producto.jpg" alt="Imagen del Producto" class="product-image">
-         <div class="triangulo">
-        </div>
-         <div class="product-details">
-              <h1 class="product-title">auto modelo</h1>
+        <img class="img-principal" src="/img/Pick-Up.jpg" alt="Imagen del Producto" class="product-image" width="700px" height="500px">
+        <div class="product-details">
+              <h1 class="product-title">Ford Ranger</h1>
               <p class="product-description">especificaciones</p>
               <p class="product-price">Precio:</p>
               <p class="product-p">$150000</p>
               <div class="compartir">
                 Compartir
-                <a href="www.facebook.com" target="_blank"><i class="fab fa-facebook-f" style="color: #ffffff;"></i></a>
-                <a href="www.instagram.com" target="_blank"><i class="fab fa-instagram" style="color: #ffffff;"></i></a>
-                <a href="www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp" style="color: #ffffff;"></i></a>
+                <i class="fas fa-share-alt" style="color: #ffffff;"></i>
               </div>
           </div>
       </section>
-      <section id="fotos">
-        <div>
-        <img src="" alt="foto-lateral">
-        <img src="" alt="foto-lateral2">
-        <img src="" alt="foto-atras">
-        <img src="" alt="foto-adelante">
-        <img src="" alt="foto-360">
+      <section id="fotos" class="container">
+        <div class="fotos">
+        <img src="/img/interior-pickup.jpg" alt="foto-interior" width="150px" height="150px">
+        <img src="/img/interior-pickup1.jpg" alt="foto-lateral2" width="150px" height="150px">
+        <img src="/img/interior-pickup2.jpg" alt="foto-atras" width="150px" height="150px">
+        <img src="/img/pickup-atras.jpg" alt="foto-adelante" width="150px" height="150px">
+        <img src="img/pickup-atras1.jpg" alt="foto-360" width="150px" height="150px">
         </div>
-        <button type="submit" class="consultar">consultar</button>
-        <button type="submit" class="reservar">reservar</button>
+        <div class="botones">
+          <button type="submit" class="consultar">Consultar</button>
+          <br>
+          <button type="submit" class="reservar">Reservar</button>
+        </div>
       </section>
-      <section>
-        <div id="nombres">
-          <p>Caracterizticas tecnicas</p>
-          <p>Confort</p>
-          <p>Seguridad</p>
-        </div>
+    </div>
+      <section class="carac-tecn">
         <div class="cajas">
-          <div class="bloque">car</div>
-          <div class="bloque">con</div>
-          <div class="bloque">seg</div>
+          <h2>CARACTERISTICAS</h2>
+          <div class="bloque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quos similique voluptate cumque vel alias illo repellendus numquam fugit quas! Qui nisi veniam veritatis est in vitae harum incidunt nobis.</div>
+          <h2>CONFORT</h2>
+          <div class="bloque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ut voluptatem dolores aliquid laboriosam optio temporibus consequuntur consectetur saepe cupiditate. Culpa porro suscipit delectus, eligendi commodi nobis voluptatum laboriosam rerum!</div>
+          <h2>SEGURIDAD</h2>
+          <div class="bloque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, quasi voluptatum molestiae praesentium illo dolores ullam vel blanditiis aut a optio, vero quo et eos nulla ducimus, perferendis itaque. Perferendis.</div>
           </div>
-          <div class="ficha-tecnica">
-              <div class="ficha">ficha tecnica</div>
-          </div>
+          <div class="ficha-tecnica">ficha tecnica</div>
       </section>
+    </div>
     </main>
     <footer>
       <div id="Copyright">
@@ -87,7 +92,7 @@
         <a href="www.facebook.com" target="_blank"><i class="fab fa-facebook-f" style="color: #ffffff;"></i></a>
         <a href="www.instagram.com" target="_blank"><i class="fab fa-instagram" style="color: #ffffff;"></i></a>
         <a href="www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp" style="color: #ffffff;"></i></a>
-      </div>
+      
     </footer>
 </body>
 </html>

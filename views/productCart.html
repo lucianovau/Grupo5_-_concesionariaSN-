@@ -2,6 +2,7 @@
   <html>
   <head>
     <title>Carrito de Compras</title>
+    <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/productCart.css">
@@ -12,10 +13,11 @@
   <body>
     <header>
       <div class="head">
-        <img src="/img/Logo.png" alt="Logo"  width= "30%">
-          <div>
-          <a href="login"><i class="fas fa-user-circle" style="color: #ffffff;"></i></a>
-          <a href="" id="burger"><i class="fas fa-bars" style="color: #ffffff;"></i></a> 
+        <img src="/img/logo2.png" alt="Logo">
+          <div class="iconos">
+            <a href="login"><i class="fas fa-user-circle" style="color: #ff0000; "></i></a>
+            <a href="productCart"><i class="fas fa-shopping-cart" style="color: #ff0000;"></i></a>
+          <a href="" id="burger"><i class="fas fa-bars" style="color: #ff0000;"></i></a> 
         </div>   
       </div>
       <div id="barra">
@@ -28,62 +30,72 @@
           </ul>
         </nav>
         <form action="/" method="POST">
-          <button type="submit" id="boton"><i class="fas fa-search" style="color: #000000;"></i></button>
+          <button type="submit" id="boton"><i class="fas fa-search" style="color: #ff0000;"></i></button>
           <input type="text" placeholder="Buscar..." name="Buscar" id="buscar">
         </form>
       </div>
-      
+
+      <video muted autoplay loop>
+        <source src="/img/video.mp4" type="video/mp4">
+      </video>
+      <div class="capa"></div>
     </header>
-    <main>
-      <div class="tituloProducto">
-        <p>Productos</p>
-      </div>
-
+    <!-- fin header -->
+    <main>      
       <!-- SECTION PRODUCTO  -->
+      <section class="sectionProducto">
+        <div class="contenedorSectionProducto">
 
-      <section class="contenedorProducto">
-        <div class="contenedorIzq">
-          <div class="contenedorIzqImg">
-            <img class="imagen-producto" src="producto.jpg" alt="">
+          <div class="tituloProducto">
+            <p>Productos</p>
           </div>
-          <div class="contenedorIzqTexto">  
-            <h3 class="tituloIzq">Producto</h3>
-              <h4>Nombre del producto</h4>
-              <p>Texto descriptivo</p>
+          
+          <div class="contenedorProducto">
+            <div class="contenedorIzq">
+              <div class="contenedorIzqImg">
+                <img class="imagen-producto" src="producto.jpg" alt="">
+              </div>
+              <div class="contenedorIzqTexto">  
+                <h3 class="tituloIzq">Producto</h3>
+                <h4>Nombre del producto</h4>
+                <p>Texto descriptivo</p>
+              </div>
+            </div>
+            
+            <div class="contenedorDer">
+            <div class="contenedorDerinputs">
+              <label for="cantidadDeProducto" name="cantidadDeProducto">Cantidad:</label>
+              <input type="number" id="cantidadDeProducto" name="cantidadDeProducto" min="0" value="1">
+            </div>
+            
+            <div class="contenedorDerinputs">
+              <label for="precioProducto" name="precioProducto">Precio:</label>
+              <input type="text" id="precioProducto" name="precioProducto" value="0.00">
+            </div>
+            
+            <div class="contenedorDerinputs" id="contenedorDerPrecioEnvio">
+              <label for="precioEnvio" name="precioEnvio">Precio de envío:</label>
+              <input type="text" id="precioEnvio" name="precioEnvio" value="0.00">
+            </div>
           </div>
         </div>
         
-        <div class="contenedorDer">
-          <div class="contenedorDerinputs">
-            <label for="cantidadDeProducto" name="cantidadDeProducto">Cantidad:</label>
-            <input type="number" id="cantidadDeProducto" name="cantidadDeProducto" min="0" value="1">
+        <div class="envioProducto">
+          <div class="envioTextoProducto">
+            <p>Envio</p>
           </div>
-          
-          <div class="contenedorDerinputs">
-            <label for="precioProducto" name="precioProducto">Precio:</label>
-            <input type="text" id="precioProducto" name="precioProducto" value="0.00">
+          <div class="precioTextoProducto">
+            <p>$ </p>
+            <p>*****</p>
           </div>
-          
-          <div class="contenedorDerinputs">
-            <label for="precioEnvio" name="precioEnvio">Precio de envío:</label>
-            <input type="text" id="precioEnvio" name="precioEnvio" value="0.00">
-          </div>
-        </div>
-      </section>
-      
-      <div class="envioProducto">
-        <div class="envioTextoProducto">
-          <p>Envio</p>
-        </div>
-        <div class="precioTextoProducto">
-          <p>$ </p>
-          <p>*****</p>
         </div>
       </div>
-      
+      </section>
+  
       <!-- SECTION RESUMEN DE COMPRA  -->
-
-      <section class="contenedorCompra">
+    
+      <section class="sectionCompra">
+        <div class="contenedorCompra">
           <h3 class="titulo-resumen">Resumen de Compra</h3>
           
           <div class="resumenCompra">
@@ -96,26 +108,27 @@
               <div class="itemResumen">
                 <label for="envioProductoCompra" name="envioProductoCompra">Envio:</label>
                 <input type="text" id="envioProductoCompra" name="envioProductoCompra" value="5.00">
-              </div>
-            </div>
-              
-            <div class="itemResumen">
-              <label for="totalProductoCompra" name="totalProductoCompra">Total:</label>
-              <input type="text" id="totalProductoCompra" name="totalProductoCompra" value="104.99">
             </div>
           </div>
-            
-          <button class="boton-resumen">Continuar compra</button>
-      
-        </section>
+          
+          <div class="itemResumen">
+            <label for="totalProductoCompra" name="totalProductoCompra">Total:</label>
+            <input type="text" id="totalProductoCompra" name="totalProductoCompra" value="104.99">
+          </div>
+        </div>
+        
+        <button class="boton-resumen">Continuar compra</button>
+        
+      </div>
+    </section>  
     </main>
-
+    
     <footer>
       <div id="Copyright">
         <h4>Copyright 2023 ConcesionariaSN</h4>
         <p>Todos los contenidos de este Sitio (Incluyendo, pero no limitado a, texto, logotipos, contenido, fotografías, audio, botones, nombres comerciales y vídeo) 
           están sujetos a derechos de propiedad por las leyes de Derechos de Autor </p>
-      </div>
+        </div>
       <div id="sociales">
         <a href="www.facebook.com" target="_blank"><i class="fab fa-facebook-f" style="color: #ffffff;"></i></a>
         <a href="www.instagram.com" target="_blank"><i class="fab fa-instagram" style="color: #ffffff;"></i></a>

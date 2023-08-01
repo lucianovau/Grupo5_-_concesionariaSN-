@@ -1,9 +1,9 @@
 footer{
-    background: linear-gradient(white, 40% ,#8d99ae );
+    background: linear-gradient(rgb(255, 255, 255), 40% ,#8d99ae );
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 10rem;
+    height: 250px;
 }
 
 #Copyright{
