@@ -148,6 +148,8 @@ main{
 .carac-tecn{
     margin: 0px;
     height: 100%;
+    background-image: url(../img/fondo-dp.jpg);
+    background-size: cover;
 }
 
 .bloque{
