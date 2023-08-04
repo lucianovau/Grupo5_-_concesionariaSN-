@@ -199,3 +199,83 @@ main{
     margin: 50px;
 }
 
+/*------ popup-------*/
+
+#popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el formulario dentro del popup */
+#contact-form {
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#close-popup-btn {
+    background-color: #DC3545;
+}
+
+/* Otros estilos específicos para el contenido del popup */
+/* Por ejemplo, si deseas estilizar el título y los botones de compartir */
+.popup-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.compartir {
+    font-size: 18px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.compartir i {
+    margin-left: 5px;
+}
+
+/* Estilos para el botón "Mostrar Popup" en la barra de navegación */
+#show-popup-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
