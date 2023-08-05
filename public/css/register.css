@@ -4,6 +4,7 @@
 section{
     height: 100%;
     width: 100%;
+    color: white
 }
 #izquierda{
     display: none;
