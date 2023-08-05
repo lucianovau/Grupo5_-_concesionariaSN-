@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/login.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <%- include('../partials/header') %>
+  <main>
+      <section id="login">
+          <h2>Iniciar Sesión</h2>
+          <div>
+            <form id="Iniciar">
+              <input type="email" id="email" name="email" required class="inicio" placeholder="Email">
+      
+              <input type="contraseña" id="contraseña" name="contraseña" required class="inicio" placeholder="Contraseña">
+            
+            <p class="inicio">
+              <input type="checkbox" id="sesion-iniciada" name="sesion-iniciada" > 
+              <label for="sesion-iniciada">Mantener sesión iniciada</label>
+            
+            </p>
+            
+            <button type="submit" class="inicio" id="boton1">Iniciar Sesión</button>
+
+            <p class="inicio">
+              <a href="register">No tenes cuenta todavia, registrate acá </a>
+            </p>
+          </form>
+          </div>
+          
+      </section>
+
+      <section id="invitado">
+            <h2>Continuar como invitado</h2>
+            <input type="submit" name="inivitado" value="Invitado" id="boton2" >
+      </section>
+  </main>
+ 
+  <%- include('../partials/footer') %>
+</body>
+</html>

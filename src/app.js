@@ -3,11 +3,14 @@ const app = express();
 const path = require('path');
 
 app.use(express.json());
-app.use( express.static(__dirname + '/public'));
+app.use( express.static(path.resolve(__dirname,  '../public')));
+
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
 app.get('/', (req, res) => {
-    let ruta = path.join(__dirname + '/views/home.html');
-    res.sendFile(ruta);
+    let ruta = path.join(__dirname + '/views/home');
+    res.render(ruta);
 })
 
 app.get('/register', (req, res) => {
