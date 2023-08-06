@@ -11,33 +11,30 @@
 <body>
   <%- include('../partials/header') %>
   <main>
-      <section id="login">
-          <h2>Iniciar Sesión</h2>
-          <div>
-            <form id="Iniciar">
-              <input type="email" id="email" name="email" required class="inicio" placeholder="Email">
+    <section id="login">
+      <h2>Iniciar Sesión</h2>
+        <div>
+          <form id="Iniciar">
+            <input type="email" id="email" name="email" required class="inicio iniput" placeholder="Email">
       
-              <input type="contraseña" id="contraseña" name="contraseña" required class="inicio" placeholder="Contraseña">
+            <input type="contraseña" id="contraseña" name="contraseña" required class="inicio iniput" placeholder="Contraseña">
             
             <p class="inicio">
-              <input type="checkbox" id="sesion-iniciada" name="sesion-iniciada" > 
+              <input type="checkbox" id="sesion-iniciada" name="sesion-iniciada" class="iniput"> 
               <label for="sesion-iniciada">Mantener sesión iniciada</label>
-            
             </p>
             
             <button type="submit" class="inicio" id="boton1">Iniciar Sesión</button>
 
             <p class="inicio">
-              <a href="register">No tenes cuenta todavia, registrate acá </a>
+              <a href="register">No tenes cuenta todavía, registrate acá</a>
             </p>
           </form>
-          </div>
-          
+        </div>   
       </section>
-
       <section id="invitado">
-            <h2>Continuar como invitado</h2>
-            <input type="submit" name="inivitado" value="Invitado" id="boton2" >
+          <h2>Continuar como invitado</h2>
+          <button type="submit" id="boton2">Invitado</button>
       </section>
   </main>
  

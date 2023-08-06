@@ -1,0 +1,66 @@
+main{
+    padding-bottom: 60px;
+    background-color: black;
+}
+
+/* ARTICULOS */
+
+.titulo{
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: black;
+    color: red;
+}
+
+.lista-productos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 50%;
+    background-color: black;
+    color: red;
+    text-align: center;
+}
+
+article img{
+    width: 100%;
+    z-index: -100;
+}
+
+.descripcionAuto{
+    padding: 5px;
+}
+
+/* IMAGEN GRANDE */
+
+#productoUno{
+    width: 100%;
+}
+
+#productoUno h2, span{
+    font-size: 2rem;
+}
+
+#productoUno p{
+    font-size: 1rem;
+}
+
+/* ARTICULO HOVER */
+
+article:hover > .descripcionAuto{
+    box-shadow: inset 1px 2px 11px 3px rgba(255,0,0,1);
+    transition: all 0.3s;
+}
+
+/* FONT SIZE */
+article h2, article span{
+    font-size: 1rem;
+    text-transform: uppercase;    
+}
+
+article p{
+    font-size: 12px;
+}
