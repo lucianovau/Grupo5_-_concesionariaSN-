@@ -8,7 +8,7 @@ router.get('/home', controller.home);
 router.get('/login', controller.login);
 router.get('/register', controller.registro);
 router.get('/productos', controller.productos);
-router.get('/detalleProd', controller.detalle);
+router.get('/detallesProd', controller.detalle);
 router.get('/productCart', controller.cart)
 
 module.exports = router
