@@ -2,12 +2,20 @@
 @import url(header.css);
 @import url(footer.css);
 
+/* ----------> BODY <---------- */
+
+body{
+    background-color: black;
+    color: #f00;
+}
+
 /* ----------> SECTION <---------- */
 
 .contenedorProducto, .tituloProducto, .envioProducto{
     margin: 0px 10px;
     border: solid 2px #8D99AE;
     padding: 10px;
+    font-weight: bold;
 }
 
 .resumenCompra, .sectionCompra{
@@ -16,7 +24,7 @@
 
 .tituloProducto{
     margin-top: 20px;
-    border: solid 2px #bdbdbd;
+    border: solid 2px #f00;
     text-transform: uppercase;
     font-size: 10px;
     font-weight: bold;
@@ -24,7 +32,7 @@
 
 .envioProducto{
     margin-bottom: 20px;
-    border: solid 2px #bdbdbd;
+    border: solid 2px #f00;
 }
 
 /* SECTION PRODUCTO  */
@@ -34,6 +42,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0px 10px;
+    border: solid 2px white;
 }
 
 .contenedorIzq, .contenedorDer{
@@ -44,13 +53,12 @@
 .contenedorIzq{
     margin: 40px 0px;
     width: 60%;
-    border: solid 2px #bdbdbd;
+    border: solid 2px #f00;
 }
 
-.contenedorIzqImg{
+.contenedorProducto img{
     width: 50px;
     height: 50px;
-    background-color: black;
 }
 
 .contenedorIzqTexto{
@@ -73,17 +81,19 @@
     font-size: 8px;
     text-transform: uppercase;
     width: 95%;
-    border: solid 2px #bdbdbd;
+    border: solid 2px #f00;
     margin: 7px 0px;
     padding: 4px;
 }
 
 .contenedorDer input{
     width: 25px;
+    background-color: black;
+    color: red;
     text-align: right;
-    border: none;
     font-size: 8px;
     font-weight: bold;
+    border: none;
 }
 
 .contenedorIzq h3{
@@ -126,22 +136,21 @@
 .contenedorCompra{
     display: flex;
     margin-bottom: 30px;
-    background-color: #bdbdbd;
+    background-color: #ff000085;
     flex-direction: column;
-    /* align-content: space-around; */
     align-items: stretch;
 }
 
 .contenedorCompra h3{
-    background-color: white;
+    background-color: black;
     font-size: 10px;
     text-transform: uppercase;
-    border: solid 1px #8D99AE;
+    border: solid 1px #ff000085;
     padding: 2px 4px;
 }
 
 .itemResumen, .itemResumen input, .itemResumen label{
-    background-color:#bdbdbd;
+    background-color:rgba(255, 0, 0, 0);
     font-size: 10px;
     font-weight: bold;
     text-transform: uppercase;
@@ -170,6 +179,7 @@
 
 .itemResumen label{
     width: 60%;
+    color: black;
 }
 
 .contenedorCompra button{
@@ -178,90 +188,72 @@
     margin-right: auto;
     margin-left: auto;
     width: 75%;
-    color: white;
-    background-color:midnightblue;
-    border: solid 1px #8D99AE;
     border-radius: 15px;
     text-transform: uppercase;
+    color: black;
+    background-color: red;
+    border: solid 1px black;
 }
 
 
 .contenedorCompra button:hover{
-    background-color: white;
-    color: blue;
-    border: solid 1px blue;
+    
+    color: red;
+    background-color: black;
+    border: solid 1px white;
 }
 
-/* FOOTER  */
 
 
 
 
 /* ------------------------------> RESPONSIVE <------------------------------ */
 
-/* @media (max-width: 360px){
-
-    /* FOOTER */
-
-    /* footer{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-start;
-        padding: 10px;
-    }
-    
-    #sociales {
-        width: 30%;
-        display: flex;
-        justify-content: space-between;
-        margin-left: auto;
-        margin-bottom: 5px;
-    }
-    
-    #Copyright, #Copyright p{
-        width: 100%;
-    } */ 
-
-    /* TERMINA FOOTER */
-/* } */
-
 /* ------------------------------> TABLET <------------------------------ */
 
 @media (min-width: 361px){
-    /* footer{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-start;
-        padding: 10px;
-    }
- 
-    #sociales {
-        justify-content: end;
-        margin-left: auto;
-    }
- 
- #Copyright, #Copyright p{
-    width: 100%;
-    } */
-    
     
     /* MAIN */
     
     main{
         display:flex;
-        flex-direction: row;
+        flex-direction: column;
         margin: 30px 20px;
     }
 
     /* PRODUCTO */
+
+    .contenedorProducto{
+        padding: 40px 10px;
+    }
 
     .tituloProducto {
         margin-top: 0px;
         font-size: 13px;
     }
 
-    .sectionProducto{
-        width: 55%;
+    .sectionProducto, .sectionCompra{
+        width: 100%;
+        margin: 30px 0px;
+    }
+
+    .contenedorIzq{
+        margin: 0px;
+    }
+
+    .contenedorIzqImg{
+        width: 60%;
+    }
+
+    .contenedorIzqTexto{
+        width: 40%;
+        padding-left: 10px;
+    }
+
+    .contenedorProducto img {
+        width: 100%;
+        padding: 10px 3px;
+        height: auto;
     }
 
     .envioProducto{
@@ -270,19 +262,19 @@
 
     /* COMPRA RESUMEN */
 
-    .sectionCompra{
-        width: 45%;
-    }
-
-    .contenedorCompra h3{
+    .contenedorCompra h3, .tituloProducto, .envioProducto{
         padding: 10px;
-        font-size: 13px;
+        font-size: 22px;
     }
 
     .contenedorCompra{
         width: 100%;
         height: 100%;
         margin-bottom: 0px;
+    }
+
+    .itemResumen, .itemResumen input, .itemResumen label, .contenedorCompra button{
+        font-size: 1rem;
     }
     
 }
@@ -293,37 +285,6 @@
 
 @media (min-width: 769px){
     
-    /* HEAD  */
-    
-    /* #barra nav ul li a, form input{
-        font-size: 2rem;
-    } */
-
-    /* FOOTER */
-    
-    /* footer{
-        width: 100%;
-        font-size: 1rem;
-    }
-
-    
-
-    #Copyright{
-        justify-content: flex-end;
-        height: 4rem;
-    }
-
-    #Copyright p{
-        font-size: 14px;
-    }
-
-    #sociales i{
-        font-size: 35px;
-        margin: 0px 15px;
-    }
-     */
-/* TERMINA FOOTER */
-
 /* ----------> MAIN <----------*/
 
     main{
@@ -356,15 +317,25 @@
 
     .contenedorIzq {
         margin-top: auto;
+        margin-bottom: auto;
         margin-left: auto;
         border: none;
         width: 60%;
         width: 70%;
-        padding: 15px;
+        padding: 40px 10px;
     }
     .contenedorIzqImg{
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .contenedorIzq h3 {
+        font-size: 2rem;
+    }
+
+    .contenedorProducto img {
+        width: 100%;
+        height: 100%;
     }
     
     .contenedorIzqTexto h4, .contenedorIzqTexto p{
