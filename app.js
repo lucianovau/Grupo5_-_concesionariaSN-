@@ -1,6 +1,9 @@
 const express = require('express');
+const { request } = require('http');
 const app = express();
 const path = require('path');
+
+let productosController = require ('../controllers/productosControllers.js');
 
 app.use(express.json());
 app.use( express.static(__dirname + '/public'));
@@ -19,8 +22,8 @@ app.get('/login', (req, res) => {
 })
 
 app.get('/detalleProd', (req, res) => {
-    res.sendFile(__dirname + '/views/detallesProd.html');
-})
+        res.sendFile(__dirname + '/views/detallesProd.html');
+    } )
 
 app.get('/productCart', (req, res) => {
     res.sendFile(__dirname + '/views/productCart.html');
