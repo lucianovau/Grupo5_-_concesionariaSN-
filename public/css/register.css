@@ -4,6 +4,13 @@
 section{
     height: 100%;
     width: 100%;
+    color: white
+}
+main{
+    background: url('../img/background6.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
 }
 #izquierda{
     display: none;
@@ -15,6 +22,7 @@ section{
     align-items: center;
     width: 100%;
     padding: 20px;
+    text-shadow: 2.5px 2.5px 15px rgb(26, 25, 25) ;
 }
 #registro{
     display: flex;
@@ -30,6 +38,10 @@ section{
     flex-direction: column;
     margin: 10px;
     font-size: small;
+}
+.input{
+    box-shadow: 3px 3px 10px rgb(26, 25, 25);
+    border: none;
 }
 #redes{
     display: flex;
@@ -61,12 +73,20 @@ section{
 #ingresa{
     align-self: flex-end;
 }
+#ingresa a{
+    color: white;
+    font-size: 10px;
+}
+#ingresa a:hover{
+    color: black;
+}
 #terminos{
     position: relative;
     top: 15px;
     right: 120px;
 }
-@media (min-width: 1024px){
+
+@media (min-width: 1028px){
     main{
         display: flex;
         flex-direction: row;
@@ -80,7 +100,7 @@ section{
     #triangulo1{
         width: 0px; 
         height: 0px; 
-        border-left: 340px solid #E90027;
+        border-left: 340px solid black;
         border-top: 170px solid transparent;
         border-bottom: 170px solid transparent; 
         rotate: 90deg;
@@ -88,7 +108,7 @@ section{
     #triangulo2{
         width: 0px; 
         height: 0px; 
-        border-left: 340px solid #E90027;
+        border-left: 340px solid black;
         border-top: 170px solid transparent;
         border-bottom: 170px solid transparent; 
         rotate: -90deg;
@@ -99,7 +119,7 @@ section{
         border-right: 190px solid transparent;
         border-top: 100px solid transparent;
         border-left: 190px solid transparent;
-        border-bottom: 100px solid #E90027;
+        border-bottom: 100px solid black ;
         rotate: -90deg;
         position: relative;
         left: 100px;
@@ -111,5 +131,8 @@ section{
     }
     #terminos{
         height: 1rem;
+    }
+    #derecha{
+        width: 50%;
     }
 }

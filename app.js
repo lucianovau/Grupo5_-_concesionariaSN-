@@ -3,7 +3,6 @@ const { request } = require('http');
 const app = express();
 const path = require('path');
 
-let productosController = require ('../controllers/productosControllers.js');
 
 app.use(express.json());
 app.use( express.static(__dirname + '/public'));

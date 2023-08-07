@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crea tu cuenta</title>
+  <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/register.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet" />
+</head>
+<body>
+  <%- include('../partials/header') %>
+  <main>
+    <section id="izquierda">
+      
+      <div id="triangulo1"></div>
+      <div id="triangulo3"></div>
+      <div id="triangulo2"></div>
+     
+    </section>
+    <section id="derecha">
+      <p id="ingresa"><a href="login.html">¿Ya estás registrado? Ingresa aquí</a></p>
+      <p> <h1>Crea tu cuenta</h1></p>
+    <div>
+      <form id="registro">
+        <div class="grupo-formulario">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" class="input" required>
+        </div>
+        <div class="grupo-formulario">
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" class="input"  required>
+        </div>
+        <div class="grupo-formulario">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" class="input" required>
+        </div>
+        <div class="grupo-formulario">
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" name="direccion" class="input" required>
+        </div>
+        <div class="grupo-formulario">
+            <label for="contraseña">Contraseña:</label>
+            <input type="contraseña" id="contraseña" name="contraseña" class="input" required>
+        </div>
+        <div class="grupo-formulario" >
+            <label for="confirmar-contraseña">Confirmar contraseña:</label>
+            <input type="contraseña" id="confirmar-contraseña"  class="input" name="confirmar-contraseña" required>
+        </div>
+        <div class="grupo-formulario">
+          <input type="checkbox" id="terminos" name="terminos" required >
+          <label for="terminos" class="etiqueta-checkbox">Acepto los términos y condiciones</label>
+        </div>
+        <button type="submit" id="boton1" class="input">Crear cuenta</button>
+        <div class="grupo-formulario" id="redes">
+          <button type="submit" class="boton2 input">Ingresa con Facebook <i class="fab fa-facebook-f" style="color: #ffffff;"></i></button>
+          <button type="submit" class="boton2 input" >Ingresa con Google <i class="fab fa-google" style="color: #ffffff;"></i></button>
+        </div>
+      </form>
+    </div>
+    </section>
+  </main>
+  <%- include('../partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>Carrito de Compras</title>
+    <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/productCart.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  rel="stylesheet" />
+    <title>Carrito de Compras</title>
+  </head>
+  <body>
+    <%- include('../partials/header') %>
+    <main>      
+      <!-- SECTION PRODUCTO  -->
+      <section class="sectionProducto">
+        <div class="contenedorSectionProducto">
+
+          <div class="tituloProducto">
+            <p>Productos</p>
+          </div>
+          
+          <div class="contenedorProducto">
+            <div class="contenedorIzq">
+              <div class="contenedorIzqImg">
+                <img class="imagen-producto" src="producto.jpg" alt="">
+              </div>
+              <div class="contenedorIzqTexto">  
+                <h3 class="tituloIzq">Producto</h3>
+                <h4>Nombre del producto</h4>
+                <p>Texto descriptivo</p>
+              </div>
+            </div>
+            
+            <div class="contenedorDer">
+            <div class="contenedorDerinputs">
+              <label for="cantidadDeProducto" name="cantidadDeProducto">Cantidad:</label>
+              <input type="number" id="cantidadDeProducto" name="cantidadDeProducto" min="0" value="1">
+            </div>
+            
+            <div class="contenedorDerinputs">
+              <label for="precioProducto" name="precioProducto">Precio:</label>
+              <input type="text" id="precioProducto" name="precioProducto" value="0.00">
+            </div>
+            
+            <div class="contenedorDerinputs" id="contenedorDerPrecioEnvio">
+              <label for="precioEnvio" name="precioEnvio">Precio de envío:</label>
+              <input type="text" id="precioEnvio" name="precioEnvio" value="0.00">
+            </div>
+          </div>
+        </div>
+        
+        <div class="envioProducto">
+          <div class="envioTextoProducto">
+            <p>Envio</p>
+          </div>
+          <div class="precioTextoProducto">
+            <p>$ </p>
+            <p>*****</p>
+          </div>
+        </div>
+      </div>
+      </section>
+  
+      <!-- SECTION RESUMEN DE COMPRA  -->
+    
+      <section class="sectionCompra">
+        <div class="contenedorCompra">
+          <h3 class="titulo-resumen">Resumen de Compra</h3>
+          
+          <div class="resumenCompra">
+            <div class="contenedorItemResumen">
+              <div class="itemResumen">
+                <label for="precioProductoCompra" name="precioProductoCompra">Producto:</label>
+                <input type="text" id="precioProductoCompra" name="precioProductoCompra" value="99.99">
+              </div>
+              
+              <div class="itemResumen">
+                <label for="envioProductoCompra" name="envioProductoCompra">Envio:</label>
+                <input type="text" id="envioProductoCompra" name="envioProductoCompra" value="5.00">
+            </div>
+          </div>
+          
+          <div class="itemResumen">
+            <label for="totalProductoCompra" name="totalProductoCompra">Total:</label>
+            <input type="text" id="totalProductoCompra" name="totalProductoCompra" value="104.99">
+          </div>
+        </div>
+        
+        <button class="boton-resumen">Continuar compra</button>
+        
+      </div>
+    </section>  
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+  </html>

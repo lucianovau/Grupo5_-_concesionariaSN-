@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/detallesProd.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <%- include('../partials/header') %>
+    <main>
+      <div class="contenedor">
+      <section class="product-info">
+        <img class="img-principal" src="/img/Pick-Up.jpg" alt="Imagen del Producto" class="product-image" width="700px" height="500px">
+        <div class="product-details">
+              <h1 class="product-title">Ford Ranger</h1>
+              <p class="product-description">especificaciones</p>
+              <p class="product-price">Precio:</p>
+              <p class="product-p">$150000</p>
+              <div class="compartir">
+                Compartir
+                <i class="fas fa-share-alt" style="color: #ffffff;"></i>
+              </div>
+          </div>
+      </section>
+      <section id="fotos" class="container">
+        <div class="fotos">
+        <img src="/img/interior-pickup.jpg" alt="foto-interior" width="150px" height="150px">
+        <img src="/img/interior-pickup1.jpg" alt="foto-lateral2" width="150px" height="150px">
+        <img src="/img/interior-pickup2.jpg" alt="foto-atras" width="150px" height="150px">
+        <img src="/img/pickup-atras.jpg" alt="foto-adelante" width="150px" height="150px">
+        <img src="img/pickup-atras1.jpg" alt="foto-360" width="150px" height="150px">
+        </div>
+        <div class="botones">
+          <button type="submit" class="consultar">Consultar</button>
+          <br>
+          <button type="submit" class="reservar">Reservar</button>
+        </div>
+      </section>
+    </div>
+      <section class="carac-tecn">
+        <div class="cajas">
+          <h2>CARACTERISTICAS</h2>
+          <div class="bloque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quos similique voluptate cumque vel alias illo repellendus numquam fugit quas! Qui nisi veniam veritatis est in vitae harum incidunt nobis.</div>
+          <h2>CONFORT</h2>
+          <div class="bloque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ut voluptatem dolores aliquid laboriosam optio temporibus consequuntur consectetur saepe cupiditate. Culpa porro suscipit delectus, eligendi commodi nobis voluptatum laboriosam rerum!</div>
+          <h2>SEGURIDAD</h2>
+          <div class="bloque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, quasi voluptatum molestiae praesentium illo dolores ullam vel blanditiis aut a optio, vero quo et eos nulla ducimus, perferendis itaque. Perferendis.</div>
+          </div>
+          <div class="ficha-tecnica">ficha tecnica</div>
+      </section>
+    </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <div id="popup-container">
+      <div class="popup-content">
+          <h2>Formulario de Contacto</h2>
+          <form id="contact-form">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" required>
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" required>
+              <label for="message">Mensaje:</label>
+              <textarea id="message" required></textarea>
+              <button type="submit">Enviar</button>
+          </form>
+          <button id="close-popup-btn">Cerrar</button>
+      </div>
+  </div>
+  
+  <script src="../script.js"></script>
+</body>
+</html>
+
