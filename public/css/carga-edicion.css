@@ -1,0 +1,10 @@
+@import url(centralize.css);
+@import url(header.css);
+@import url(footer.css);
+
+main{
+    display: flex;
+    flex-direction: row;
+    background-color: brown;
+    height: 700px;
+}

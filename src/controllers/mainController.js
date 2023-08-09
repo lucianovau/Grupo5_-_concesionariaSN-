@@ -23,6 +23,10 @@ const controller = {
     cart: (req, res) => {
         let ruta = path.resolve(__dirname, '../views/products/productCart')
         res.render(ruta)
+    },
+    cargaEdicion: (req, res) => {
+        let ruta = path.resolve(__dirname, '../views/products/carga-edicion')
+        res.render(ruta)
     }
 }
 
