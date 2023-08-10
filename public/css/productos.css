@@ -1,3 +1,7 @@
+@import url(centralize.css);
+@import url(header.css);
+@import url(footer.css);
+
 main{
     padding-bottom: 60px;
     background-color: black;
