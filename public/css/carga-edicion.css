@@ -2,9 +2,42 @@
 @import url(header.css);
 @import url(footer.css);
 
-main{
-    display: flex;
-    flex-direction: row;
+main{  
+    width: 100%;
     background-color: brown;
     height: 700px;
+}
+h1{
+    width: 100%;    
+}
+#productForm{
+    margin-top: 15px;  
+}
+#productForm button{
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: black;
+    background-color: red;
+    border: solid 1px black;
+}
+.posicionamientoForm{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: small;
+}
+
+
+
+
+
+
+
+
+
+
+@media ((min-width: 481px)){
+    
 }
