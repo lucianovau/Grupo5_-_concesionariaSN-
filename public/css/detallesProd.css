@@ -1,19 +1,6 @@
 @import url(centralize.css);
 @import url(header.css);
 @import url(footer.css);
-/*main{
-    margin: 10px;
-}*/
-/*.triangulo{
-    width: 0px; 
-    height: 0px; 
-    border-left: 300px solid #8d99ae;
-    border-top: 150px solid transparent;
-    border-bottom: 150px solid transparent; 
-    rotate: -90deg;
-    position: absolute;
-    left: 38.7%;
-}*/
 .product-info {
     display: flex;
     justify-content: center;
@@ -34,6 +21,7 @@
     background-image: url(../img/background3.jpg);
     background-size: cover;
     object-fit: contain;
+    width: 100%;
 }
 .product-title {
     font-size: 30px;
@@ -102,7 +90,6 @@ main{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 5px 10px; 
 }
 
 .fotos{
@@ -146,14 +133,14 @@ main{
 }
 
 .carac-tecn{
-    margin: 0px;
+    width: 100%;
     height: 100%;
     background-image: url(../img/fondo-dp.jpg);
     background-size: cover;
 }
 
 .bloque{
-    width: 300px;
+    width: 160px;
     height: 400px;
     border: solid 1px #474747;
     border-radius: 15px;
@@ -170,9 +157,9 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    margin: 0px;
-    padding: 50px 50px 20px 50px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-right: 150px;
 }
 
 .cajas h2{
@@ -184,12 +171,11 @@ main{
 }
 
 .ficha-tecnica{
-    width: 90%;
+    width: 850px;
+    align-self: center;
     cursor: pointer;
-    display: flex;
     font-size: 16px;
     padding: 20px;
-    justify-content: center;
     text-align: center;
     background: radial-gradient(#000000, #E90027);
     color:  #cfd3d8;
@@ -197,6 +183,7 @@ main{
     border: solid 1px #474747;
     border-radius: 8px;
     margin: 50px;
+    margin-left: 200px;
 }
 
 /*------ popup-------*/

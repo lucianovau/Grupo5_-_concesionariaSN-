@@ -1,0 +1,110 @@
+@import url(centralize.css);
+@import url(header.css);
+@import url(footer.css);
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+
+.product-info {
+    display: flex;
+    margin-top: 20px;
+}
+.product-image {
+    flex: 0 0 200px;
+    margin-right: 650px;
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px;
+}
+.product-price {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 10px;
+}
+.compartir{
+    border: none;
+    color: black;
+    border: solid;
+    padding: 10px 20px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.consultar {
+    background-color: white;
+    border: solid;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.reservar{
+    background-color: #888;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.bloque1{
+    border: none;
+    color: black;
+    border: solid;
+    padding: 120px 100px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.cajas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.ficha{
+    border: none;
+    color: black;
+    border: solid;
+    padding: 20px 100px;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+footer{
+    margin: 0%;
+    padding: 0%;
+}
+
+.lorem{
+    width: 30%;
+    display: inline-block;
+    text-align: left;
+}
