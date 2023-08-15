@@ -12,14 +12,6 @@ const controller = {
         let ruta = path.resolve(__dirname, '../views/users/register');
         res.render(ruta);
     },
-    detalle: (req, res)=>{
-        let ruta = path.resolve(__dirname, '../views/products/detallesProd')
-        res.render(ruta)
-    },
-    productos: (req, res) => {
-        let ruta = path.resolve(__dirname, '../views/products/productos');
-        res.render(ruta);
-    },
     cart: (req, res) => {
         let ruta = path.resolve(__dirname, '../views/products/productCart')
         res.render(ruta)
