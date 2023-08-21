@@ -15,11 +15,7 @@
               <p class="product-description"><%= descripcion%></p>
               <p class="product-price">Precio:</p>
               <p class="product-p"><%= precio %></p>
-              <div class="compartir">
-                Compartir
-                <i class="fas fa-share-alt" style="color: #ffffff;"></i>
-              </div>
-          </div>
+        </div>
       </section>
       <section id="fotos" class="container">
         <div class="fotos">
@@ -30,9 +26,11 @@
         <img src="<%= img6 %>" alt="foto-360" width="150px" height="150px">
         </div>
         <div class="botones">
-          <button type="submit" class="consultar">Consultar</button>
-          <br>
-          <button type="submit" class="reservar">Reservar</button>
+          <div class="botones-arriba">
+          <button type="submit" class="boton">Consultar</button>
+          <button type="submit" class="boton">Compartir</button>
+          </div>
+          <button type="submit" class="boton-destacado">Reservar</button>
         </div>
       </section>
       <section class="carac-tecn">
