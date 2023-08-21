@@ -1,18 +1,18 @@
-const express = require('express');
+const express = require("express");
 let router = express.Router();
 
-let controller = require('../controllers/mainController')
+let controller = require("../controllers/mainController");
 
-router.get('/', controller.home);
-router.get('/home', controller.home);
-router.get('/login', controller.login);
-router.get('/register', controller.registro);
-router.get('/productCart', controller.cart)
-router.get('/carga-edicion', controller.cargaEdicion);
+router.get("/", controller.home);
+router.get("/home", controller.home);
+router.get("/login", controller.login);
+router.get("/register", controller.registro);
+router.get("/productCart", controller.cart);
+router.get("/createProduct", controller.create);
+router.get("/editProduct", controller.Edition);
 
+let productosRutas = require("./productos");
+router.get("/productos", productosRutas);
+router.get("/detalleProd", productosRutas);
 
-let productosRutas = require('./productos')
-router.get('/productos', productosRutas);
-router.get('/detalleProd', productosRutas);
-
-module.exports = router
+module.exports = router;
