@@ -1,0 +1,36 @@
+[
+    {
+        "id":1, 
+        "marca": "FORD",
+        "name": "Ranger",
+        "descripcion": "XLT 2.0L Diesel Cabina Doble 4x2",
+        "img1": "/img/FordRanger/Pick-Up.jpg",
+        "img2": "/img/FordRanger/interior-pickup.jpg",
+        "img3": "/img/FordRanger/interior-pickup1.jpg",
+        "img4": "/img/FordRanger/interior-pickup2.jpg",
+        "img5": "/img/FordRanger/pickup-atras.jpg",
+        "img6": "/img/FordRanger/pickup-atras1.jpg",
+        "category": "Pickup",
+        "color": "Azul",
+        "price":12936000,
+        "caract": "La Nueva Ranger se destaca por su tencología innovadora, incorporando una pantalla LED multitáctil de 12' con alta definición y un panel de instrumentos LED de 12,4', Asiento de cuero ecológico, Sensores de estacionamiento traseros y delanteros",
+        "fichaTecnica": "Motor 2.0L Bi-Turbo diesel con 210 CV 500 Nm de torque."
+    },
+    {
+        "id":2, 
+        "marca": "VOLKSWAGEN",
+        "name": "Vento",
+        "descripcion": "2.0 GLI 350TSI DSG 230cv App Connect",
+        "img1": "/img/VWVento/sedan.jpg",
+        "img2": "/img/VWVento/interior-sedan.jpg",
+        "img3": "/img/VWVento/interior-sedan1.jpg",
+        "img4": "/img/VWVento/interior-sedan2.jpg",
+        "img5": "/img/VWVento/sedan-atras.jpg",
+        "img6": "/img/VWVento/sedan-atras1.jpg",
+        "category": "Sedan",
+        "color": "Negro",
+        "price":14734650,
+        "caract": "Nuevas llantas 18”, techo corredizo, pantalla multimedia VW Play de 10 pulgadas, tablero digital Active Info Display, butacas con ventilación y calefacción, tapizado en cuero, volante multifunción con comandos táctiles, control de crucero adaptativo y control de cambio de carril, etc.",
+        "fichaTecnica": "Nuevo motor 2.0 TSi G3, 230cv caja automática DSG."
+    }
+]
