@@ -1,0 +1,61 @@
+[
+    {
+        "id": 1,
+        "name": "Agustina",
+        "lastName": "Perez",
+        "email": "aperez@gmail.com",
+        "password": "xxx-001",
+        "category": "administrador",
+        "image": ""
+    },
+
+    {
+        "id": 2,
+        "name": "Antonella",
+        "lastName": "Diaz",
+        "email": "adiaz@gmail.com",
+        "password": "xxx-002",
+        "category": "administrador",
+        "image": ""
+    },
+
+    {
+        "id": 3,
+        "name": "Camilo",
+        "lastName": "Gomez",
+        "email": "cgomez@gmail.com",
+        "password": "xxx-003",
+        "category": "usuario",
+        "image": ""
+    },
+
+    {
+        "id": 4,
+        "name": "Nicolás",
+        "lastName": "Gutierrez",
+        "email": "ngutierrez@gmail.com",
+        "password": "xxx-004",
+        "category": "administrador",
+        "image": ""
+    },
+
+    {
+        "id": 5,
+        "name": "Amanda",
+        "lastName": "Solis",
+        "email": "asolis@gmail.com",
+        "password": "xxx-005",
+        "category": "usuario",
+        "image": ""
+    },
+
+    {
+        "id": 6,
+        "name": "Carlos",
+        "lastName": "Gimenez",
+        "email": "cgimenez@gmail.com",
+        "password": "xxx-006",
+        "category": "usuario",
+        "image": ""
+    }
+]

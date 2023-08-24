@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/carga-edicion.css" />
-  </head>
 
-  <body>
-    <%- include('../partials/header') %>
+<head>
+  <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/carga-edicion.css" />
+</head>
+
+<body>
+  <%- include('../partials/header') %>
     <main>
       <h1>Edición de Productos</h1>
-      <form id="productForm">
+      <form id="productForm" action="" method="post" enctype="multipart/form-data">
         <div class="posicionamientoForm">
           <label for="name">Nombre del producto:</label>
           <input type="text" id="name" name="name" required /><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="description">Descripción:</label>
-          <textarea id="description" name="description" required></textarea
-          ><br /><br />
+          <textarea id="description" name="description" required></textarea><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="image">Imagen:</label>
-          <input
-            type="file"
-            id="image"
-            name="image"
-            accept="image/*"
-            required
-          /><br /><br />
+          <input type="file" id="image" name="imageUsuario" accept="image/*" required /><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="category">Categoría:</label>
-          <input
-            type="text"
-            id="category"
-            name="category"
-            required
-          /><br /><br />
+          <input type="text" id="category" name="category" required /><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="colors">Colores:</label>
@@ -44,17 +33,12 @@
         </div>
         <div class="posicionamientoForm">
           <label for="price">Precio:</label>
-          <input
-            type="number"
-            id="price"
-            name="price"
-            step="0.01"
-            required
-          /><br /><br />
+          <input type="number" id="price" name="price" step="0.01" required /><br /><br />
         </div>
         <button id="botonGuardar" type="submit">Guardar Producto</button>
       </form>
     </main>
     <%- include('../partials/footer') %>
-  </body>
+</body>
+
 </html>
