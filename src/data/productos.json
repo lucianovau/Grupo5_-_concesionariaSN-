@@ -1,8 +1,9 @@
 [
     {
         "id":1, 
-        "marca": "FORD",
-        "name": "Ranger",
+        "name": "Ford Ranger",
+        "marca": "Ford",
+        "modelo": "Ranger",
         "descripcion": "La Nueva Ranger se destaca por su tencología innovadora, incorporando una pantalla LED multitáctil de 12' con alta definición y un panel de instrumentos LED de 12,4', Asiento de cuero ecológico, Sensores de estacionamiento traseros y delanteros",
         "img1": "/img/FordRanger/Pick-Up.jpg",
         "img2": "/img/FordRanger/interior-pickup.jpg",
@@ -18,8 +19,9 @@
 
     {
         "id":2, 
-        "marca": "FORD",
-        "name": "Mustang",
+        "name":"Ford Mustang", 
+        "marca": "Ford",
+        "modelo": "Mustang",
         "descripcion": "Imponente y atrapante, una nueva interpretación del ícono en cada detalle. Durante 6 generaciones, el Mustang ha demostrado ser mucho más que un vehículo deportivo, marcando con cada una de ellas un nuevo hito en la industria automotriz.",
         "img1": "/img/FordMustang/deportivo.jpg",
         "img2": "/img/FordMustang/interior-deportivo.jpg",
@@ -35,8 +37,9 @@
     
     {
         "id": 3,
-        "marca": "FORD",
-        "name": "Kuga Híbrida",
+        "name":"Ford Kuga Híbrida", 
+        "marca": "Ford",
+        "modelo": "Kuga Híbrida",
         "descripcion": "Una combinación perfecta entre eficiencia y versatilidad, el Ford Kuga Híbrida es un SUV que redefine la movilidad sostenible. Con su avanzado sistema híbrido, ofrece un viaje suave y cómodo mientras cuida el medio ambiente.",
         "img1": "/img/FordKugaHybrid/exterior.jpg",
         "img2": "/img/FordKugaHybrid/interior.jpg",
@@ -51,8 +54,9 @@
       
       {
         "id": 4,
-        "marca": "FORD",
-        "name": "Transit",
+        "name": "Ford Transit",
+        "marca": "Ford",
+        "modelo": "Transit",
         "descripcion": "La Ford Transit es la solución ideal para tus necesidades de carga y transporte. Diseñada para la eficiencia y la versatilidad, esta furgoneta ofrece un amplio espacio de carga y una conducción confiable, convirtiéndola en la compañera perfecta para empresas y negocios.",
         "img1": "/img/FordTransit/exterior.jpg",
         "img2": "/img/FordTransit/interior-carga.jpg",
@@ -67,8 +71,9 @@
       
       {
         "id": 5,
-        "marca": "FORD",
-        "name": "Raptor",
+        "name": "Ford Raptor",
+        "marca": "Ford",
+        "modelo": "Raptor",
         "descripcion": "La Ford Raptor es una pick-up todoterreno diseñada para dominar cualquier terreno con su potencia y capacidad. Con un diseño imponente y tecnología avanzada, la Raptor ofrece una experiencia de conducción emocionante tanto en carreteras como en caminos difíciles.",
         "img1": "/img/FordRaptor/exterior.jpg",
         "img2": "/img/FordRaptor/interior.jpg",
@@ -83,8 +88,9 @@
       
       {
         "id": 6,
-        "marca": "CHEVROLET",
-        "name": "Onix Plus",
+        "name": "Chevrolet Onix Plus" ,
+        "marca": "Chevrolet",
+        "modelo": "Onix Plus",
         "descripcion": "El Chevrolet Onix Plus es un sedán compacto que combina estilo, rendimiento y comodidad. Con un diseño moderno y tecnología avanzada, el Onix Plus es perfecto para aquellos que buscan un equilibrio entre eficiencia y confort en sus viajes diarios.",
         "img1": "/img/ChevroletOnixPlus/exterior.jpg",
         "img2": "/img/ChevroletOnixPlus/interior.jpg",
@@ -99,8 +105,9 @@
       
       {
         "id": 7,
-        "marca": "CHEVROLET",
-        "name": "Cruze 5",
+        "name": "Chevrolet Cruze 5",
+        "marca": "Chevrolet",
+        "modelo": "Cruze 5",
         "descripcion": "El Chevrolet Cruze 5 es un hatchback compacto que combina estilo, eficiencia y tecnología avanzada. Con su diseño versátil y su rendimiento confiable, el Cruze 5 es una opción ideal para quienes buscan comodidad y practicidad en sus desplazamientos urbanos.",
         "img1": "/img/ChevroletCruze5/exterior.jpg",
         "img2": "/img/ChevroletCruze5/interior.jpg",
@@ -115,8 +122,9 @@
       
       {
         "id": 8,
-        "marca": "CHEVROLET",
-        "name": "Tracker",
+        "name": "Chevrolet Tracker",
+        "marca": "Chevrolet",
+        "modelo": "Tracker",
         "descripcion": "La Chevrolet Tracker es una SUV compacta diseñada para brindar versatilidad y comodidad en tus viajes. Con su diseño moderno y su tecnología avanzada, la Tracker te ofrece una experiencia de conducción emocionante tanto en la ciudad como en aventuras fuera de la carretera.",
         "img1": "/img/ChevroletTracker/exterior.jpg",
         "img2": "/img/ChevroletTracker/interior.jpg",
@@ -131,8 +139,9 @@
       
       {
         "id": 9,
-        "marca": "CHEVROLET",
-        "name": "S10 Z71",
+        "name": "Chevrolet S10 Z71",
+        "marca": "Chevrolet",
+        "modelo": "S10 Z71",
         "descripcion": "La Chevrolet S10 Z71 es una camioneta pickup todoterreno diseñada para el trabajo duro y la aventura. Con su diseño robusto y su capacidad de carga, la S10 Z71 te brinda el rendimiento necesario para enfrentar cualquier desafío, ya sea en la ciudad o en terrenos difíciles.",
         "img1": "/img/ChevroletS10Z71/exterior.jpg",
         "img2": "/img/ChevroletS10Z71/interior.jpg",
@@ -143,12 +152,12 @@
         "color": "Rojo",
         "price": 32900,
         "fichaTecnica": "MOTOR: V6 Turbo Diesel. POTENCIA: Hasta X CV. TORQUE: Hasta Y Nm. TRANSMISIÓN: Manual o automática, dependiendo de la configuración."
-      }      
+      } ,
 
       {
         "id":10, 
         "name": "Toyota Yaris Hatchback XS 6M/T 5P",
-        "marca": "TOYOTA",
+        "marca": "Toyota",
         "modelo": "Yaris",
         "descripcion": "El nuevo Toyota Yaris 2023 incorpora ahora más seguridad, con 7 airbags en todas sus versiones, y más conectividad, con Car Play y Android Auto. Además, ahora las versiones XLS Pack CVT y S incluyen Toyota Safety Sense con Alerta de Cambio de Carril (LDA) y Sistema Pre-Colisión Frontal (PCS). Equipado con un motor de 1.5 litros y con las opciones de transmisión manual de 6 velocidades o caja automática secuencial CVT de 7 velocidades, es el automóvil ideal para uso diario, por su bajo consumo, excelente andar y máximo confort.",
         "img1": "/img/ToyotaYaris/sedan.jpg",
@@ -167,7 +176,7 @@
     {
         "id":11, 
         "name": "Corolla 2.0 XLI CVT",
-        "marca": "TOYOTA",
+        "marca": "Toyota",
         "modelo": "Corolla",
         "descripcion": "¡El sedán más vendido de la historia se renovó completamente! El nuevo Corolla 2023 ofrece dos variantes de motorización: El motor híbrido con tecnología de última generación que ya conocés, y un renovado 2.0L Dynamic Force que le brinda una potencia de 170CV. Además, en la versión naftera tenemos dos grandes novedades: Una caja Direct Shift CVT de ¡10 Velocidades! y el tan esperado Techo Solar que le suma confort e insonorización. Equipado con TOYOTA Safety Sense en sus versiones SE-G, no solo es el sedán más vendido de la historia, sino también el más seguro. ¡Sumate a la Experiencia JORGE FERRO con TOYOTA Corolla!",
         "img1": "/img/ToyotaCorolla/sedan.jpg",
@@ -186,7 +195,7 @@
     {
         "id":12, 
         "name": "Toyota Prius Hybrid",
-        "marca": "TOYOTA",
+        "marca": "Toyota",
         "modelo": "Prius",
         "descripcion": "El nuevo Prius actualiza su carácter vanguardista y presenta un cambio integral de diseño y equipamiento. Su exclusiva tecnología Hybrid Synergy Drive combina un motor de combustión de 1.8L con 16 válvulas y sistema WT-i junto con un inteligente sistema eléctrico con batería autorecargable para lograr un eficiente consumo y una alta performance, optimizando su funcionamiento y movilizando una nueva conciencia ecológica.",
         "img1": "/img/ToyotaCorolla/hybrid.jpg",
@@ -205,7 +214,7 @@
     {
         "id":13, 
         "name": "Hilux Cabina Doble CONQUEST 4X4",
-        "marca": "TOYOTA",
+        "marca": "Toyota",
         "modelo": "Hilux",
         "descripcion": "La nueva Toyota Hilux presenta un nuevo diseño que le da una mayor robustez, dándole un carácter fuerte, además de incorporar más potencia a su motor. Los cambios en la suspensión le brindan un mayor confort de marcha, haciendo de la Hilux un aliado ideal para el trabajo pero también para su rol como pick-up recreativa. Además, suma tecnología de última generación gracias al paquete de seguridad Toyota Safety Sense, y un multimedia JBL con Android Auto y Car Play. Acercate a conocerla a nuestro concesionario!",
         "img1": "/img/ToyotaCorolla/pick-up.jpg",
@@ -224,7 +233,7 @@
     {
         "id":14, 
         "name": "Toyota Etios XLS Pack 1.5",
-        "marca": "TOYOTA",
+        "marca": "Toyota",
         "modelo": "Etios",
         "descripcion": "El nuevo TOYOTA Etios presenta un nuevo diseño que le brinda fuerza y actitud. Su motor Dual VVT-i, sus opciones de caja automática de 4 marchas y caja manual de 6 marchas y su pantalla táctil, lo convierten en tu mejor elección. En su versión 2023, incorpora de serie el sistema de control de estabilidad (ESP), el control de tracción (TRC) y asistencia de pendiente en arranque (HRC), que evitan que el auto retroceda en el momento del encendido al estar en subida. Además, las versiones Pack incluyen Cámara de Retroceso, Tuercas de Seguridad y Bandeja Antiderrames para baúl. Siempre tenés más excusas para manejarlo, decile SI a todo!",
         "img1": "/img/ToyotaEtios/sedan.jpg",
