@@ -3,7 +3,7 @@
         "id":1, 
         "marca": "FORD",
         "name": "Ranger",
-        "descripcion": "XLT 2.0L Diesel Cabina Doble 4x2",
+        "descripcion": "La Nueva Ranger se destaca por su tencología innovadora, incorporando una pantalla LED multitáctil de 12' con alta definición y un panel de instrumentos LED de 12,4', Asiento de cuero ecológico, Sensores de estacionamiento traseros y delanteros",
         "img1": "/img/FordRanger/Pick-Up.jpg",
         "img2": "/img/FordRanger/interior-pickup.jpg",
         "img3": "/img/FordRanger/interior-pickup1.jpg",
@@ -59,7 +59,7 @@
         "img3": "/img/FordTransit/interior-conductor.jpg",
         "img4": "/img/FordTransit/tecnologia.jpg",
         "img5": "/img/FordTransit/atras.jpg",
-        "category": "Furgoneta",
+        "category": "Utilitario",
         "color": "Blanco",
         "price": 28900,
         "fichaTecnica": "MOTOR: Varias opciones de motorización disponibles. CAPACIDAD DE CARGA: Hasta X kg. CAPACIDAD DE PASAJEROS: Hasta Y asientos. TRANSMISIÓN: Manual o automática, dependiendo de la configuración."
@@ -107,7 +107,7 @@
         "img3": "/img/ChevroletCruze5/tecnologia.jpg",
         "img4": "/img/ChevroletCruze5/conduccion.jpg",
         "img5": "/img/ChevroletCruze5/atras.jpg",
-        "category": "Hatchback",
+        "category": "Sedán",
         "color": "Rojo",
         "price": 21500,
         "fichaTecnica": "MOTOR: Varias opciones de motorización disponibles. POTENCIA: Hasta X CV. TORQUE: Hasta Y Nm. TRANSMISIÓN: Manual o automática, dependiendo de la configuración."
@@ -144,4 +144,99 @@
         "price": 32900,
         "fichaTecnica": "MOTOR: V6 Turbo Diesel. POTENCIA: Hasta X CV. TORQUE: Hasta Y Nm. TRANSMISIÓN: Manual o automática, dependiendo de la configuración."
       }      
+
+      {
+        "id":10, 
+        "name": "Toyota Yaris Hatchback XS 6M/T 5P",
+        "marca": "TOYOTA",
+        "modelo": "Yaris",
+        "descripcion": "El nuevo Toyota Yaris 2023 incorpora ahora más seguridad, con 7 airbags en todas sus versiones, y más conectividad, con Car Play y Android Auto. Además, ahora las versiones XLS Pack CVT y S incluyen Toyota Safety Sense con Alerta de Cambio de Carril (LDA) y Sistema Pre-Colisión Frontal (PCS). Equipado con un motor de 1.5 litros y con las opciones de transmisión manual de 6 velocidades o caja automática secuencial CVT de 7 velocidades, es el automóvil ideal para uso diario, por su bajo consumo, excelente andar y máximo confort.",
+        "img1": "/img/ToyotaYaris/sedan.jpg",
+        "img2": "/img/ToyotaYaris/interior-sedan.jpg",
+        "img3": "/img/ToyotaYaris/interior-sedan1.jpg",
+        "img4": "/img/ToyotaYaris/interior-sedan2.jpg",
+        "img5": "/img/ToyotaYaris/sedan-atras.jpg",
+        "img6": "/img/ToyotaYaris/sedan-atras1.jpg",
+        "category": "Sedán",
+        "color": "Rojo Metalizado",
+        "price":6551000,
+        "fichaTecnica": "MOTOR: 1.5 CILINDROS: 4 VÁLVULAS: 16 POTENCIA: 107 CV TIPO DE CAJA: Manual de 6 velocidades"
+    },
+
+
+    {
+        "id":11, 
+        "name": "Corolla 2.0 XLI CVT",
+        "marca": "TOYOTA",
+        "modelo": "Corolla",
+        "descripcion": "¡El sedán más vendido de la historia se renovó completamente! El nuevo Corolla 2023 ofrece dos variantes de motorización: El motor híbrido con tecnología de última generación que ya conocés, y un renovado 2.0L Dynamic Force que le brinda una potencia de 170CV. Además, en la versión naftera tenemos dos grandes novedades: Una caja Direct Shift CVT de ¡10 Velocidades! y el tan esperado Techo Solar que le suma confort e insonorización. Equipado con TOYOTA Safety Sense en sus versiones SE-G, no solo es el sedán más vendido de la historia, sino también el más seguro. ¡Sumate a la Experiencia JORGE FERRO con TOYOTA Corolla!",
+        "img1": "/img/ToyotaCorolla/sedan.jpg",
+        "img2": "/img/ToyotaCorolla/interior-sedan.jpg",
+        "img3": "/img/ToyotaCorolla/interior-sedan1.jpg",
+        "img4": "/img/ToyotaCorolla/interior-sedan2.jpg",
+        "img5": "/img/ToyotaCorolla/sedan-atras.jpg",
+        "img6": "/img/ToyotaCorolla/sedan-atras1.jpg",
+        "category": "Sedán",
+        "color": "Blanco Perlado",
+        "price":8364000,
+        "fichaTecnica": "MOTOR: 2.0 CILINDROS: 4 VÁLVULAS: 16 POTENCIA: 170 CV TIPO DE CAJA: Automática de 10 velocidades"
+    },
+
+
+    {
+        "id":12, 
+        "name": "Toyota Prius Hybrid",
+        "marca": "TOYOTA",
+        "modelo": "Prius",
+        "descripcion": "El nuevo Prius actualiza su carácter vanguardista y presenta un cambio integral de diseño y equipamiento. Su exclusiva tecnología Hybrid Synergy Drive combina un motor de combustión de 1.8L con 16 válvulas y sistema WT-i junto con un inteligente sistema eléctrico con batería autorecargable para lograr un eficiente consumo y una alta performance, optimizando su funcionamiento y movilizando una nueva conciencia ecológica.",
+        "img1": "/img/ToyotaCorolla/hybrid.jpg",
+        "img2": "/img/ToyotaCorolla/interior-hybrid.jpg",
+        "img3": "/img/ToyotaCorolla/interior-hybrid1.jpg",
+        "img4": "/img/ToyotaCorolla/interior-hybrid2.jpg",
+        "img5": "/img/ToyotaCorolla/hybrid-atras.jpg",
+        "img6": "/img/ToyotaCorolla/hybrid-atras1.jpg",
+        "category": "Hybrid",
+        "color": "Azul Metalizado",
+        "price":11988000,
+        "fichaTecnica": "MOTOR: 2.0 CILINDROS: 4 VÁLVULAS: 16 POTENCIA: 122 CV TIPO DE CAJA: e-CVT"
+    },
+
+
+    {
+        "id":13, 
+        "name": "Hilux Cabina Doble CONQUEST 4X4",
+        "marca": "TOYOTA",
+        "modelo": "Hilux",
+        "descripcion": "La nueva Toyota Hilux presenta un nuevo diseño que le da una mayor robustez, dándole un carácter fuerte, además de incorporar más potencia a su motor. Los cambios en la suspensión le brindan un mayor confort de marcha, haciendo de la Hilux un aliado ideal para el trabajo pero también para su rol como pick-up recreativa. Además, suma tecnología de última generación gracias al paquete de seguridad Toyota Safety Sense, y un multimedia JBL con Android Auto y Car Play. Acercate a conocerla a nuestro concesionario!",
+        "img1": "/img/ToyotaCorolla/pick-up.jpg",
+        "img2": "/img/ToyotaCorolla/interior-pick-up.jpg",
+        "img3": "/img/ToyotaCorolla/interior-pick-up1.jpg",
+        "img4": "/img/ToyotaCorolla/interior-pick-up2.jpg",
+        "img5": "/img/ToyotaCorolla/pick-up-atras.jpg",
+        "img6": "/img/ToyotaCorolla/pick-up-atras1.jpg",
+        "category": "Pick-up",
+        "color": "Super Blanco",
+        "price":22815000,
+        "fichaTecnica": "MOTOR: 2.8 CILINDROS: 4 VÁLVULAS: 16 POTENCIA: 204 CV TIPO DE CAJA: Automática de 6 velocidades Puertas: 4"
+    },
+
+
+    {
+        "id":14, 
+        "name": "Toyota Etios XLS Pack 1.5",
+        "marca": "TOYOTA",
+        "modelo": "Etios",
+        "descripcion": "El nuevo TOYOTA Etios presenta un nuevo diseño que le brinda fuerza y actitud. Su motor Dual VVT-i, sus opciones de caja automática de 4 marchas y caja manual de 6 marchas y su pantalla táctil, lo convierten en tu mejor elección. En su versión 2023, incorpora de serie el sistema de control de estabilidad (ESP), el control de tracción (TRC) y asistencia de pendiente en arranque (HRC), que evitan que el auto retroceda en el momento del encendido al estar en subida. Además, las versiones Pack incluyen Cámara de Retroceso, Tuercas de Seguridad y Bandeja Antiderrames para baúl. Siempre tenés más excusas para manejarlo, decile SI a todo!",
+        "img1": "/img/ToyotaEtios/sedan.jpg",
+        "img2": "/img/ToyotaEtios/interior-sedan.jpg",
+        "img3": "/img/ToyotaEtios/interior-sedan1.jpg",
+        "img4": "/img/ToyotaEtios/interior-sedan2.jpg",
+        "img5": "/img/ToyotaEtios/sedan-atras.jpg",
+        "img6": "/img/ToyotaEtios/sedan-atras1.jpg",
+        "category": "Sedán",
+        "color": "Super Blanco",
+        "price":6123000,
+        "fichaTecnica": "MOTOR: 1.5 CILINDROS: 4 VÁLVULAS: 16 POTENCIA: 103 CV TIPO DE CAJA: Caja manual de 6 velocidades TECNOLOGÍA: Audio con pantalla táctil de 7' con conectividad Apple CarPlay® y Android Auto®, Cámara de estacionamiento"
+    }
+
 ]
