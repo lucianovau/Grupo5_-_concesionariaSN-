@@ -16,14 +16,6 @@ const controller = {
     let ruta = path.resolve(__dirname, "../views/products/productCart");
     res.render(ruta);
   },
-  create: (req, res) => {
-    let ruta = path.resolve(__dirname, "../views/products/createProduct");
-    res.render(ruta);
-  },
-  Edition: (req, res) => {
-    let ruta = path.resolve(__dirname, "../views/products/editProduct");
-    res.render(ruta);
-  },
 };
 
 module.exports = controller;

@@ -11,75 +11,30 @@
     <h1 class="titulo">Productos</h1>
     
     <section class="lista-productos">
-      
-      <article class="producto">
-        <img src="https://www.karvi.com.ar/blog/wp-content/uploads/2020/10/208II3-850x567.jpg" alt="Auto">
-        <h2>Nombre del Auto</h2>
-        <p>Descripción breve del auto.</p>
-        <span class="precio">$20,000</span>
-        <a href="#" class="btn">Ver Detalles</a>
-      </article>
-      
-      <article class="producto">
-        <img src="https://www.karvi.com.ar/blog/wp-content/uploads/2020/10/208II3-850x567.jpg" alt="Auto">
-        <h2>Nombre del Auto</h2>
-        <p>Descripción breve del auto.</p>
-        <span class="precio">$20,000</span>
-        <a href="#" class="btn">Ver Detalles</a>
-      </article>
-      
-      <article class="producto">
-        <img src="https://www.karvi.com.ar/blog/wp-content/uploads/2020/10/208II3-850x567.jpg" alt="Auto">
-        <h2>Nombre del Auto</h2>
-        <p>Descripción breve del auto.</p>
-        <span class="precio">$20,000</span>
-        <a href="#" class="btn">Ver Detalles</a>
-      </article>
-      
-      <article class="producto" id="productoUno">
-        <img src="https://www.karvi.com.ar/blog/wp-content/uploads/2020/10/208II3-850x567.jpg" alt="Auto">
-        <h2>Nombre del Auto</h2>
-        <p>Descripción breve del auto.</p>
-        <span class="precio">$20,000</span>
-        <a href="#" class="btn">Ver Detalles</a>
-      </article>
+      <% productos.forEach((producto=>{ %>
+        <article class="producto">
+          <img src="<%= producto.img1 %>" alt="Auto">
+          <h2><%= producto.name%></h2>
+          <p><%= producto.descripcion %></p>
+          <span class="precio"><%= producto.price %> </span>
+          <a href="/detalleProd/<%=producto.id%>" class="btn">Ver Detalles</a>
+        </article>
+      <% })) %>
     </section>
-    
+      
     <h1 class="tituloRecomendado">Recomendado para tí</h1>
     
     <section class="lista-recomendados">
-      
-      <article class="producto">
-        <img src="https://www.karvi.com.ar/blog/wp-content/uploads/2020/10/208II3-850x567.jpg" alt="Auto">
-        <h2>Nombre del Auto</h2>
-        <p>Descripción breve del auto.</p>
-        <span class="precio">$20,000</span>
-        <a href="#" class="btn">Ver Detalles</a>
-      </article>
-      
-      <article class="producto">
-        <img src="https://www.karvi.com.ar/blog/wp-content/uploads/2020/10/208II3-850x567.jpg" alt="Auto">
-        <h2>Nombre del Auto</h2>
-        <p>Descripción breve del auto.</p>
-        <span class="precio">$20,000</span>
-        <a href="#" class="btn">Ver Detalles</a>
-      </article>
-      
-      <article class="producto">
-        <img src="https://www.karvi.com.ar/blog/wp-content/uploads/2020/10/208II3-850x567.jpg" alt="Auto">
-        <h2>Nombre del Auto</h2>
-        <p>Descripción breve del auto.</p>
-        <span class="precio">$20,000</span>
-        <a href="#" class="btn">Ver Detalles</a>
-      </article>
-      
-      <article class="producto" id="productoDos">
-        <img src="https://www.karvi.com.ar/blog/wp-content/uploads/2020/10/208II3-850x567.jpg" alt="Auto">
-        <h2>Nombre del Auto</h2>
-        <p>Descripción breve del auto.</p>
-        <span class="precio">$20,000</span>
-        <a href="#" class="btn">Ver Detalles</a>
-      </article>
+      <% productos.forEach((producto=>{ %>
+        <article class="producto">
+          <img src="<%= producto.img1 %>" alt="Auto">
+          <h2><%= producto.name%></h2>
+          <p><%= producto.descripcion %></p>
+          <span class="precio"><%= producto.price %> </span>
+          <a href="/detalleProd/<%=producto.id%>" class="btn">Ver Detalles</a>
+        </article>
+      <% })) %>   
+    
     </section>
     
   </main>

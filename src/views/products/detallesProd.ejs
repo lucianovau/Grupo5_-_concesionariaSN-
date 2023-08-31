@@ -9,21 +9,21 @@
     <main>
       <div class="contenedor">
       <section class="product-info">
-        <img class="img-principal" src="<%= img1 %>" alt="Imagen del Producto" class="product-image" width="700px" height="500px">
+        <img class="img-principal" src="<%= producto.img1 %>" alt="Imagen del Producto" class="product-image" width="700px" height="500px">
         <div class="product-details">
-              <h1 class="product-title"><%= title %> </h1>
-              <p class="product-description"><%= descripcion%></p>
+              <h1 class="product-title"><%= producto.name %> </h1>
+              <p class="product-description"><%= producto.descripcion%></p>
               <p class="product-price">Precio:</p>
-              <p class="product-p"><%= precio %></p>
+              <p class="product-p"><%= producto.price %></p>
         </div>
       </section>
       <section id="fotos" class="container">
         <div class="fotos">
-        <img src="<%= img2 %>" alt="foto-interior" width="150px" height="150px">
-        <img src="<%= img3 %>" alt="foto-lateral2" width="150px" height="150px">
-        <img src="<%= img4 %>" alt="foto-atras" width="150px" height="150px">
-        <img src="<%= img5 %>" alt="foto-adelante" width="150px" height="150px">
-        <img src="<%= img6 %>" alt="foto-360" width="150px" height="150px">
+        <img src="<%= producto.img2 %>" alt="foto-interior" width="150px" height="150px">
+        <img src="<%= producto.img3 %>" alt="foto-lateral2" width="150px" height="150px">
+        <img src="<%= producto.img4 %>" alt="foto-atras" width="150px" height="150px">
+        <img src="<%= producto.img5 %>" alt="foto-adelante" width="150px" height="150px">
+        <img src="<%= producto.img6 %>" alt="foto-360" width="150px" height="150px">
         </div>
         <div class="botones">
           <div class="botones-arriba">
@@ -36,11 +36,11 @@
       <section class="carac-tecn">
         <div class="cajas">
           <h2>CARACTERISTICAS</h2>
-          <div class="bloque"><%= caract %></div>
+          <div class="bloque"><%= producto.caract %></div>
           <h2>CONFORT</h2>
-          <div class="bloque"> <%= confort %></div>
+          <div class="bloque"> <%= producto.confort %></div>
           <h2>SEGURIDAD</h2>
-          <div class="bloque"><%= seguridad %></div>
+          <div class="bloque"><%= producto.seguridad %></div>
           <div class="ficha-tecnica">ficha tecnica</div>
       </section>
       </div>

@@ -10,14 +10,22 @@
   <%- include('../partials/header') %>
     <main>
       <h1>Creación de Productos</h1>
-      <form id="productForm" action="" method="post" enctype="multipart/form-data">
+      <form id="productForm" action="/productos/create" method="POST" enctype="multiport/form-data">
         <div class="posicionamientoForm">
           <label for="name">Nombre del producto:</label>
           <input type="text" id="name" name="name" required /><br /><br />
         </div>
         <div class="posicionamientoForm">
-          <label for="description">Descripción:</label>
-          <textarea id="description" name="description" required></textarea><br /><br />
+          <label for="marca">Marca:</label>
+          <input type="text" id="marca" name="marca" required /><br /><br />
+        </div>
+        <div class="posicionamientoForm">
+          <label for="modelo">Modelo:</label>
+          <input type="text" id="modelo" name="modelo" required /><br /><br />
+        </div>
+        <div class="posicionamientoForm">
+          <label for="descripcion">Descripción:</label>
+          <textarea id="descripcion" name="descripcion" required></textarea><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="image">Imagen:</label>
@@ -34,6 +42,10 @@
         <div class="posicionamientoForm">
           <label for="price">Precio:</label>
           <input type="number" id="price" name="price" step="0.01" required /><br /><br />
+        </div>
+        <div class="posicionamientoForm">
+          <label for="fichaTecnica">Ficha tecnica:</label>
+          <textarea id="fichaTecnica" name="fichaTecnica" required></textarea><br /><br />
         </div>
         <button id="botonGuardar" type="submit">Guardar Producto</button>
       </form>
