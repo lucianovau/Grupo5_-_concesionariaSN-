@@ -23,3 +23,12 @@ Aumentar el numero de reuniones semanales.
 -Continuar haciendo.
 Continuar comunicandonos, trabajando unidos para mejorar todo lo posible el trabajo.
 
+Retrospectiva del SPRINT4
+-Comenzar a hacer.
+El tablero de Trello es una herramienta muy util por lo que decidimos marcar en el los tiempos correspondientes a cada Sprint y tenerlo como recordatorio para mejorar los tiempos de trabajo.
+-Hacer más. 
+Aumentar el numero de reuniones semanales via Zoom o Meet. Este ultimo Sprint nos ha servido mas la comunicacion continua via Whatsapp que las reuniones pactadas.
+-Continuar haciendo.
+Continuar comunicandonos, trabajando unidos para mejorar todo lo posible el trabajo. Este Sprint estuvo acompañado de un modulo y temas complejos, por lo que nos ha sido de mucha ayuda apoyarnos entre compañeros para entender todos los temas y desarrollar de manera mas eficiente el proyecto. 
+
+
