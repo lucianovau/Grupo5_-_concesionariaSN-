@@ -10,7 +10,10 @@ Falta pequeños retoques de estilos, la actividad 7 del Sprint 3 y arreglar la a
 
 SPRINT 4
 ¿Que se hizo esta semana?
+Se realizaron las actividades, surgieron inconvenientes que se discutieron en pos de encontrar solucion.
 
 ¿se encontró con algún impedimento?
+Se detectaron pequeñas trabas que fueron resueltas luego de ser evaluadas en grupo.
 
 ¿Qué queda por hacer?
+Se terminaron en tiempo y forma las actividades.
