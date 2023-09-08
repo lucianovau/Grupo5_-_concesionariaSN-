@@ -4,14 +4,7 @@ const controller = {
     let ruta = path.resolve(__dirname, "../views/home");
     res.render(ruta);
   },
-  login: (req, res) => {
-    let ruta = path.resolve(__dirname, "../views/users/login");
-    res.render(ruta);
-  },
-  registro: (req, res) => {
-    let ruta = path.resolve(__dirname, "../views/users/register");
-    res.render(ruta);
-  },
+  
   cart: (req, res) => {
     let ruta = path.resolve(__dirname, "../views/products/productCart");
     res.render(ruta);
