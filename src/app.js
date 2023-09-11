@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json()); // permite parsear peticiones
 app.use(methodOverride('_method')) // permite usar routas con PUT y DELETE
 app.use(express.static(path.resolve(__dirname,  '../public'))); // pone de manera estatica la carpeta de public
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false })); // permite obtener la informacion enviada por POST
 app.use(logger('dev'));
 app.use(cookieParser());
 
@@ -23,11 +23,13 @@ app.set('views', './views'); // le deci a ejs que las plantillas estan en la car
 // router sistem
 const mainRutas = require('./routes/main')
 const productosRutas = require('./routes/productos');
-const detalleRutas = require('./routes/detalle')
+const detalleRutas = require('./routes/detalle');
+const userRutas = require('./routes/users');
 
 app.use('/', mainRutas);
 app.use('/productos', productosRutas);
 app.use('/detalleProd', detalleRutas);
+app.use('/user', userRutas);
 
 // levantar el servidor
 let port = process.env.PORT || 3000

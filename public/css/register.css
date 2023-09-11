@@ -85,6 +85,9 @@ main{
     top: 15px;
     right: 120px;
 }
+.text-error{
+    color: #E90027;
+}
 
 @media (min-width: 1028px){
     main{
