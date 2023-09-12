@@ -25,12 +25,12 @@ const validations = [
     body('email')
         .notEmpty().withMessage('Tienes que escribir un email').bail()
         .isEmail().withMessage('Debes ingresar un formato válido'),
-    body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña'),
-    body('confirmarContraseña').notEmpty().withMessage('Tienes que repetir la contraseña'),
+    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('confirmarPassword').notEmpty().withMessage('Tienes que repetir la contraseña'),
     body('terminos').notEmpty().withMessage('Tienes que aceptar los terminos y condiciones'),
     body('foto').custom(((value, { req })=>{
         let file = req.file;
-        let acceptedExtension = ['.jpg', '.png', '.gif']
+        let acceptedExtension = ['.jpg', '.png', '.gif', '.jpeg']
 
         if(!file){
             throw new Error('Tienes que subir una imagen');

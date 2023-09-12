@@ -22,8 +22,7 @@
         <h1>Crea tu cuenta</h1>
         </p>
         <div>
-          <form action="/registro" method="POST" enctype="multipart/form-data" action="/user/register" method="POST"
-            enctype="multipart/form-data" id="registro">
+          <form action="/user/register" method="POST" enctype="multipart/form-data" id="registro">
             <div class="grupo-formulario">
               <label for="nombre">Nombre:</label>
               <input type="text" id="nombre" name="nombre" class="input"
@@ -65,7 +64,7 @@
             </div>
             <div class="grupo-formulario">
               <label for="contraseña">Contraseña:</label>
-              <input type="contraseña" id="contraseña" name="contraseña" class="input">
+              <input type="password" id="contraseña" name="password" class="input">
               <% if(locals.errors && errors.contraseña){ %>
                 <div class="text-error">
                   <%= errors.contraseña.msg %>
@@ -74,7 +73,7 @@
             </div>
             <div class="grupo-formulario">
               <label for="confirmarContraseña">Confirmar contraseña:</label>
-              <input type="contraseña" id="confirmarContraseña" class="input" name="confirmar-contraseña">
+              <input type="password" id="confirmarContraseña" class="input" name="confirmarPassword">
               <% if(locals.errors && errors.confirmarContraseña){ %>
                 <div class="text-error">
                   <%= errors.confirmarContraseña.msg %>

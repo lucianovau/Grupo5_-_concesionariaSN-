@@ -43,5 +43,15 @@
   "password": "xxx-005",
   "category": "usuario",
   "image": ""
+ },
+ {
+  "id": 6,
+  "nombre": "lauri",
+  "apellido": "wittmer",
+  "email": "laureanowittmer@gmail.com",
+  "password": "$2a$10$OD4schsIpgx64Do2mQcbDO8FpBSd9mAnvFe6/VIv49mm9b1jWdLu2",
+  "confirmarPassword": "$2a$10$HpK8yVproJh1ZV8Ehu7hqeUAOI6q1tpoFgnbPz5go6dWAQdXHXrJK",
+  "terminos": "on",
+  "foto": "1694484733099_img.png"
  }
 ]
