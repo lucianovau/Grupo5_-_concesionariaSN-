@@ -45,7 +45,9 @@ const validations = [
 ]
 
 router.get("/login", controller.login);
+router.post("/login", controller.loginProcess);
 router.get("/register", controller.register);
 router.post("/register", uploadFile.single('foto'), validations , controller.processRegister);
+
 
 module.exports = router

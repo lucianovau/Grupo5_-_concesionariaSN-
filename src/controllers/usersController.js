@@ -42,6 +42,21 @@ const controller = {
         res.render(ruta);
       },
     
+    loginProcess: (req,res) => {
+        let userToLogin = User.findByField("email", req.body.email);
+        if(userToLogin) {
+        let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+        if(passwordOk) {
+            return res.send("Ingresando");
+          }
+          return res.render("login",{
+            errors: {
+                email: {msg: "Las credenciales son invalidas"}
+            }
+          });
+          }
+        return res.redirect("/");
+      },
 };
 
 module.exports = controller;

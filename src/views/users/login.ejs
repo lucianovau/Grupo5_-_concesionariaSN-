@@ -10,11 +10,20 @@
     <section id="login">
       <h2>Iniciar Sesión</h2>
         <div>
-          <form id="Iniciar">
+          <form id="Iniciar" action="/user/login" method="POST" enctype="multipart/form-data">
             <input type="email" id="email" name="email" required class="inicio iniput" placeholder="Email">
-      
-            <input type="contraseña" id="contraseña" name="contraseña" required class="inicio iniput" placeholder="Contraseña">
-            
+            <% if(locals.errors && errors.email){ %>
+              <div class="text-error">
+                <%= errors.email.msg %>
+              </div>
+              <% } %>
+            <input type="password" id="contraseña" name="contraseña" required class="inicio iniput" placeholder="Contraseña">
+            <% if(locals.errors && errors.password){ %>
+              <div class="text-error">
+                <%= errors.password.msg %>
+              </div>
+              <% } %>
+
             <p class="inicio">
               <input type="checkbox" id="sesion-iniciada" name="sesion-iniciada" class="iniput"> 
               <label for="sesion-iniciada">Mantener sesión iniciada</label>
