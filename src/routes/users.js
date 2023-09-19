@@ -48,6 +48,6 @@ router.get("/login", controller.login);
 router.post("/login", controller.loginProcess);
 router.get("/register", controller.register);
 router.post("/register", uploadFile.single('foto'), validations , controller.processRegister);
-
+router.get("/profile", controller.profile);
 
 module.exports = router

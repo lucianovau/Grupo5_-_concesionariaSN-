@@ -47,7 +47,9 @@ const controller = {
         if(userToLogin) {
         let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
         if(passwordOk) {
-            return res.send("Ingresando");
+            delete userToLogin.password;
+            req.session.userLogged = userToLogin;
+            return res.redirect("profile");
           }
           return res.render("login",{
             errors: {
@@ -57,6 +59,13 @@ const controller = {
           }
         return res.redirect("/");
       },
+
+    profile: (req, res) => {
+        console.log("Estas en profile");
+        console.log(req.session);
+        return res.redirect("profile");
+    }   
 };
+
 
 module.exports = controller;

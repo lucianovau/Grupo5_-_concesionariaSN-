@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('../partials/head') %>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <%- include('../partials/header') %>
+  <main>
+    <section>
+    <form id="Perfil" action="/user/profile" method="GET" enctype="multipart/form-data">
+
+      <h1 id="userProfile" class="userProfile">Perfil Usuario</h1>
+      <img id="userImg" class="userImg" src="./img/logo.png">
+      <div id="mailContainer" class="mailContainer">
+        <p>Email: abc123</p>
+      </div>
+    </form>
+</section>
+  </main>
+ 
+  <%- include('../partials/footer') %>
+</body>
+</html>

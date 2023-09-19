@@ -4,12 +4,18 @@ const path = require('path');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const session = require('express-session');
 
 // express()
 const app = express();
 
 // middlewares
 app.use(express.json()); // permite parsear peticiones
+app.use(session({
+    secret: "It's a secret",
+    resave: false,
+    saveUninitialized: false, 
+})) ;
 app.use(methodOverride('_method')) // permite usar routas con PUT y DELETE
 app.use(express.static(path.resolve(__dirname,  '../public'))); // pone de manera estatica la carpeta de public
 app.use(express.urlencoded({ extended: false })); // permite obtener la informacion enviada por POST
