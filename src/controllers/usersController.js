@@ -3,6 +3,9 @@ const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
 const User = require('../models/user');
 
+const profileRoute = path.resolve(__dirname, "../views/users/profile"); 
+
+
 const rutaRegistro = path.resolve(__dirname, "../views/users/register");
 
 const controller = {
@@ -49,7 +52,7 @@ const controller = {
         if(passwordOk) {
             delete userToLogin.password;
             req.session.userLogged = userToLogin;
-            return res.redirect("profile");
+            return res.redirect(profileRoute);
           }
           return res.render("login",{
             errors: {
@@ -63,7 +66,7 @@ const controller = {
     profile: (req, res) => {
         console.log("Estas en profile");
         console.log(req.session);
-        return res.redirect("profile");
+        return res.render(profileRoute);
     }   
 };
 
