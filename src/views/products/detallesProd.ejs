@@ -1,68 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <%- include('../partials/head') %>
+  <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/detallesProd.css">
 </head>
+
 <body>
   <%- include('../partials/header') %>
     <main>
       <div class="contenedor">
-      <section class="product-info">
-        <img class="img-principal" src="<%= producto.img1 %>" alt="Imagen del Producto" class="product-image" width="700px" height="500px">
-        <div class="product-details">
-              <h1 class="product-title"><%= producto.name %> </h1>
-              <p class="product-description"><%= producto.descripcion%></p>
-              <p class="product-price">Precio:</p>
-              <p class="product-p"><%= producto.price %></p>
-        </div>
-      </section>
-      <section id="fotos" class="container">
-        <div class="fotos">
-        <img src="<%= producto.img2 %>" alt="foto-interior" width="150px" height="150px">
-        <img src="<%= producto.img3 %>" alt="foto-lateral2" width="150px" height="150px">
-        <img src="<%= producto.img4 %>" alt="foto-atras" width="150px" height="150px">
-        <img src="<%= producto.img5 %>" alt="foto-adelante" width="150px" height="150px">
-        <img src="<%= producto.img6 %>" alt="foto-360" width="150px" height="150px">
-        </div>
-        <div class="botones">
-          <div class="botones-arriba">
-          <button type="submit" class="boton">Consultar</button>
-          <button type="submit" class="boton">Compartir</button>
+        <section class="product-info">
+          <img class="img-principal" src="<%= producto.img %>" alt="Imagen del Producto" class="product-image"
+            width="700px" height="500px">
+          <div class="product-details">
+            <h1 class="product-title">
+              <%= producto.name %>
+            </h1>
+            <p class="product-description">
+              <%= producto.descripcion%>
+            </p>
+            <p class="product-price">Precio:</p>
+            <p class="product-p">
+              <%= producto.price %>
+            </p>
           </div>
-          <button type="submit" class="boton-destacado">Reservar</button>
-        </div>
-      </section>
-      <section class="carac-tecn">
-        <div class="cajas">
-          <h2>CARACTERISTICAS</h2>
-          <div class="bloque"><%= producto.caract %></div>
-          <h2>CONFORT</h2>
-          <div class="bloque"> <%= producto.confort %></div>
-          <h2>SEGURIDAD</h2>
-          <div class="bloque"><%= producto.seguridad %></div>
-          <div class="ficha-tecnica">ficha tecnica</div>
-      </section>
+        </section>
+        <section id="fotos" class="container">
+          <div class="fotos">
+            <img src="<%= producto.img2 %>" alt="foto-interior" width="150px" height="150px">
+            <img src="<%= producto.img3 %>" alt="foto-lateral2" width="150px" height="150px">
+            <img src="<%= producto.img4 %>" alt="foto-atras" width="150px" height="150px">
+            <img src="<%= producto.img5 %>" alt="foto-adelante" width="150px" height="150px">
+            <img src="<%= producto.img6 %>" alt="foto-360" width="150px" height="150px">
+          </div>
+          <div class="botones">
+            <div class="botones-arriba">
+              <button type="submit" class="boton">Consultar</button>
+              <button type="submit" class="boton">Compartir</button>
+            </div>
+            <button type="submit" class="boton-destacado">Reservar</button>
+          </div>
+        </section>
+        <section class="carac-tecn">
+          <div class="cajas">
+            <h2>CARACTERISTICAS</h2>
+            <div class="bloque">
+              <%= producto.caract %>
+            </div>
+            <h2>CONFORT</h2>
+            <div class="bloque">
+              <%= producto.confort %>
+            </div>
+            <h2>SEGURIDAD</h2>
+            <div class="bloque">
+              <%= producto.seguridad %>
+            </div>
+            <div class="ficha-tecnica">ficha tecnica</div>
+        </section>
       </div>
     </main>
     <%- include('../partials/footer') %>
-    <div id="popup-container">
-      <div class="popup-content">
+      <div id="popup-container">
+        <div class="popup-content">
           <h2>Formulario de Contacto</h2>
           <form id="contact-form">
-              <label for="name">Nombre:</label>
-              <input type="text" id="name" required>
-              <label for="email">Correo electrónico:</label>
-              <input type="email" id="email" required>
-              <label for="message">Mensaje:</label>
-              <textarea id="message" required></textarea>
-              <button type="submit">Enviar</button>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Enviar</button>
           </form>
           <button id="close-popup-btn">Cerrar</button>
+        </div>
       </div>
-  </div>
-  
-  <script src="../script.js"></script>
-</body>
-</html>
 
+      <script src="../script.js"></script>
+</body>
+
+</html>

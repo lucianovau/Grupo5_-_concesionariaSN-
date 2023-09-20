@@ -61,7 +61,7 @@ const controller = {
             }
           });
           }
-        return res.redirect("/");
+        return res.redirect("/user/profile");
       },
 
     profile: (req, res) => {
