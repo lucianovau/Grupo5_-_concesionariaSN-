@@ -2,16 +2,32 @@
     <div class="head">
       <img src="/img/logo2.png" alt="Logo">
         <div class="iconos">
-        <a href="user/login"><i class="fas fa-user-circle" style="color: #ff0000;"></i></a>
-        <a href="productCart"><i class="fas fa-shopping-cart" style="color: #ff0000;"></i></a>
+        <a href="<% if(locals.rutaproducto){ %>
+          login
+      <% }else{ %>
+          user/login
+     <% } %>"><i class="fas fa-user-circle" style="color: #ff0000;"></i></a>
+        <a href="<% if(locals.rutaproducto){ %>
+          ../productCart
+      <% }else{ %>
+        productCart
+     <% } %>"><i class="fas fa-shopping-cart" style="color: #ff0000;"></i></a>
         <a href="" id="burger"><i class="fas fa-bars" style="color: #ff0000;"></i></a> 
       </div>   
     </div>
     <div id="barra">
       <nav>
         <ul>
-          <li><a href="home">Inicio</a></li>
-          <li><a href="productos">Productos</a></li>
+          <li><a href="<% if(locals.rutaproducto){ %>
+              ../home
+          <% }else{ %>
+              home
+         <% } %>">Inicio</a></li>
+          <li><a href="<% if(locals.rutaproducto){ %>
+            ../productos
+        <% }else{ %>
+            productos
+       <% } %>">Productos</a></li>
           <li><a href="#">Contacto</a></li>
           <li><a href="#">Ayuda</a></li>
         </ul>

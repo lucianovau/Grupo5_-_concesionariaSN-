@@ -7,9 +7,10 @@ const profileRoute = path.resolve(__dirname, "../views/users/profile");
 
 
 const rutaRegistro = path.resolve(__dirname, "../views/users/register");
+let rutaproducto = true;
 
 const controller = {
-    register: (req, res) => { res.render(rutaRegistro); },
+    register: (req, res) => { res.render(rutaRegistro, {rutaproducto}); },
 
 
     processRegister: (req, res) => {
@@ -42,7 +43,7 @@ const controller = {
     },
     login: (req, res) => {
         let ruta = path.resolve(__dirname, "../views/users/login");
-        res.render(ruta);
+        res.render(ruta, {rutaproducto});
       },
     
     loginProcess: (req,res) => {
@@ -66,7 +67,7 @@ const controller = {
     profile: (req, res) => {
         console.log("Estas en profile");
         console.log(req.session);
-        return res.render(profileRoute);
+        return res.render(profileRoute, {rutaproducto});
     }   
 };
 
