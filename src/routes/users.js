@@ -44,7 +44,14 @@ const validations = [
         }))
 ]
 
-router.get("/login", controller.login);
+function guestMiddleware(req, res, next) {
+    if (req.session.userLogged) {
+        return res.redirect('/profile');
+    }
+    next();
+}
+
+router.get("/login", guestMiddleware, controller.login);
 router.post("/login", controller.loginProcess);
 router.get("/register", controller.register);
 router.post("/register", uploadFile.single('foto'), validations , controller.processRegister);
