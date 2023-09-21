@@ -44,17 +44,13 @@ const validations = [
         }))
 ]
 
-function guestMiddleware(req, res, next) {
-    if (req.session.userLogged) {
-        return res.redirect('/profile');
-    }
-    next();
-}
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 router.get("/login", guestMiddleware, controller.login);
 router.post("/login", controller.loginProcess);
-router.get("/register", controller.register);
+router.get("/register", guestMiddleware, controller.register);
 router.post("/register", uploadFile.single('foto'), validations , controller.processRegister);
 router.get("/profile", controller.profile);
+
 
 module.exports = router
