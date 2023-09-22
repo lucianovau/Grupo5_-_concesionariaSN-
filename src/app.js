@@ -10,6 +10,10 @@ const session = require('express-session');
 const app = express();
 
 // middlewares
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
+
+app.use(userLoggedMiddleware);
 app.use(express.json()); // permite parsear peticiones
 app.use(session({
     secret: "It's a secret",

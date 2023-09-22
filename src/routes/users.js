@@ -45,12 +45,14 @@ const validations = [
 ]
 
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware= require('../middlewares/authMiddleware');
 
 router.get("/login", guestMiddleware, controller.login);
 router.post("/login", controller.loginProcess);
 router.get("/register", guestMiddleware, controller.register);
 router.post("/register", uploadFile.single('foto'), validations , controller.processRegister);
-router.get("/profile", controller.profile);
+router.get("/profile/", authMiddleware, controller.profile);
+router.get("/logout/", controller.logout);
 
 
 module.exports = router

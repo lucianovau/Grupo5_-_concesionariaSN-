@@ -68,7 +68,12 @@ const controller = {
         console.log("Estas en profile");
         console.log(req.session);
         return res.render(profileRoute, {rutaproducto});
-    }   
+    },
+    
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/');
+    }
 };
 
 
