@@ -57,14 +57,12 @@ video{
     flex-direction: column;
     align-items: flex-start;
     /* margin: 0px -30px; */
-
+    
     
 }
 
 .iconos ul{
-    
-    list-style: none;
-    display: none;
+    /* display: none; */
     margin: auto;
     /* background-color: aqua; */
     padding: 10px;
@@ -74,19 +72,18 @@ video{
     width: 100%;
 }
 
-.iconos li:hover > .listaMenuPerfil ul{
-    display: block;
-}
-
-
 .listaMenuPerfil{
     border: 1px solid white;
     width: auto;
     color: #8d99ae;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     margin: 0px -30px; 
+}
+
+.iconos li:hover > .listaMenuPerfil{
+    display: flex;
 }
 
 .iconos a{
