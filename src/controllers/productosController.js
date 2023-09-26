@@ -1,5 +1,6 @@
 let fs = require('fs');
 let path = require('path');
+const multer = require('multer');
 
 const productsFilePath = path.resolve(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -17,8 +18,8 @@ const controller = {
    },
    // Guarda el nuevo producto
    store: (req, res) => {
-    productos.push({
-        id: productos[productos.length -1].id + 1,
+    const newProduct = {
+        id: productos.length + 1,
         name: req.body.name,
         marca: req.body.marca,
         modelo: req.body.modelo,
@@ -26,8 +27,12 @@ const controller = {
         category: req.body.category,
         color: req.body.colors,
         price: req.body.price,
-        fichaTecnica: req.body.fichaTecnica
-    })
+        fichaTecnica: req.body.fichaTecnica,
+        image: req.body.imageProduct // Guarda la ruta de la imagen
+       };
+    
+     productos.push(newProduct);   
+
     let productosJSON = JSON.stringify(productos)
     fs.writeFileSync(productsFilePath, productosJSON)
     res.redirect('/productos')
