@@ -28,8 +28,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
-
-function mostrarBotonHome(){
-    // document.getElementById('texto-home').style.display ="block";
-    window.alert("hola! soy un cartel!")
-}
