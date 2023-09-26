@@ -2,13 +2,22 @@
     <div class="head">
       <img src="/img/logo2.png" alt="Logo">
         <div class="iconos">
-        <a href="<% if(locals.rutaproducto){ %>
-          login
-      <% }else if(locals.rutaDetalle){ %>
-          ../user/login
-       <% }else{ %>
-          user/login
-     <% } %>"><i class="fas fa-user-circle" style="color: #ff0000;"></i></a>
+          
+          <li>
+          <a href="<% if(locals.rutaproducto){ %>
+            login
+            <% }else if(locals.rutaDetalle){ %>
+              ../user/login
+              <% }else{ %>
+                user/login
+                <% } %>"><i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
+              </a>
+              <div class="listaMenuPerfil">
+
+                <ul><a href="#">Iniciar Sesión</a></ul>
+                <ul><a href="#">Registrarse</a></ul>
+              </div>
+              </li>
         <a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
           ../productCart
       <% }else{ %>
