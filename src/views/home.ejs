@@ -73,9 +73,14 @@
           <img src="/img/lambo/lambo1.jpg" alt="">
           <article> 
           <h1>CONSECIONARIA SN</h1>
-          <p>En CONCESIONARIA SN, comprendemos que la compra de un automóvil es una decisión importante. Nuestro compromiso es hacer que todo el proceso sea lo más sencillo y cómodo posible para ti. Contamos con un amplio catálogo de vehículos de todas las marcas y modelos, para que encuentres el automóvil que se adapte perfectamente a tus necesidades y gustos.
-
-            Nuestro equipo de expertos en ventas está aquí para brindarte asesoramiento personalizado y responder a todas tus preguntas. Nos enorgullece ofrecer opciones de financiamiento flexibles y asequibles que se ajusten a tu presupuesto. Además, nuestras instalaciones están diseñadas pensando en tu comodidad, con áreas de espera cómodas y servicios adicionales que hacen que la experiencia de compra sea excepcional.</p>
+          <button id="btnHomeTexto" class="btn-home">CONOCENOS</button>
+          <div id="texto-home" class="texto-home">
+            <span class="cambiarTexto" id="idTexto">
+              <p>En CONCESIONARIA SN, comprendemos que la compra de un automóvil es una decisión importante. Nuestro compromiso es hacer que todo el proceso sea lo más sencillo y cómodo posible para ti. Contamos con un amplio catálogo de vehículos de todas las marcas y modelos, para que encuentres el automóvil que se adapte perfectamente a tus necesidades y gustos.</p>
+              <p>Nuestro equipo de expertos en ventas está aquí para brindarte asesoramiento personalizado y responder a todas tus preguntas. Nos enorgullece ofrecer opciones de financiamiento flexibles y asequibles que se ajusten a tu presupuesto. Además, nuestras instalaciones están diseñadas pensando en tu comodidad, con áreas de espera cómodas y servicios adicionales que hacen que la experiencia de compra sea excepcional
+              </p>
+            </span>
+          </div>
         </article>
         </section>
       </main>
@@ -102,6 +107,17 @@
         el: ".swiper-pagination",
       },
     });
+  </script>
+
+  <script>
+    let btnHome = document.getElementById('btnHomeTexto');
+    let btnTexto = document.getElementById('idTexto');
+
+    btnHome.addEventListener('click', function(){
+        btnTexto.classList.toggle('mostrarTexto');
+      });
+    
+
   </script>
     
 </body>

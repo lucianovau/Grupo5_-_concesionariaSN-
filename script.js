@@ -26,4 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         // Aquí puedes agregar el código para enviar los datos del formulario.
     });
+
 });
+
+function mostrarBotonHome(){
+    // document.getElementById('texto-home').style.display ="block";
+    window.alert("hola! soy un cartel!")
+}
