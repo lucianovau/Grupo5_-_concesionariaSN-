@@ -23,6 +23,6 @@ router.get('/', controllerProductos.detalleId);
 router.get('/:id', controllerProductos.detalleId);
 router.get('/:id/edit', controllerProductos.edit);
 router.put('/:id/edit', upload.single('imageUsuario'), controllerProductos.store);
-router.delete('/:id/edit', controllerProductos.delete);
+router.get('/:id/delete', controllerProductos.delete);
 
 module.exports = router

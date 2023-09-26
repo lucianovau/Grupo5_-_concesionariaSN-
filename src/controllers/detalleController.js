@@ -4,13 +4,15 @@ let path = require('path');
 const productsFilePath = path.resolve(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const rutaDetalle = true
+
 const controller = {
     // Muestra el detalle de un producto 
     detalleId: (req, res)=>{
         let ruta = path.resolve(__dirname, '../views/products/detallesProd')
         let idProd = req.params.id || 1;
         let producto = productos[idProd - 1];
-        res.render(ruta, {producto})
+        res.render(ruta, {producto, rutaDetalle})
    },
    // Muestra el formulario de edicion
    edit: (req, res) => {

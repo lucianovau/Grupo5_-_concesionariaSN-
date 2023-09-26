@@ -186,4 +186,32 @@ main{
 	.info-extra img{
 		height: 100%;
 	}
+  .tarjetas{
+    flex-wrap: wrap;
+  }
+}
+@media ((max-width:839px)){
+  .conteCard{
+      bottom: 100px;
+  }
+  .imgCard{
+     height: 150px;
+  }
+.info-extra img{
+  height: 100%;
+}
+.info-extra {
+  margin-bottom: 50px
+}
+.tarjetas{
+  flex-wrap: wrap;
+
+}
+.conteCard{
+  margin-top: 70px;
+}
+.d-block{
+ height: 300px;
+ object-fit: cover;
+}
 }
