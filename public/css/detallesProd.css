@@ -78,6 +78,7 @@ main {
 #fotos img {
   margin: 2px;
   position: relative;
+  object-fit: cover;
 }
 #fotos button {
   position: relative;

@@ -189,6 +189,7 @@ main{
 	.info-extra img{
 		height: 100%;
 	}
+<<<<<<< HEAD
 }
 
 @media ((max-width:767px)){
@@ -276,3 +277,34 @@ main{
           padding-top: 10px;
         }
       }
+=======
+  .tarjetas{
+    flex-wrap: wrap;
+  }
+}
+@media ((max-width:839px)){
+  .conteCard{
+      bottom: 100px;
+  }
+  .imgCard{
+     height: 150px;
+  }
+.info-extra img{
+  height: 100%;
+}
+.info-extra {
+  margin-bottom: 50px
+}
+.tarjetas{
+  flex-wrap: wrap;
+
+}
+.conteCard{
+  margin-top: 70px;
+}
+.d-block{
+ height: 300px;
+ object-fit: cover;
+}
+}
+>>>>>>> f1dda2520373ee131599dad97507d17e791658ec

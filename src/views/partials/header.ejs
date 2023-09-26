@@ -4,10 +4,12 @@
         <div class="iconos">
         <a href="<% if(locals.rutaproducto){ %>
           login
-      <% }else{ %>
+      <% }else if(locals.rutaDetalle){ %>
+          ../user/login
+       <% }else{ %>
           user/login
      <% } %>"><i class="fas fa-user-circle" style="color: #ff0000;"></i></a>
-        <a href="<% if(locals.rutaproducto){ %>
+        <a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
           ../productCart
       <% }else{ %>
         productCart
@@ -18,12 +20,12 @@
     <div id="barra">
       <nav>
         <ul>
-          <li><a href="<% if(locals.rutaproducto){ %>
+          <li><a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
               ../home
           <% }else{ %>
               home
          <% } %>">Inicio</a></li>
-          <li><a href="<% if(locals.rutaproducto){ %>
+          <li><a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
             ../productos
         <% }else{ %>
             productos
