@@ -26,7 +26,13 @@ const validations = [
         .notEmpty().withMessage('Tienes que escribir un email').bail()
         .isEmail().withMessage('Debes ingresar un formato válido'),
     body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-    body('confirmarPassword').notEmpty().withMessage('Tienes que repetir la contraseña'),
+    body('confirmarPassword').notEmpty().withMessage('Tienes que repetir la contraseña')
+        .bail().custom((value, { req }) => {
+        if (value !== req.body.password) {
+            throw new Error("las contraseñas no coinciden");
+        }
+        return true;
+    }),
     body('terminos').notEmpty().withMessage('Tienes que aceptar los terminos y condiciones'),
     body('foto').custom(((value, { req })=>{
         let file = req.file;
@@ -51,8 +57,8 @@ router.get("/login", guestMiddleware, controller.login);
 router.post("/login", controller.loginProcess);
 router.get("/register", guestMiddleware, controller.register);
 router.post("/register", uploadFile.single('foto'), validations , controller.processRegister);
-router.get("/profile/", authMiddleware, controller.profile);
-router.get("/logout/", controller.logout);
+router.get("/profile", authMiddleware, controller.profile);
+router.get("/logout", controller.logout);
 
 
 module.exports = router

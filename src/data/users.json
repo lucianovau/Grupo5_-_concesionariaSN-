@@ -53,5 +53,45 @@
   "confirmarPassword": "$2a$10$HpK8yVproJh1ZV8Ehu7hqeUAOI6q1tpoFgnbPz5go6dWAQdXHXrJK",
   "terminos": "on",
   "foto": "1694484733099_img.png"
+ },
+ {
+  "id": 7,
+  "nombre": "graciela",
+  "apellido": "fondato",
+  "email": "gracielafondato@gmail.com",
+  "password": "$2a$10$r6ovUx1f4XdSppvKJa/Znerds/RYdvdQjyd.z4l7qYiWTNWEDDkv2",
+  "confirmarPassword": "$2a$10$HPm2aCL/RKgoc6RJ01jGqeJ/sheMewhT0.RmpwSbtOlAV/spMxy7i",
+  "terminos": "on",
+  "foto": "1695751415967_img.png"
+ },
+ {
+  "id": 8,
+  "nombre": "graciela",
+  "apellido": "fondato",
+  "email": "grfondato@gmail.com",
+  "password": "$2a$10$TY.81ex1mpiTb5i6y4RoEet/xGb4s1rXMOZ59vMFse3RFIO9aIpOO",
+  "confirmarPassword": "$2a$10$CEAkq3qe8VVnn94/qqRNe.hOtfmRY5i/MXKbnjsEXXAVnCLtCXP4K",
+  "terminos": "on",
+  "foto": "1695751675549_img.png"
+ },
+ {
+  "id": 9,
+  "nombre": "graciela",
+  "apellido": "fondato",
+  "email": "grfondat@gmail.com",
+  "password": "$2a$10$DIvd09B.TJvWvLqawuevWOgalO04CTgCpAiRdsAOWYoyacEJQDfsW",
+  "confirmarPassword": "$2a$10$NuFCbhPF701YzPjqGkS1COTfG62Dr1m1MG/Dm5EAoBGDHEypBWsTu",
+  "terminos": "on",
+  "foto": "1695751726872_img.png"
+ },
+ {
+  "id": 10,
+  "nombre": "graciela",
+  "apellido": "fondato",
+  "email": "grfondt@gmail.com",
+  "password": "$2a$10$Vw/9SB1g6/83ZMQdApnKhuqma3xjvln8WkqmhsaCyaW8fqz4E2mqm",
+  "confirmarPassword": "$2a$10$FG/rGD/YtV2IFMwe0W6woubTtiGOzRcRYv.USWWxMzXJw7YCoIBP2",
+  "terminos": "on",
+  "foto": "1695751792871_img.png"
  }
 ]

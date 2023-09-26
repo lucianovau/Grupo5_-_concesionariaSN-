@@ -39,7 +39,8 @@ const controller = {
             password: bcrypt.hashSync(req.body.password,10),
             confirmarPassword: bcrypt.hashSync(req.body.confirmarPassword,10)
 } 
-         User.create(nuevoUsuario);
+        User.create(nuevoUsuario);
+        return res.redirect("/");
     },
     login: (req, res) => {
         let ruta = path.resolve(__dirname, "../views/users/login");

@@ -64,19 +64,19 @@
             </div>
             <div class="grupo-formulario">
               <label for="contraseña">Contraseña:</label>
-              <input type="password" id="contraseña" name="password" class="input">
-              <% if(locals.errors && errors.contraseña){ %>
+              <input type="password" id="password" name="password" class="input">
+              <% if(locals.errors && errors.password){ %>
                 <div class="text-error">
-                  <%= errors.contraseña.msg %>
+                  <%= errors.password.msg %>
                 </div>
                 <% } %>
             </div>
             <div class="grupo-formulario">
               <label for="confirmarContraseña">Confirmar contraseña:</label>
-              <input type="password" id="confirmarContraseña" class="input" name="confirmarPassword">
-              <% if(locals.errors && errors.confirmarContraseña){ %>
+              <input type="password" id="confirmarPassword" class="input" name="confirmarPassword">
+              <% if(locals.errors && errors.confirmarPassword){ %>
                 <div class="text-error">
-                  <%= errors.confirmarContraseña.msg %>
+                  <%= errors.confirmarPassword.msg %>
                 </div>
                 <% } %>
             </div>
