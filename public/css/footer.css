@@ -1,3 +1,9 @@
+/* @media ((min-width:768px)){
+    #Copyright{
+        justify-content: space-evenly;
+    }
+} */
+
 footer{
     background: linear-gradient(black, 80% , #E90027 );
     display: flex;
@@ -32,4 +38,43 @@ a{
 .fab{
     font-size: 1.5rem;
     
+}
+
+/* TABLET */
+
+@media ((min-width: 361px)){
+    #Copyright{
+        justify-content: normal;
+    }
+}
+
+/* CELULAR */
+
+@media ((max-width: 361px)){
+    footer{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        position: relative;
+    }
+
+    #Copyright{
+        height: auto;
+        width: 95%;
+    }
+
+    #Copyright p {
+        width: 100%;
+    }
+    
+    #Copyright h4 {
+        padding: 12px 0px;
+        font-size: 1.2rem;
+    }
+
+    #sociales{
+        width: 60%;
+    }
+
+
 }

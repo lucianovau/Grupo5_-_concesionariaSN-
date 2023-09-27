@@ -73,6 +73,7 @@ video{
 }
 
 .listaMenuPerfil{
+    
     border: 1px solid white;
     width: auto;
     color: #8d99ae;
@@ -133,11 +134,6 @@ li a{
     font-size: 25px;
 }
 
-@media (max-width: 508px){
-    .head img{
-        display: none;
-    }
-}
 @media (min-width: 768px){
     #barra{
         display: flex;
@@ -175,21 +171,60 @@ li a{
     .fas{
         font-size: 3.5rem;
         padding: 15px;
-     }
+    }
     .fa-search{
         font-size: 1rem;
     }
-   .head{
-    height: 10rem;
-   
-   }
-   #burger{
-    display: none;
-   }
+    .head{
+        height: 10rem;
+        
+    }
+    #burger{
+        display: none;
+    }
 }
 @media (min-width: 1024px){
     .head{
         height: 15rem;
         margin-top: 0px;
-       }
+    }
+}
+    
+/* CELULAR */
+    
+@media (max-width: 360px){
+    
+    #burger{
+        display: none;
+    }
+
+    .head{
+        padding: 10px 0px;
+    }
+
+    .head img{
+        width: 50%;
+        margin: auto 0px;
+    }
+
+
+    .iconos {
+        width: 50%;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    .iconos a{
+        margin: 10px;
+        width: auto;
+    }
+
+    #barra{
+        position: relative;
+        z-index: 10;
+    }
+
+    header nav{
+        display: none;
+    }
 }
