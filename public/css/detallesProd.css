@@ -426,6 +426,10 @@ button {
 
 @media (max-width: 360px){
 
+  #fotos img {
+    width: 40%;
+  }
+
   .bloque{
     width: 100%;
   }
