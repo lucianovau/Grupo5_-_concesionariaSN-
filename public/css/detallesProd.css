@@ -69,12 +69,7 @@ main {
   position: relative;
   height: auto;
 }
-#fotos {
-  position: relative;
-  bottom: 62%;
-  display: flex;
-  width: 100%;
-}
+
 #fotos img {
   margin: 2px;
   position: relative;
@@ -82,33 +77,44 @@ main {
 }
 #fotos button {
   position: relative;
-  left: 22%;
-  margin: 0px 30px;
+  margin: 5px 25px;
 }
 
 .container {
+  max-width: max-content;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* bottom: 62%; */
+}
+
+.contenedorImgBtn{
+  width: 100%;
 }
 
 .fotos {
   display: flex;
+  width: 65%;
 }
 
 .fotos img {
   margin-right: 10px;
   padding: 10px;
+  width: 20%;
 }
 
 .fotos img:hover {
   transform: scale(1.5);
+  z-index: 5;
 }
 .botones {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+
 .botones-arriba {
   display: flex;
   gap: 10px; /* Espacio entre los botones "Consultar" y "Compartir" */
@@ -146,6 +152,8 @@ main {
 .carac-tecn {
   width: 100%;
   height: 100%;
+  padding-bottom: 20px;
+  padding-top: 30px;
   background-size: cover;
 }
 
@@ -166,24 +174,45 @@ main {
 }
 .cajas {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  padding-right: 150px;
+  /* padding-right: 150px; */
 }
 
+.contenedorDetalles{
+  width: 30%;
+  display: contents;
+}
+
+.h2Detalles{
+  position: relative;
+  /* height: 400px; */
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  /* top: 0; */
+  /* bottom: 0; */
+  /* right: 0; */
+  /* left: 0; */
+  /* margin: 0px auto; */
+}
+
+
 .cajas h2 {
+  margin-left: 110px;
+  position: relative;
   width: auto;
   color: #cfd3d8;
   text-shadow: 4px 4px 6px rgb(151, 88, 88);
   text-orientation: upright;
   transform: rotate(-0.25turn);
-  margin: 2px 0;
+  /* margin: 2px 0; */
 }
 
 .ficha-tecnica {
-  width: 850px;
+  width: 90%;
   align-self: center;
   cursor: pointer;
   font-size: 16px;
@@ -194,8 +223,11 @@ main {
   box-shadow: 10px 5px 6px rgb(151, 88, 88, 0.829);
   border: solid 1px #474747;
   border-radius: 8px;
-  margin: 50px;
-  margin-left: 200px;
+  margin: 50px 100px;
+}
+
+.txtFichaTecnica{
+  font-size: 2rem;
 }
 
 /*------ popup-------*/
