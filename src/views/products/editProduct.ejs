@@ -10,7 +10,7 @@
   <%- include('../partials/header') %>
     <main>
       <h1>Edición de Productos</h1>
-      <form id="productForm" action="/detalleProd/<%=producto.id%>/edit?_method=PUT " method="POST" enctype="multiport/form-data">
+      <form id="productForm" action="/detalleProd/<%=producto.id%>/edit?_method=PUT " method="POST" enctype="multipart/form-data">
         <div class="posicionamientoForm">
           <label for="name">Nombre del producto:</label>
           <input type="text" id="name" name="name" value="<%=producto.name%>" required />
@@ -29,7 +29,7 @@
         </div>
         <div class="posicionamientoForm">
           <label for="image">Imagen:</label>
-          <input type="file" id="image" name="imageUsuario" value="<%=producto.img1%>" accept="image/*" />
+          <input type="file" multiple id="image" name="imageProduct" value="" accept="image/*" />
         </div>
         <div class="posicionamientoForm">
           <label for="category">Categoría:</label>

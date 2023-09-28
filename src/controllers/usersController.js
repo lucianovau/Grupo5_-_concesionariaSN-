@@ -19,7 +19,8 @@ const controller = {
         if(resultValidation.errors.length > 0){
             res.render(rutaRegistro, { 
                 errors: resultValidation.mapped(),
-                oldData: req.body
+                oldData: req.body,
+                rutaproducto
             })
         };
         const usuarioRegistrado = User.findByField('email', req.body.email);
@@ -48,7 +49,18 @@ const controller = {
       },
     
     loginProcess: (req,res) => {
+        const resultValidation = validationResult(req);
+        
+        if(resultValidation.errors.length > 0){
+            res.render(path.resolve(__dirname, "../views/users/login"), { 
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                rutaproducto
+            })
+        };
+
         let userToLogin = User.findByField("email", req.body.email);
+
         if(userToLogin) {
         let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
         if(passwordOk) {
