@@ -1,11 +1,12 @@
 let fs = require('fs');
 let path = require('path');
 const multer = require('multer');
+const Product = require('../models/product');
 
 const productsFilePath = path.resolve(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const controller = {
+const controllerProductos = {
     // muestra todos los productos
     productos: (req, res) => {
         let ruta = path.resolve(__dirname, '../views/products/productos');
@@ -28,7 +29,7 @@ const controller = {
         color: req.body.colors,
         price: req.body.price,
         fichaTecnica: req.body.fichaTecnica,
-        image: req.body.imageProduct // Guarda la ruta de la imagen
+        image: req.body.imageProduct 
        };
     
      productos.push(newProduct);   
@@ -39,4 +40,4 @@ const controller = {
    }
 } 
 
-module.exports = controller
+module.exports = controllerProductos;
