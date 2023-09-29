@@ -10,7 +10,9 @@ const rutaRegistro = path.resolve(__dirname, "../views/users/register");
 let rutaproducto = true;
 
 const controller = {
-    register: (req, res) => { res.render(rutaRegistro, {rutaproducto}); },
+    register: (req, res) => {
+        res.render(rutaRegistro, { rutaproducto });
+    },
 
 
     processRegister: (req, res) => {
@@ -65,7 +67,10 @@ const controller = {
         let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
         if(passwordOk) {
             delete userToLogin.password;
-            req.session.userLogged = userToLogin;
+            req.session.userLogged = userToLogin; 
+            if (req.body.sesion) {
+                res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
+            }
             return res.redirect(profileRoute);
           }
           return res.render("login",{
@@ -84,6 +89,7 @@ const controller = {
     },
     
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
     }

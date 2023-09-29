@@ -4,6 +4,7 @@ const path = require('path');
 let router = express.Router();
 let controller = require('../controllers/usersController');
 
+const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware= require('../middlewares/authMiddleware');
 const validationRegister = require('../middlewares/validarRegister');
