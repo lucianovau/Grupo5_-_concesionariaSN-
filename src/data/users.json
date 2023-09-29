@@ -93,5 +93,15 @@
   "confirmarPassword": "$2a$10$FG/rGD/YtV2IFMwe0W6woubTtiGOzRcRYv.USWWxMzXJw7YCoIBP2",
   "terminos": "on",
   "foto": "1695751792871_img.png"
+ },
+ {
+  "id": 11,
+  "nombre": "lucia",
+  "apellido": "novau",
+  "email": "lulinovau@gmail.com",
+  "password": "$2a$10$FtrNxf/0b5UV.wGCG1IduOYGTSkNzUpk3o86sdm/JN8GdNLOmm4WW",
+  "confirmarPassword": "$2a$10$ItdC6FU4KgPzUJ/vMctcMOFDxm0TbDzhtxMe2JwB2BCE/RAhasf7K",
+  "terminos": "on",
+  "foto": "1695914658757_img.jpg"
  }
 ]

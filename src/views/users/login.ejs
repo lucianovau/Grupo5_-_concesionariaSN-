@@ -13,14 +13,14 @@
         <h2>Iniciar Sesión</h2>
         <div>
           <form id="Iniciar" action="/user/login" method="POST" enctype="multipart/form-data">
-            <input type="email" id="email" name="email" required class="inicio iniput" placeholder="Email"
+            <input type="email" id="email" name="email"  class="inicio iniput" placeholder="Email"
               value="<%= (locals.old && old.email) ? old.email : '' %>">
             <% if(locals.errors && errors.email){ %>
               <div class="text-error">
                 <%= errors.email.msg %>
               </div>
               <% } %>
-                <input type="password" id="password" name="password" required class="inicio iniput"
+                <input type="password" id="password" name="password" class="inicio iniput"
                   placeholder="Contraseña" value="<%= (locals.old && old.password) ? old.password : '' %>">
                 <% if(locals.errors && errors.password){ %>
                   <div class="text-error">
@@ -29,9 +29,15 @@
                   <% } %>
 
                     <p class="inicio">
-                      <input type="checkbox" id="sesion-iniciada" name="sesion-iniciada" class="iniput">
+                      <input type="checkbox" id="sesion-iniciada" name="sesion" class="iniput">
                       <label for="sesion-iniciada">Mantener sesión iniciada</label>
+                      <% if(locals.errors && errors.sesion){ %>
+                        <div class="text-error">
+                          <%= errors.sesion.msg %>
+                        </div>
+                        <% } %>
                     </p>
+                   
 
                     <button type="submit" class="inicio" id="boton1">Iniciar Sesión</button>
 

@@ -29,7 +29,12 @@ const controllerProductos = {
         color: req.body.colors,
         price: req.body.price,
         fichaTecnica: req.body.fichaTecnica,
-        image: req.body.imageProduct 
+        img1: ('/img/productImg/' + req.files[0].filename),
+        img2: ('/img/productImg/' + req.files[1].filename),
+        img3: ('/img/productImg/' + req.files[2].filename),
+        img4: ('/img/productImg/' + req.files[3].filename),
+        img5: ('/img/productImg/' + req.files[4].filename),
+        img6: ('/img/productImg/' + req.files[5].filename)
        };
     
      productos.push(newProduct);   

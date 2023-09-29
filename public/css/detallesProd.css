@@ -69,12 +69,7 @@ main {
   position: relative;
   height: auto;
 }
-#fotos {
-  position: relative;
-  bottom: 62%;
-  display: flex;
-  width: 100%;
-}
+
 #fotos img {
   margin: 2px;
   position: relative;
@@ -82,33 +77,44 @@ main {
 }
 #fotos button {
   position: relative;
-  left: 22%;
-  margin: 0px 30px;
+  margin: 5px 25px;
 }
 
 .container {
+  max-width: max-content;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* bottom: 62%; */
+}
+
+.contenedorImgBtn{
+  width: 100%;
 }
 
 .fotos {
   display: flex;
+  width: 65%;
 }
 
 .fotos img {
   margin-right: 10px;
   padding: 10px;
+  width: 20%;
 }
 
 .fotos img:hover {
   transform: scale(1.5);
+  z-index: 5;
 }
 .botones {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+
 .botones-arriba {
   display: flex;
   gap: 10px; /* Espacio entre los botones "Consultar" y "Compartir" */
@@ -146,6 +152,8 @@ main {
 .carac-tecn {
   width: 100%;
   height: 100%;
+  padding-bottom: 20px;
+  padding-top: 30px;
   background-size: cover;
 }
 
@@ -166,24 +174,45 @@ main {
 }
 .cajas {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  padding-right: 150px;
+  /* padding-right: 150px; */
 }
 
+.contenedorDetalles{
+  width: 30%;
+  display: contents;
+}
+
+.h2Detalles{
+  position: relative;
+  /* height: 400px; */
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  /* top: 0; */
+  /* bottom: 0; */
+  /* right: 0; */
+  /* left: 0; */
+  /* margin: 0px auto; */
+}
+
+
 .cajas h2 {
+  margin-left: 110px;
+  position: relative;
   width: auto;
   color: #cfd3d8;
   text-shadow: 4px 4px 6px rgb(151, 88, 88);
   text-orientation: upright;
   transform: rotate(-0.25turn);
-  margin: 2px 0;
+  /* margin: 2px 0; */
 }
 
 .ficha-tecnica {
-  width: 850px;
+  width: 90%;
   align-self: center;
   cursor: pointer;
   font-size: 16px;
@@ -194,8 +223,11 @@ main {
   box-shadow: 10px 5px 6px rgb(151, 88, 88, 0.829);
   border: solid 1px #474747;
   border-radius: 8px;
-  margin: 50px;
-  margin-left: 200px;
+  margin: 50px 100px;
+}
+
+.txtFichaTecnica{
+  font-size: 2rem;
 }
 
 /*------ popup-------*/
@@ -221,30 +253,6 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 768px) {
-  .contenedor {
-    flex-direction: column;
-  }
-
-  .product-info,
-  .carac-tecn {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .botones-arriba {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .fotos,
-  .botones {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-}
 
 /* Estilos para el formulario dentro del popup */
 #contact-form {
@@ -303,4 +311,143 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  
+/* SECTION PRODUCTO */
+
+  .product-info {
+    display: flex;
+    /* flex-direction: column; */
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .product-details{
+    width: 95%;
+    margin: 20px 0px;
+    padding: 0px;
+  }
+
+  .product-info,
+  .carac-tecn {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .img-principal{
+    margin: 0px;
+    padding: 0px;
+    width: 80%;
+    height: auto;
+  }
+
+/* SECTION FOTOS */
+
+  #fotos{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .fotos{
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  #fotos img {
+    width: 18%;
+  }
+
+  
+  .botones{
+    width: 80%;
+    gap: 20px;
+    margin: 25px 0px;
+  }
+  
+  #fotos button {
+    position: relative;
+    margin: auto;
+  }
+
+  .botones-arriba {
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .botones-arriba .boton{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+
+/* SECTION FICHA TÉCNICA    */
+
+  .cajas{
+    flex-direction: column;
+  }
+
+  .cajas h2 {
+    transform: none;
+    margin: auto;
+  }
+
+  .bloque{
+    width: 80%;
+    min-height: 200px;
+    margin-top: auto;
+  }
+
+  .h2Detalles{
+    width: auto;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .contenedorDetalles {
+    width: 80%;
+  }
+
+  .ficha-tecnica{
+    margin: auto;
+    width: auto;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+}
+
+@media (max-width: 360px){
+
+  #fotos img {
+    width: 40%;
+  }
+
+  .bloque{
+    width: 100%;
+  }
+
+  .ficha-tecnica{
+    width: 80%;
+    padding: 10px 0px;
+  }
+
+  .bloque, .ficha-tecnica{
+    box-shadow: 0px 0px 15px 4px  rgb(151, 88, 88, 0.829);
+  }
+
+  .txtFichaTecnica{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: auto;
+  }
+
+
 }
