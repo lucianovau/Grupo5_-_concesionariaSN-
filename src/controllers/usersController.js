@@ -66,9 +66,9 @@ const controller = {
       },
 
     profile: (req, res) => {
-        console.log("Estas en profile");
-        console.log(req.session);
-        return res.render(profileRoute, {rutaproducto});
+        return res.render(profileRoute, {
+            user: req.session.userLogged
+        });
     },
     
     logout: (req, res) => {
