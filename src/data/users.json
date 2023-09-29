@@ -103,5 +103,15 @@
   "confirmarPassword": "$2a$10$ItdC6FU4KgPzUJ/vMctcMOFDxm0TbDzhtxMe2JwB2BCE/RAhasf7K",
   "terminos": "on",
   "foto": "1695914658757_img.jpg"
+ },
+ {
+  "id": 12,
+  "nombre": "maria",
+  "apellido": "perez",
+  "email": "mariap@gmail.com",
+  "password": "$2a$10$N6U2FH/ydwrLI42g4DCNdO9KRP6EbgdMUqnWGyxhJh1wzsEhx7EAG",
+  "confirmarPassword": "$2a$10$.UbdbYuwWtB0HsdXEvX3bOrRC569nTA91ct8T1SAprD0gxLKaatkO",
+  "terminos": "on",
+  "foto": "1695952359953_img.png"
  }
 ]

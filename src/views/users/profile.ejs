@@ -12,11 +12,13 @@
       <section>
         <form id="Perfil" action="/user/profile" method="GET" enctype="multipart/form-data">
 
-          <h2 id="userProfile" class="userProfile">Hola <%= user.name </h2>
-              <img id="userImg" class="userImg" src="./img/logo.png">
-              <div id="mailContainer" class="mailContainer">
-                <p>Email: abc123</p>
-              </div>
+          <h2 id="userProfile" class="userProfile">Hola <%= user.name %>
+          </h2>
+          <img id="userImg" class="userImg" src="/img/users/<%= user.image %>">
+          <div id="mailContainer" class="mailContainer">
+            <p>Email <%= user.email %>
+            </p>
+          </div>
         </form>
       </section>
     </main>
