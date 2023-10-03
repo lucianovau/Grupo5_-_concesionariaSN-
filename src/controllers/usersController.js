@@ -2,10 +2,9 @@ let path = require("path");
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 const User = require('../models/user');
+const session = require('express-session')
 
 const profileRoute = path.resolve(__dirname, "../views/users/profile"); 
-
-
 const rutaRegistro = path.resolve(__dirname, "../views/users/register");
 let rutaproducto = true;
 
@@ -86,7 +85,9 @@ const controller = {
         },
 
     profile: (req, res) => {
-        return res.render(profileRoute, {
+        console.log( req.session.userLogged)
+        
+        return res.render(profileRoute, {rutaproducto,
             user: req.session.userLogged
         });
     },
