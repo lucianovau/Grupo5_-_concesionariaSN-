@@ -1,6 +1,6 @@
 let path = require("path");
 const { validationResult } = require('express-validator');
-const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 const User = require('../models/user');
 
 const profileRoute = path.resolve(__dirname, "../views/users/profile"); 
@@ -39,8 +39,8 @@ const controller = {
         let nuevoUsuario = {
             ...req.body,
             foto : req.file.filename,
-            password: bcrypt.hashSync(req.body.password,10),
-            confirmarPassword: bcrypt.hashSync(req.body.confirmarPassword,10)
+            password: bcryptjs.hashSync(req.body.password,10),
+            confirmarPassword: bcryptjs.hashSync(req.body.confirmarPassword,10)
 } 
         User.create(nuevoUsuario);
         return res.redirect("/");
@@ -50,37 +50,40 @@ const controller = {
         res.render(ruta, {rutaproducto});
       },
     
-    loginProcess: (req,res) => {
+    loginProcess: (req, res) => {
         const resultValidation = validationResult(req);
         
         if(resultValidation.errors.length > 0){
-            res.render(path.resolve(__dirname, "../views/users/login"), { 
-                errors: resultValidation.mapped(),
-                oldData: req.body,
-                rutaproducto
+            return res.render(path.resolve(__dirname, "../views/users/login"), { 
+                    errors: resultValidation.mapped(),
+                    oldData: req.body,
+                    rutaproducto
             })
         };
 
         let userToLogin = User.findByField("email", req.body.email);
+        let passwordOk;
 
-        if(userToLogin) {
-        let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+        if (userToLogin) {
+            passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+        } else { 
+            return res.send('error al encontrar el usuario');
+        }
         if(passwordOk) {
-            delete userToLogin.password;
-            req.session.userLogged = userToLogin; 
+            req.session.userLogged = userToLogin.email; 
             if (req.body.sesion) {
-                res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
+                res.cookie('userEmail', req.body.email, { maxAge: ((1000 * 60) * 60) * 24})
             }
-            return res.redirect(profileRoute);
-          }
-          return res.render("login",{
+            return res.redirect("/user/profile");
+        } else {
+            return res.render(path.resolve(__dirname, "../views/users/login"),{
             errors: {
                 email: {msg: "Las credenciales son invalidas"}
             }
-          });
-          }
-        return res.redirect("/user/profile");
-      },
+        });
+        }
+
+        },
 
     profile: (req, res) => {
         return res.render(profileRoute, {
