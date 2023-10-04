@@ -9,16 +9,31 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controllerProductos = {
     // muestra todos los productos
     productos: (req, res) => {
+        let logged 
+    if (req.cookies.userEmail) {
+      logged = true
+    } else {
+      logged = false
+    }
         let ruta = path.resolve(__dirname, '../views/products/productos');
-        res.render(ruta, {productos});
+        res.render(ruta, {productos, logged});
     },
    // Muestra el formulario de creacion
-   create: (req, res) => {
+    create: (req, res) => {
+        let logged 
+    if (req.cookies.userEmail) {
+      logged = true
+    } else {
+      logged = false
+    }
         let ruta = path.resolve(__dirname, '../views/products/createProduct');
-        res.render(ruta);
+        res.render(ruta, {
+            logged
+        });
    },
    // Guarda el nuevo producto
-   store: (req, res) => {
+    store: (req, res) => {
+       
     const newProduct = {
         id: productos.length + 1,
         name: req.body.name,

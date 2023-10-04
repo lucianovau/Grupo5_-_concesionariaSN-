@@ -69,7 +69,7 @@ const controller = {
             return res.send('error al encontrar el usuario');
         }
         if(passwordOk) {
-            req.session.userLogged = userToLogin.email; 
+            req.session.userLogged = userToLogin; 
             if (req.body.sesion) {
                 res.cookie('userEmail', req.body.email, { maxAge: ((1000 * 60) * 60) * 24})
             }
@@ -85,10 +85,11 @@ const controller = {
         },
 
     profile: (req, res) => {
-        console.log( req.session.userLogged)
+        let logged = true;
         
         return res.render(profileRoute, {rutaproducto,
-            user: req.session.userLogged
+            user: req.session.userLogged,
+            logged
         });
     },
     
@@ -96,7 +97,13 @@ const controller = {
         res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
+    },
+
+    guest: (req, res) => {
+        res.cookie('userGuest', true, { maxAge: ((1000 * 60) * 60) * 24})
+        return res.redirect('/');
     }
+    
 };
 
 

@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <%- include('./partials/head') %>
-  <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-      <%- include('./partials/header') %>
-      <main>
-        <!-- carrusel -->
-        <div id="carouselExampleDark" class="carousel carousel-dark slide">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-              <img src="..." class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <img src="..." class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+  <%- include('./partials/header') %>
+    <main>
+      <!-- carrusel -->
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
         </div>
-        <!-- <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/diseño-banner/1.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Saleen</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/diseño-banner/3.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Amarok</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/diseño-banner/2.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Chevrolet</h2>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- <div id="carouselExampleCaptions" class="carousel slide">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -82,81 +84,100 @@
           </button>
         </div> -->
 
-        <!-- tarjetas -->
-        <section class="tarjetas">
-            <div class="conteCard"> 
-              <div class="imgCard"><img src="/img/logos/Ford.jpg" alt=""></div>
-                <div class="textCard"><p>Ford</p></div>
-            </div>
-            <div class="conteCard">
-                <div class="imgCard"><img src="/img/logos/Chevrolet.jpg" alt=""></div>
-                <div class="textCard"><p>Chevrolet</p></div>
-            </div>
-            <div class="conteCard">
-                <div class="imgCard"><img src="/img/logos/Peugeot.jpg" alt=""></div>
-                <div class="textCard"><p>Peugeot</p></div>
-            </div>
-            <div class="conteCard">
-                <div class="imgCard"><img src="/img/logos/Citroen.jpg" alt=""></div>
-                <div class="textCard"><p>Citroen</p></div>
-            </div>
-            <div class="conteCard">
-                <div class="imgCard"><img src="/img/logos/Toyota.jpg" alt=""></div>
-                <div class="textCard"><p>Toyota</p></div>
-            </div>
-        </section>
-          <!-- fin -->
+      <!-- tarjetas -->
+      <section class="tarjetas">
+        <div class="conteCard">
+          <div class="imgCard"><img src="/img/logos/Ford.jpg" alt=""></div>
+          <div class="textCard">
+            <p>Ford</p>
+          </div>
+        </div>
+        <div class="conteCard">
+          <div class="imgCard"><img src="/img/logos/Chevrolet.jpg" alt=""></div>
+          <div class="textCard">
+            <p>Chevrolet</p>
+          </div>
+        </div>
+        <div class="conteCard">
+          <div class="imgCard"><img src="/img/logos/Peugeot.jpg" alt=""></div>
+          <div class="textCard">
+            <p>Peugeot</p>
+          </div>
+        </div>
+        <div class="conteCard">
+          <div class="imgCard"><img src="/img/logos/Citroen.jpg" alt=""></div>
+          <div class="textCard">
+            <p>Citroen</p>
+          </div>
+        </div>
+        <div class="conteCard">
+          <div class="imgCard"><img src="/img/logos/Toyota.jpg" alt=""></div>
+          <div class="textCard">
+            <p>Toyota</p>
+          </div>
+        </div>
+      </section>
+      <!-- fin -->
 
-        <section class="info-extra">
-          <img src="/img/lambo/lambo1.jpg" alt="">
-          <article> 
+      <section class="info-extra">
+        <img src="/img/lambo/lambo1.jpg" alt="">
+        <article>
           <h1>CONSECIONARIA SN</h1>
           <button id="btnHomeTexto" class="btn-home">CONOCENOS</button>
           <div id="texto-home" class="texto-home">
             <span class="cambiarTexto" id="idTexto">
-              <p>En CONCESIONARIA SN, comprendemos que la compra de un automóvil es una decisión importante. Nuestro compromiso es hacer que todo el proceso sea lo más sencillo y cómodo posible para ti. Contamos con un amplio catálogo de vehículos de todas las marcas y modelos, para que encuentres el automóvil que se adapte perfectamente a tus necesidades y gustos.</p>
-              <p>Nuestro equipo de expertos en ventas está aquí para brindarte asesoramiento personalizado y responder a todas tus preguntas. Nos enorgullece ofrecer opciones de financiamiento flexibles y asequibles que se ajusten a tu presupuesto. Además, nuestras instalaciones están diseñadas pensando en tu comodidad, con áreas de espera cómodas y servicios adicionales que hacen que la experiencia de compra sea excepcional
+              <p>En CONCESIONARIA SN, comprendemos que la compra de un automóvil es una decisión importante. Nuestro
+                compromiso es hacer que todo el proceso sea lo más sencillo y cómodo posible para ti. Contamos con un
+                amplio catálogo de vehículos de todas las marcas y modelos, para que encuentres el automóvil que se
+                adapte perfectamente a tus necesidades y gustos.</p>
+              <p>Nuestro equipo de expertos en ventas está aquí para brindarte asesoramiento personalizado y responder a
+                todas tus preguntas. Nos enorgullece ofrecer opciones de financiamiento flexibles y asequibles que se
+                ajusten a tu presupuesto. Además, nuestras instalaciones están diseñadas pensando en tu comodidad, con
+                áreas de espera cómodas y servicios adicionales que hacen que la experiencia de compra sea excepcional
               </p>
             </span>
           </div>
         </article>
-        </section>
-      </main>
-      <%- include('./partials/footer') %>
+      </section>
+    </main>
+    <%- include('./partials/footer') %>
 
       <!-- comando swiper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 300,
-        modifier: 1,
-        slideShadows: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-  </script>
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 300,
+            modifier: 1,
+            slideShadows: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
 
-  <script>
-    let btnHome = document.getElementById('btnHomeTexto');
-    let btnTexto = document.getElementById('idTexto');
+      <script>
+        let btnHome = document.getElementById('btnHomeTexto');
+        let btnTexto = document.getElementById('idTexto');
 
-    btnHome.addEventListener('click', function(){
-        btnTexto.classList.toggle('mostrarTexto');
-      });
-    
+        btnHome.addEventListener('click', function () {
+          btnTexto.classList.toggle('mostrarTexto');
+        });
 
-  </script>
-    
+
+      </script>
+
 </body>
+
 </html>

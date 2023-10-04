@@ -1,9 +1,10 @@
 <header>
-    <div class="head">
-      <img src="/img/logo2.png" alt="Logo">
-        <div class="iconos">
-          
-          <li>
+  <div class="head">
+    <img src="/img/logo2.png" alt="Logo">
+    <div class="iconos">
+
+      <% if(!locals.logged) { %>
+        <li>
           <a href="<% if(locals.rutaproducto){ %>
             login
             <% }else if(locals.rutaDetalle){ %>
@@ -11,46 +12,81 @@
               <% }else{ %>
                 user/login
                 <% } %>"><i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
-              </a>
-              <div class="listaMenuPerfil">
+          </a>
+          <div class="listaMenuPerfil">
 
-                <ul><a href="#">Iniciar Sesión</a></ul>
-                <ul><a href="#">Registrarse</a></ul>
-              </div>
-              </li>
-        <a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
+            <ul><a href="<% if(locals.rutaproducto){ %>
+            login
+            <% }else if(locals.rutaDetalle){ %>
+              ../user/login
+              <% }else{ %>
+                user/login
+                <% } %>">Iniciar Sesión</a></ul>
+            <ul><a href="<% if(locals.rutaproducto){ %>
+            register
+            <% }else if(locals.rutaDetalle){ %>
+              ../user/register
+              <% }else{ %>
+                user/register
+                <% } %>">Registrarse</a></ul>
+          </div>
+        </li>
+        <%} else {%>
+          <li>
+            <a href="<% if(locals.rutaproducto){ %>
+                      profile
+                      <% }else if(locals.rutaDetalle){ %>
+                        ../user/profile
+                        <% }else{ %>
+                          user/profile
+                          <% } %>"><i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
+            </a>
+            <div class="listaMenuPerfil">
+
+              <ul><a href="<% if(locals.rutaproducto){ %>
+                      logout
+                      <% }else if(locals.rutaDetalle){ %>
+                        ../user/logout
+                        <% }else{ %>
+                          user/logout
+                          <% } %>">Cerrar Sesión</a></ul>
+            </div>
+          </li>
+          <% } %>
+            <% if(locals.logged) { %>
+              <a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
           ../productCart
       <% }else{ %>
         productCart
      <% } %>"><i class="fas fa-shopping-cart" style="color: #ff0000;"></i></a>
-        <a href="" id="burger"><i class="fas fa-bars" style="color: #ff0000;"></i></a> 
-      </div>   
+              <% } %>
     </div>
-    <div id="barra">
-      <nav>
-        <ul>
-          <li><a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
+  </div>
+  <div id="barra">
+    <nav>
+      <ul>
+        <li><a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
               ../home
           <% }else{ %>
               home
          <% } %>">Inicio</a></li>
-          <li><a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
+        <li><a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
             ../productos
         <% }else{ %>
             productos
        <% } %>">Productos</a></li>
-          <li><a href="#">Contacto</a></li>
-          <li><a href="#">Ayuda</a></li>
-        </ul>
-      </nav>
-      <form action="/" method="POST">
-        <button type="submit" id="boton"><i class="fas fa-search" style="color: #ff0000;"></i></button>
-        <input type="text" placeholder="Buscar..." name="Buscar" id="buscar">
-      </form>
-    </div>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Ayuda</a></li>
+      </ul>
+    </nav>
+    <form action="/" method="POST">
+      <button type="submit" id="boton"><i class="fas fa-search" style="color: #ff0000;"></i></button>
+      <input type="text" placeholder="Buscar..." name="Buscar" id="buscar">
+    </form>
+  </div>
 
-    <video muted autoplay loop>
-      <source src="/img/video.mp4" type="video/mp4">
-    </video>
-    <div class="capa"></div>
-  </header>
+  <video muted autoplay loop>
+    <source src="/img/video.mp4" type="video/mp4">
+  </video>
+  <div class="capa"></div>
+</header>

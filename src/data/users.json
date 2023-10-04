@@ -113,5 +113,15 @@
   "confirmarPassword": "$2a$10$.UbdbYuwWtB0HsdXEvX3bOrRC569nTA91ct8T1SAprD0gxLKaatkO",
   "terminos": "on",
   "foto": "1695952359953_img.png"
+ },
+ {
+  "id": 13,
+  "nombre": "mario",
+  "apellido": "pepito",
+  "email": "pepito@gmail.com",
+  "password": "$2a$10$UYoY5fHiYxfurhcLJna.nuNjMP9knF0aqhBrwiX.BRCKnW54W2ROe",
+  "confirmarPassword": "$2a$10$4mKTgXRCvJ5C8tLQIck/oel0EmAdtLFsy9Q5YbSmcqqDbagliOhoe",
+  "terminos": "on",
+  "foto": "1696372128049_img.jpg"
  }
 ]
