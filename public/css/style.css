@@ -22,19 +22,28 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px black;
     position: relative;
     overflow: hidden;
+}
+.imgCard{
+  height: 100%;
+  position: relative;
 }
 .carousel-caption{
   position: relative;
   top: 30%;
   width: 350px;
 }
-.carousel-caption h2{
+.carousel-caption h5{
+  position: absolute;
+  top: -400px;
   font-size: 90px;
   opacity: 80%;
   font-weight: bold;
+}
+.carousel-caption p{
+  position: absolute;
+  top: -300px;
 }
 /* tarjetas */
 .tarjetas{
