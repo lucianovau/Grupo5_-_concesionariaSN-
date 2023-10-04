@@ -17,6 +17,7 @@ router.get("/register", guestMiddleware, controller.register);
 router.post("/register", uploadFile.single('foto'), validationRegister , controller.processRegister);
 router.get("/profile", authMiddleware, controller.profile);
 router.get("/logout", controller.logout);
+router.post("/invitado", controller.guest);
 
 
 module.exports = router

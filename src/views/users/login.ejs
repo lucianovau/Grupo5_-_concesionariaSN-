@@ -12,15 +12,16 @@
       <section id="login">
         <h2>Iniciar Sesión</h2>
         <div>
-          <form id="Iniciar" action="/user/login" method="POST" enctype="multipart/form-data">
-            <input type="text" id="email" name="email"  class="inicio iniput" placeholder="Email"
+          <form id="Iniciar" action="/user/login" method="POST">
+            <input type="email" id="email" name="email" class="inicio iniput" placeholder="Email"
               value="<%= (locals.old && old.email) ? old.email : '' %>">
             <% if(locals.errors && errors.email){ %>
               <div class="text-error">
                 <%= errors.email.msg %>
               </div>
               <% } %>
-                <input type="password" id="password" name="password" class="inicio iniput" placeholder="Contraseña" value="">
+                <input type="password" id="password" name="password" class="inicio iniput" placeholder="Contraseña"
+                  value="<%= (locals.old && old.password) ? old.password : '' %>">
                 <% if(locals.errors && errors.password){ %>
                   <div class="text-error">
                     <%= errors.password.msg %>
@@ -36,7 +37,7 @@
                         </div>
                         <% } %>
                     </p>
-                   
+
 
                     <button type="submit" class="inicio" id="boton1">Iniciar Sesión</button>
 
@@ -47,8 +48,10 @@
         </div>
       </section>
       <section id="invitado">
-        <h2>Continuar como invitado</h2>
-        <button type="submit" id="boton2">Invitado</button>
+        <form id="invitado" action="/user/invitado" method="POST">
+          <h2>Continuar como invitado</h2>
+          <button type="submit" id="boton2">Invitado</button>
+        </form>
       </section>
     </main>
 

@@ -8,18 +8,36 @@ const rutaDetalle = true
 
 const controller = {
     // Muestra el detalle de un producto 
-    detalleId: (req, res)=>{
+     detalleId: (req, res) => {
+          let logged 
+    if (req.cookies.userEmail) {
+      logged = true
+    } else {
+      logged = false
+    }
+     let guest 
+    if (req.cookies.userGuest) {
+      guest = true
+    } else {
+      guest = false
+    }
         let ruta = path.resolve(__dirname, '../views/products/detallesProd')
         let idProd = req.params.id || 1;
         let producto = productos[idProd - 1];
-        res.render(ruta, {producto, rutaDetalle})
+        res.render(ruta, {producto, rutaDetalle, logged, guest})
    },
    // Muestra el formulario de edicion
-   edit: (req, res) => {
+     edit: (req, res) => {
+        let logged 
+    if (req.cookies.userEmail) {
+      logged = true
+    } else {
+      logged = false
+    }
         let ruta = path.resolve(__dirname, '../views/products/editProduct')
         const idProd = req.params.id;
         let producto = productos[idProd - 1];
-        res.render(ruta, { producto })
+        res.render(ruta, { producto, logged })
    },
    // Envia el formulario de edicion
    store: (req, res) => {
