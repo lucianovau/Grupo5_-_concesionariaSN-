@@ -12,28 +12,19 @@ const controller = {
           let logged 
     if (req.cookies.userEmail) {
       logged = true
-    } else {
-      logged = false
-    }
-     let guest 
-    if (req.cookies.userGuest) {
-      guest = true
-    } else {
-      guest = false
-    }
+    } 
+  
         let ruta = path.resolve(__dirname, '../views/products/detallesProd')
         let idProd = req.params.id || 1;
         let producto = productos[idProd - 1];
-        res.render(ruta, {producto, rutaDetalle, logged, guest})
+        res.render(ruta, {producto, rutaDetalle, logged})
    },
    // Muestra el formulario de edicion
      edit: (req, res) => {
         let logged 
     if (req.cookies.userEmail) {
       logged = true
-    } else {
-      logged = false
-    }
+    } 
         let ruta = path.resolve(__dirname, '../views/products/editProduct')
         const idProd = req.params.id;
         let producto = productos[idProd - 1];
@@ -71,6 +62,13 @@ const controller = {
         let productosJSON = JSON.stringify(productos)
         fs.writeFileSync(productsFilePath, productosJSON)
         res.redirect('/productos')
+   },
+   // Reservar
+   reserve: (req, res) => {
+      let idProd = req.body.id;
+      let producto = productos[idProd - 1]
+      let ruta = path.resolve(__dirname, '../views/products/productCart')
+      return res.render(ruta, {producto})
    }
 }
 

@@ -100,7 +100,6 @@ const controller = {
     },
 
     guest: (req, res) => {
-        res.cookie('userGuest', true, { maxAge: ((1000 * 60) * 60) * 24})
         return res.redirect('/');
     }
     

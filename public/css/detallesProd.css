@@ -198,7 +198,9 @@ main {
   /* left: 0; */
   /* margin: 0px auto; */
 }
-
+ .invisible{
+  display: none; 
+ }
 
 .cajas h2 {
   margin-left: 110px;

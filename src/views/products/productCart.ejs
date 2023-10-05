@@ -20,12 +20,11 @@
           <div class="contenedorProducto">
             <div class="contenedorIzq">
               <div class="contenedorIzqImg">
-                <img class="imagen-producto" src="https://www.karvi.com.ar/blog/wp-content/uploads/2020/10/208II3-850x567.jpg" alt="Auto">
+                <img class="imagen-producto" src="<%= producto.img1 %>" alt="Auto">
               </div>
               <div class="contenedorIzqTexto">  
-                <h3 class="tituloIzq">Producto</h3>
-                <h4>Nombre del producto</h4>
-                <p>Texto descriptivo</p>
+                <h3 class="tituloIzq"><%= producto.name %></h3>
+                <p><%= producto.descripcion %></p>
               </div>
             </div>
             
@@ -37,7 +36,7 @@
             
             <div class="contenedorDerinputs">
               <label for="precioProducto" name="precioProducto">Precio:</label>
-              <input type="text" id="precioProducto" name="precioProducto" value="0.00">
+              <input type="text" id="precioProducto" name="precioProducto" value="<%= producto.price %>">
             </div>
             
             <div class="contenedorDerinputs" id="contenedorDerPrecioEnvio">
@@ -69,7 +68,7 @@
             <div class="contenedorItemResumen">
               <div class="itemResumen">
                 <label for="precioProductoCompra" name="precioProductoCompra">Producto:</label>
-                <input type="text" id="precioProductoCompra" name="precioProductoCompra" value="99.99">
+                <input type="text" id="precioProductoCompra" name="precioProductoCompra" value="<%= producto.price %>">
               </div>
               
               <div class="itemResumen">

@@ -43,10 +43,33 @@
           </div>
           <div class="botones">
             <div class="botones-arriba">
-              <button type="submit" class="boton">Consultar</button>
-              <button type="submit" class="boton">Compartir</button>
+              <% if(!locals.logged){ %>
+                <form action="../user/login">
+                  <button type="submit" class="boton">Consultar</button>
+                </form>
+                <form action="../user/login">
+                  <button type="submit" class="boton">Compartir</button>
+                </form>
+              </div>
+              <form action="../user/login">
+                <button type="submit" class="boton-destacado">Reservar</button>
+              </form>
+              <% } else { %>
+                <form action="../detalleProd/consultar" method="POST">
+                <input class="invisible" type="number" name="id" value="<%= producto.id %>">
+                <button type="submit" class="boton">Consultar</button>
+              </form>
+              <form action="../detalleProd/compartir" method="POST">
+                <input class="invisible" type="number" name="id" value="<%= producto.id %>">
+                <button type="submit" class="boton">Compartir</button>
+              </form>
             </div>
-            <button type="submit" class="boton-destacado">Reservar</button>
+            <form action="../detalleProd/reservar" method="POST">
+              <input class="invisible" type="number" name="id" value="<%= producto.id %>">
+              <button type="submit" class="boton-destacado">Reservar</button>
+            </form>
+             <% } %>
+    
           </div>
         </section>
         <section class="carac-tecn">
