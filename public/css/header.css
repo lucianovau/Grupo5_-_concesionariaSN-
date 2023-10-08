@@ -35,6 +35,16 @@ video{
 }
 
 /* PERFIL */
+.nombreIcono{
+    color: #ff0000;
+    margin: 15px 0px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
 .iconos{
     display: flex;
@@ -42,11 +52,12 @@ video{
     justify-content: flex-start;
     flex-wrap: wrap;
     align-content: flex-start;
+    margin-right: 50px;
 }
 
 .iconos a{
     align-self: flex-start;
-    width: 80px;
+    text-align: center;
 }
 
 .iconos li{
@@ -54,11 +65,9 @@ video{
     /* border: 1px solid white; */
     width: auto;
     color: #8d99ae;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    /* margin: 0px -30px; */
-    
-    
+    /* margin: 0px -30px; */   
 }
 
 .iconos ul{
@@ -73,27 +82,71 @@ video{
 }
 
 .listaMenuPerfil{
-    border: 1px solid #131111;
+    border: 1px solid white;
     border-radius: 10px;
     width: 150px;
     color: #8d99ae;
     display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0px -30px; 
+    flex-direction: column; 
     background: #131111;
     margin: 0 20px ;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 60px; 
+    margin-right: 53px;
 }
 
-.iconos li:hover > .listaMenuPerfil{
+.listaMenuPerfil ul:hover{
+    background: #8d99ae;
+    border-radius: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.listaMenuPerfil ul a{
+    margin: 0px 10px;
+}
+
+.cerrarSesion{    
+    margin-right: 70px;
+}
+
+.perfilHover:hover > .listaMenuPerfil{
     display: flex;
 }
 
-.iconos a{
-    text-align: center;
+#carritoDeCompras{
+    padding: 0px;
 }
 
+.carritoDeComprasTexto{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 150px;
+    color: #8d99ae;
+    display: none;
+    flex-direction: column; 
+    background: #131111;
+    margin: 0 20px ;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin-top: 60px; 
+}
 
+.carritoDeComprasTexto p{    
+    color: #ff0000;
+    text-transform: uppercase;
+    margin: auto;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.carritoHover:hover > .carritoDeComprasTexto{
+    display: flex;
+}
 
 
 
@@ -200,8 +253,13 @@ li a{
         display: none;
     }
 
+    .nombreIcono{
+        display: none;
+    }
+
     .head{
         padding: 10px 0px;
+        flex-wrap: nowrap;
     }
 
     .head img{
@@ -217,8 +275,11 @@ li a{
     }
 
     .iconos a{
-        margin: 10px;
         width: auto;
+    }
+
+    .iconos ul{
+        padding: -1px;
     }
 
     #barra{

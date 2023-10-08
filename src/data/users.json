@@ -123,5 +123,15 @@
   "confirmarPassword": "$2a$10$4mKTgXRCvJ5C8tLQIck/oel0EmAdtLFsy9Q5YbSmcqqDbagliOhoe",
   "terminos": "on",
   "foto": "1696372128049_img.jpg"
+ },
+ {
+  "id": 14,
+  "nombre": "Daniel",
+  "apellido": "Palau",
+  "email": "palaudanny@gmail.com",
+  "password": "$2a$10$6dT7DI7WUyW/d7xWOUm6aubeork9zRbMn1G36MMGTApCHxd1FoErW",
+  "confirmarPassword": "$2a$10$Uji1HxWxCML81Yo5O1xtzu0sbm6JZNOxLWVQwmiwkTuKUiwoVjQt6",
+  "terminos": "on",
+  "foto": "1696700141906_img.png"
  }
 ]

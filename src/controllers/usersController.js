@@ -65,9 +65,13 @@ const controller = {
 
         if (userToLogin) {
             passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
-        } else { 
-            return res.send('error al encontrar el usuario');
-        }
+        } else {
+            return res.render(path.resolve(__dirname, "../views/users/login"),{
+            errors: { 
+            email: {msg:"Error al encontrar el usuario"}
+        }});
+    }
+
         if(passwordOk) {
             req.session.userLogged = userToLogin; 
             if (req.body.sesion) {
