@@ -97,6 +97,43 @@ button{
     text-transform: uppercase;
 }
 
+#password{
+    width: 100%;
+    box-shadow: none;
+}
+
+#password, .boton-passsword{
+    margin: 0px;
+}
+
+.contenedor-password{
+    margin-top: 5px;
+    display: flex;
+    position: relative;
+    width: 85%;
+    box-shadow: 5px 5px 15px black;
+}
+
+.boton-passsword{
+    width: 15%;
+    border-radius: 0px;
+    height: auto;
+    background: rgb(232, 240, 254);
+
+}
+
+.ojoPasswordBoton{
+    font-size: 1rem;
+    padding: 0px;
+    justify-content: center;
+    color: black;
+}
+
+/* CLASE OJO VER */
+#mostrar-password{
+    display: none;
+}
+
 @media ((min-width: 481px) and (max-width: 768px)){
     .inicio{
         width: 95%;
