@@ -139,6 +139,11 @@ button{
         width: 95%;
         margin: 8px;
     }
+
+    .contenedor-password{
+        width: 95%;
+    }
+
     }
 @media ((min-width: 768px) and (max-width: 1279px)){
    main{
