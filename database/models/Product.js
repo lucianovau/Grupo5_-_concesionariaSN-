@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         foto: {
-            type: dataTypes.BLOB('long'),
+            type: dataTypes.STRING(100),
             allowNull: false,
         },
         descripcion: {

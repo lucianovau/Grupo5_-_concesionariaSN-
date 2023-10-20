@@ -2,16 +2,16 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'User'; // esto debería estar en singular
     let cols = {
         id: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
+            type: dataTypes.INTEGER(10),
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
-        name: {
+        nombre: {
             type: dataTypes.STRING(100),
             allowNull: false,
         },
-        lastname: {
+        apellido: {
             type: dataTypes.STRING(100),
             allowNull: false,
         },
@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         foto: {
-            type: dataTypes.BLOB('long'),
+            type: dataTypes.STRING(100),
             allowNull: false,
         },
         password: {

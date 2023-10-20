@@ -1,7 +1,6 @@
 let fs = require('fs');
 let path = require('path');
 const multer = require('multer');
-const Product = require('../models/product');
 const sequelize = require('sequelize')
 
 const db = require('../../database/models');
@@ -16,7 +15,7 @@ const controllerProductos = {
       logged = false
     }
         let ruta = path.resolve(__dirname, '../views/products/productos');
-        db.Products.findAll()
+        db.Product.findAll()
           .then((productos)=>{
                res.render(ruta, {productos, logged});
              })
@@ -41,7 +40,6 @@ const controllerProductos = {
     store: (req, res) => {
        
         db.Product.create({
-          id: productos.length + 1,
           name: req.body.name,
           marca: req.body.marca,
           modelo: req.body.modelo,
