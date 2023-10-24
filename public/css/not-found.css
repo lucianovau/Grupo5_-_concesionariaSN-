@@ -28,6 +28,43 @@ h2{
     border-radius: 50px;
 }
 
+.div-boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.div-boton h1{
+    margin: auto 15px;
+    text-transform: uppercase;
+    font-size: 13px;
+    
+}
+
+.boton-atras{
+    background-color: red;
+    display: flex;
+    padding: 0px 15px;
+    border-radius: 15px;
+}
+
+.boton-atras:hover{
+    background-color: black;
+    border-color: red;
+    color: red;
+
+}
+
+/* OCULTANDO HEADER  */
+
+.iconos, nav, #sociales, #barra{
+    display: none;
+}
+
+
+
 /* ------------------> RESPONSIVE <------------------ */
 
 /* TABLET */
@@ -43,6 +80,22 @@ h2{
         width: 60%;
         height: auto;        
     }    
+
+    .div-boton h1{
+        font-size: 2rem;
+    }
+
+    footer{
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 10px;
+        height: 150px;
+    }
+    
+    #Copyright {
+        width: auto;
+        margin-left: 15px;
+    }
 }
 
 /* LAPTOP */
@@ -61,4 +114,5 @@ h2{
     #img2{
         width: 20%;
     }    
+
 }
