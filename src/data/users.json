@@ -123,5 +123,15 @@
   "confirmarPassword": "$2a$10$4mKTgXRCvJ5C8tLQIck/oel0EmAdtLFsy9Q5YbSmcqqDbagliOhoe",
   "terminos": "on",
   "foto": "1696372128049_img.jpg"
+ },
+ {
+  "id": 14,
+  "nombre": "naza",
+  "apellido": "kessel",
+  "email": "naza.kessel30@gmail.com",
+  "password": "$2a$10$0kqUc3vBFRdO2S0ZBGSI5.lWBZ.3.k6qGLGkF/J2eElSDXrm5RAEW",
+  "confirmarPassword": "$2a$10$UmSoxQPnz5yDHLdQsP.G0Os7ke7aRL/kRm7yZbJX2ZHE5R4yNrS1a",
+  "terminos": "on",
+  "foto": "1696526458837_img.jpg"
  }
 ]
