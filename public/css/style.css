@@ -10,8 +10,9 @@
 body{
     width: 100%;
     max-width: 100%;
-    background: #000;
+    background-color: #000;
 }
+
 main{
   display: flex;
   flex-direction: column;
