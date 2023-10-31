@@ -126,12 +126,12 @@
  },
  {
   "id": 14,
-  "nombre": "Daniel",
-  "apellido": "Palau",
-  "email": "palaudanny@gmail.com",
-  "password": "$2a$10$6dT7DI7WUyW/d7xWOUm6aubeork9zRbMn1G36MMGTApCHxd1FoErW",
-  "confirmarPassword": "$2a$10$Uji1HxWxCML81Yo5O1xtzu0sbm6JZNOxLWVQwmiwkTuKUiwoVjQt6",
+  "nombre": "naza",
+  "apellido": "kessel",
+  "email": "naza.kessel30@gmail.com",
+  "password": "$2a$10$0kqUc3vBFRdO2S0ZBGSI5.lWBZ.3.k6qGLGkF/J2eElSDXrm5RAEW",
+  "confirmarPassword": "$2a$10$UmSoxQPnz5yDHLdQsP.G0Os7ke7aRL/kRm7yZbJX2ZHE5R4yNrS1a",
   "terminos": "on",
-  "foto": "1696700141906_img.png"
+  "foto": "1696526458837_img.jpg"
  }
 ]

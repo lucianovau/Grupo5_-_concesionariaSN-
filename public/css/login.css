@@ -219,9 +219,10 @@ button{
 
 /* Estilos para la imagen de usuario */
 .userImg {
-    max-width: 200px;
-    height: auto;
-    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border: solid 1px red;
+    
 }
 
 /* Estilos para el contenedor de correo */
