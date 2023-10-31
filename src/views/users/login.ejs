@@ -20,14 +20,24 @@
                 <%= errors.email.msg %>
               </div>
               <% } %>
+
+              <div class="contenedor-password">
+
                 <input type="password" id="password" name="password" class="inicio iniput" placeholder="Contraseña"
-                  value="<%= (locals.old && old.password) ? old.password : '' %>">
+                value="<%= (locals.old && old.password) ? old.password : '' %>">
+                <button type="button" class="boton-passsword" id="boton-passsword">
+                  <i class="fas fa-eye ojoPasswordBoton" id="ocultar-password"></i>
+                  <i class="fas fa-eye-slash ojoPasswordBoton" id="mostrar-password"></i>
+                </button>
+                
                 <% if(locals.errors && errors.password){ %>
                   <div class="text-error">
                     <%= errors.password.msg %>
                   </div>
                   <% } %>
-
+                
+                </div>
+                  
                     <p class="inicio">
                       <input type="checkbox" id="sesion-iniciada" name="sesion" class="iniput">
                       <label for="sesion-iniciada">Mantener sesión iniciada</label>
@@ -57,5 +67,29 @@
 
     <%- include('../partials/footer') %>
 </body>
+
+<!-- BOTON OCULTAR/VER TEXTO PASSWORD -->
+
+<script>
+
+    var botonPasssword = document.getElementById('boton-passsword');
+    var password = document.getElementById('password');
+    var mostrarPassword = document.getElementById('mostrar-password');
+    var ocultarPassword = document.getElementById('ocultar-password')
+    botonPasssword.addEventListener("click", function(){
+      if (password.type === "password") {
+        password.type = "text";
+        mostrarPassword.style.display = 'flex';
+        ocultarPassword.style.display = 'none';
+        
+      } else {
+        password.type = "password";
+        ocultarPassword.style.display = 'flex';
+        mostrarPassword.style.display = 'none';
+      }
+    })
+
+  </script>
+  
 
 </html>

@@ -2,64 +2,87 @@
   <div class="head">
     <img src="/img/logo2.png" alt="Logo">
     <div class="iconos">
-
+      <p class="nombreIcono">¡ BIENVENIDO !</p>
       <% if(!locals.logged) { %>
         <li>
-          <a href="<% if(locals.rutaproducto){ %>
-            login
-            <% }else if(locals.rutaDetalle){ %>
-              ../user/login
-              <% }else{ %>
-                user/login
-                <% } %>"><i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
-          </a>
-          <div class="listaMenuPerfil">
+          <ul class="perfilHover">
 
-            <ul><a href="<% if(locals.rutaproducto){ %>
-            login
-            <% }else if(locals.rutaDetalle){ %>
-              ../user/login
-              <% }else{ %>
-                user/login
-                <% } %>">Iniciar Sesión</a></ul>
-            <ul><a href="<% if(locals.rutaproducto){ %>
-            register
-            <% }else if(locals.rutaDetalle){ %>
-              ../user/register
-              <% }else{ %>
-                user/register
-                <% } %>">Registrarse</a></ul>
-          </div>
-        </li>
-        <%} else {%>
-          <li>
             <a href="<% if(locals.rutaproducto){ %>
-                      profile
-                      <% }else if(locals.rutaDetalle){ %>
-                        ../user/profile
-                        <% }else{ %>
-                          user/profile
-                          <% } %>"><i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
+              login
+              <% }else if(locals.rutaDetalle){ %>
+                ../user/login
+                <% }else{ %>
+                  user/login
+                  <% } %>"><i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
             </a>
             <div class="listaMenuPerfil">
-
-              <ul><a href="<% if(locals.rutaproducto){ %>
-                      logout
-                      <% }else if(locals.rutaDetalle){ %>
-                        ../user/logout
-                        <% }else{ %>
-                          user/logout
-                          <% } %>">Cerrar Sesión</a></ul>
+              <ul>
+                <a href="<% if(locals.rutaproducto){ %>
+                  login
+                  <% }else if(locals.rutaDetalle){ %>
+                    ../user/login
+                    <% }else{ %>
+                      user/login
+                      <% } %>">Iniciar Sesión</a>
+              </ul>
+              <ul>
+                <a href="<% if(locals.rutaproducto){ %>
+                  register
+                  <% }else if(locals.rutaDetalle){ %>
+                    ../user/register
+                    <% }else{ %>
+                      user/register
+                    <% } %>">Registrarse</a>
+              </ul>
             </div>
-          </li>
-          <% } %>
-            <% if(locals.logged) { %>
+          </ul>
+          <ul class="carritoHover">
+              <i id="carritoDeCompras" class="fas fa-shopping-cart" style="color: #ff0000;"></i>
+              <div class="carritoDeComprasTexto">
+                <p>
+                  Registrate para acceder al carrito
+                </p>
+              </div>
+          </ul>
+        </li>
+        <%} else {%>
+        <li>
+          <ul class="perfilHover">
+          <a href="<% if(locals.rutaproducto){ %>
+                    profile
+                    <% }else if(locals.rutaDetalle){ %>
+                      ../user/profile
+                      <% }else{ %>
+                        user/profile
+                        <% } %>"><i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
+          </a>
+          <div class="listaMenuPerfil cerrarSesion">
+            <ul>
+              <a href="<% if(locals.rutaproducto){ %>
+                logout
+                <% }else if(locals.rutaDetalle){ %>
+                  ../user/logout
+                  <% }else{ %>
+                    user/logout
+                    <% } %>"> Cerrar Sesión </a>
+              </ul>
+          </div>
+          </ul>
+        </li>
+        <% } %>
+        <% if(locals.logged) { %>
+          <li>
+
+            <ul class="carritoHover">
+              
               <a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
-          ../productCart
-      <% }else{ %>
-        productCart
-     <% } %>"><i class="fas fa-shopping-cart" style="color: #ff0000;"></i></a>
-              <% } %>
+                ../productCart
+                <% }else{ %>
+                  productCart
+                  <% } %>"><i class="fas fa-shopping-cart" style="color: #ff0000;"></i></a>
+                </ul>
+                <% } %>
+              </li>
     </div>
   </div>
   <div id="barra">

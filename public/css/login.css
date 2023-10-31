@@ -37,6 +37,7 @@ section{
 .inicio label{
     text-shadow: 2.5px 2.5px 10px black;
 }
+
 main{
     display: flex;
     flex-direction: column;
@@ -45,17 +46,24 @@ main{
     padding: 10px 0px;
 }
 #invitado {
-    height: 400px ;
-    border-top: solid 5px black;
+    /* border-top: solid 5px black; */
     background-image: url('../img/invitado.jpg');
-    justify-content: center;
     background-size: cover;
+    border: none;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
+
 #login{
     height: 400px ;
     background-image: url('../img/inicio.jpg');
     justify-content: space-evenly;
 }
+
 h2{
     color: white;
     text-align: center;
@@ -63,6 +71,7 @@ h2{
     width: 80%;
     text-shadow: 2.5px 2.5px 10px black;
 }
+
 button{
     background-color: #E90027;
     color: white;
@@ -74,17 +83,67 @@ button{
     width: 75%;
     cursor: pointer;
 }
+
 #boton2{
     margin: 10px;
 }
+
 .iniput{
     box-shadow: 5px 5px 15px black;
 }
+
+.text-error{
+    color: #E90027;
+    text-transform: uppercase;
+}
+
+#password{
+    width: 100%;
+    box-shadow: none;
+}
+
+#password, .boton-passsword{
+    margin: 0px;
+}
+
+.contenedor-password{
+    margin-top: 5px;
+    display: flex;
+    position: relative;
+    width: 85%;
+    box-shadow: 5px 5px 15px black;
+}
+
+.boton-passsword{
+    width: 15%;
+    border-radius: 0px;
+    height: auto;
+    background: rgb(232, 240, 254);
+
+}
+
+.ojoPasswordBoton{
+    font-size: 1rem;
+    padding: 0px;
+    justify-content: center;
+    color: black;
+}
+
+/* CLASE OJO VER */
+#mostrar-password{
+    display: none;
+}
+
 @media ((min-width: 481px) and (max-width: 768px)){
     .inicio{
         width: 95%;
         margin: 8px;
     }
+
+    .contenedor-password{
+        width: 95%;
+    }
+
     }
 @media ((min-width: 768px) and (max-width: 1279px)){
    main{

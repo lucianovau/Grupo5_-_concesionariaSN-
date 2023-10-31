@@ -40,6 +40,16 @@ app.use('/productos', productosRutas);
 app.use('/detalleProd', detalleRutas);
 app.use('/user', userRutas);
 
+//Error 404
+// app.use((res, req, next) =>{
+//     res.status(404),render('not-found');
+// })
+
+app.use((req,res,next) => {
+    res.status(404).render('../src/views/not-found')
+})
+
+
 // levantar el servidor
 let port = process.env.PORT || 3000
 app.listen(port, () => console.log(`servidor corriendo en el puerto ${port}`));
