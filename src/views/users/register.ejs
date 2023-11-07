@@ -124,6 +124,10 @@
                 e.preventDefault()
                 errors.push('Los campos no pueden estar vacios')
             }
+            if(name.value.length < 2 || lastname.value.length < 2){
+              e.preventDefault()
+                errors.push('Su nombre y/o apellido debera tener al menos 2 caracteres')
+            }
            if(password.value.length < 8){
                 e.preventDefault()
                 errors.push('La contraseña debe tener al menos 8 caracteres')

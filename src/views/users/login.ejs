@@ -48,7 +48,7 @@
                         <% } %>
                     </p>
 
-
+                    <ul id="errors" style="display: none ;" class="errors"></ul>
                     <button type="submit" class="inicio" id="boton1">Iniciar Sesión</button>
 
                     <p class="inicio">
@@ -89,6 +89,36 @@
       }
     })
 
+    // validaciones
+    window.addEventListener('load', ()=>{
+
+      let form = document.querySelector('#Iniciar')
+      let email = document.querySelector('#email');
+      let password = document.querySelector('#password');
+
+      let errors = []
+
+      form.addEventListener('submit', (e)=>{
+          if(email.value == '' || password.value == ''){
+              e.preventDefault()
+              errors.push('Los campos no pueden estar vacios')  
+          }
+          if(password.value.length < 8){
+              e.preventDefault()
+              errors.push('La contraseña debe tener al menos 8 caracteres')
+        }
+
+        if(errors.length > 0){
+          let list = document.querySelector('#errors')
+          list.innerHTML = ''
+            for(error of errors){
+              list.innerHTML += '<li>'+ error +'</li>'
+            }
+            list.style.display = 'flex'
+          }
+        errors = []
+      })
+      })
   </script>
   
 

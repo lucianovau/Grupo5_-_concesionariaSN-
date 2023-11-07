@@ -2,32 +2,7 @@
 @import url(header.css);
 @import url(footer.css);
 
-/*main{  
-    width: 100%;
-    background-color: brown;
-    height: 700px;
-}
-h1{
-    width: 100%;    
-}
-#productForm{
-    margin-top: 15px;  
-}
-#productForm button{
-    width: 40%;
-    margin-left: 30%;
-    border-radius: 15px;
-    text-transform: uppercase;
-    color: black;
-    background-color: red;
-    border: solid 1px black;
-}
-.posicionamientoForm{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    font-size: small;
-}*/
+
 
 /* Estilos para el formulario */
 main {
@@ -90,6 +65,15 @@ textarea {
 .posicionamientoForm {
   width: 100%;
   margin-bottom: 20px;
+}
+.errors{
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+}
+.errors li{
+  width: 100%;
+  color: #fff;
 }
 
 @media ((min-width: 481px)) {

@@ -134,6 +134,14 @@ button{
     display: none;
 }
 
+.errors{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .errors li{
+    width: 100%;
+  }
 @media ((min-width: 481px) and (max-width: 768px)){
     .inicio{
         width: 95%;
