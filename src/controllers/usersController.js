@@ -24,40 +24,41 @@ const controller = {
                 oldData: req.body,
                 rutaproducto
             })
-        };
-        let usuarioRegistrado 
-        db.User.findOne({ where: { email: req.body.email}})
-            .then((resultados)=>{
-                usuarioRegistrado = resultados
-            })
-            .catch((err)=>{
-                console.log(err)
-            })
-        if (usuarioRegistrado){
-            return res.render(rutaRegistro,{
-                errors:{
-                    email:{
-                        msg: "este email ya esta registrado"
-                    }
-                },
-                oldData: req.body
-            })
-        };
-
-        db.User.create({
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            email: req.body.email, 
-            terminos: req.body.terminos,
-            foto: '/img/productImg/' + req.file.filename,
-            password: bcryptjs.hashSync(req.body.password,10),
-        })
-            .then(()=>{
-                return res.redirect("/");
-            })
-            .catch((err)=>{
-                console.log(err)
-            })
+        }else{
+            let usuarioRegistrado 
+            db.User.findOne({ where: { email: req.body.email}})
+                .then((resultados)=>{
+                    usuarioRegistrado = resultados
+                })
+                .catch((err)=>{
+                    console.log(err)
+                })
+            if (usuarioRegistrado){
+                return res.render(rutaRegistro,{
+                    errors:{
+                        email:{
+                            msg: "este email ya esta registrado"
+                        }
+                    },
+                    oldData: req.body
+                })
+            }else{
+                db.User.create({
+                    nombre: req.body.nombre,
+                    apellido: req.body.apellido,
+                    email: req.body.email, 
+                    terminos: req.body.terminos,
+                    foto: '/img/productImg/' + req.file.filename,
+                    password: bcryptjs.hashSync(req.body.password,10),
+                })
+                    .then(()=>{
+                        return res.redirect("/");
+                    })
+                    .catch((err)=>{
+                        console.log(err)
+                    })
+                }
+            }
     },
     login: (req, res) => {
         let ruta = path.resolve(__dirname, "../views/users/login");

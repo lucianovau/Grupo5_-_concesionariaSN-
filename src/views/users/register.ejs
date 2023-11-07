@@ -9,24 +9,12 @@
 <body>
   <%- include('../partials/header') %>
     <main>
-<<<<<<< HEAD
-      <section class="logo">
-        <img src="#" alt="img">
-=======
       <section class="perfil">
         <img src="/img/users/user.png" alt="foto de perfil">
         nombren<br>
         mail
->>>>>>> 8a22c0624d7f940a1dc5712200a0e7de4a65bab5
       </section>
 
-      <section id="izquierda">
-
-        <div id="triangulo1"></div>
-        <div id="triangulo3"></div>
-        <div id="triangulo2"></div>
-
-      </section>
       <section id="derecha">
         <p id="ingresa"><a href="login">¿Ya estás registrado? Ingresa aquí</a></p>
         <p>
@@ -74,7 +62,7 @@
                 <% } %>
             </div>
             <div class="grupo-formulario">
-              <label for="contraseña">Contraseña:</label>
+              <label for="password">Contraseña:</label>
               <input type="password" id="password" name="password" class="input">
               <% if(locals.errors && errors.password){ %>
                 <div class="text-error">
@@ -83,7 +71,7 @@
                 <% } %>
             </div>
             <div class="grupo-formulario">
-              <label for="confirmarContraseña">Confirmar contraseña:</label>
+              <label for="confirmarPassword">Confirmar contraseña:</label>
               <input type="password" id="confirmarPassword" class="input" name="confirmarPassword">
               <% if(locals.errors && errors.confirmarPassword){ %>
                 <div class="text-error">
@@ -91,7 +79,8 @@
                 </div>
                 <% } %>
             </div>
-            <div class="grupo-formulario">
+            
+            <div class="grupo-formulario">   
               <input type="checkbox" id="terminos" name="terminos">
               <label for="terminos" class="etiqueta-checkbox">Acepto los términos y condiciones</label>
               <% if(locals.errors && errors.terminos){ %>
@@ -100,6 +89,7 @@
                 </div>
                 <% } %>
             </div>
+            <ul id="errors" style="display: none ;" class="errors"></ul>
             <button type="submit" id="boton1" class="input">Crear cuenta</button>
             <div class="grupo-formulario" id="redes">
               <button type="submit" class="boton2 input">Ingresa con Facebook <i class="fab fa-facebook-f"
@@ -114,6 +104,57 @@
       
     </main>
     <%- include('../partials/footer') %>
+    <script >
+      window.addEventListener('load', ()=>{
+
+        let form = document.querySelector('#registro')
+        let name = document.querySelector('#nombre');
+        let lastname = document.querySelector('#apellido');
+        let email = document.querySelector('#email');
+        let foto = document.querySelector('#foto');
+        let password = document.querySelector('#password');
+        let password2 = document.querySelector('#confirmarPassword');
+        let terms = document.querySelector('#terminos');
+
+        let errors = []
+        
+        form.addEventListener('submit', (e)=>{
+            
+            if(name.value == '' || lastname.value == '' || email.value == '' || password.value == '' || password2.value == ''){
+                e.preventDefault()
+                errors.push('Los campos no pueden estar vacios')
+            }
+           if(password.value.length < 8){
+                e.preventDefault()
+                errors.push('La contraseña debe tener al menos 8 caracteres')
+           }
+           if(password.value != password2.value){
+                e.preventDefault()
+                errors.push('La contraseña debe coincidir')
+           }
+           if(terms.value.checked == false){
+                e.preventDefault()
+                errors.push('Debe aceptar los terminos y condiciones')
+           }
+           if(foto.value == ''){
+                e.preventDefault()
+                errors.push('Debe ingresar una foto')
+           }
+
+           if(errors.length > 0){
+            let list = document.querySelector('#errors')
+            list.innerHTML = ''
+              for(error of errors){
+                list.innerHTML += '<li>'+ error +'</li>'
+              }
+              list.style.display = 'flex'
+            }
+          errors = []
+        })
+       
+        
+      })
+    </script>
 </body>
 
 </html>
