@@ -4,12 +4,26 @@ const path = require('path');
 const { body } = require('express-validator');
 
 const validations = [
-    body('nombre').notEmpty().withMessage('Tienes que escribir un nombre'),
-    body('apellido').notEmpty().withMessage('Tienes que escribir un apellido'),
+    body('nombre').notEmpty().withMessage('El nombre debe tener al menos 2 caracteres'),
+    body('apellido').notEmpty().withMessage('El apellido debe tener al menos 2 caracteres'),
     body('email')
         .notEmpty().withMessage('Tienes que escribir un email').bail()
-        .isEmail().withMessage('Debes ingresar un formato válido'),
-    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+        .isEmail().withMessage('Debes ingresar un formato válido')
+        .custom(async (value, { req }) => {
+            // Verifica si el email ya está registrado en la base de datos
+            const existingUser = await User.findOne({ email: value });
+
+            if (existingUser) {
+                throw new Error('Este email ya está registrado');
+            }
+             // Si el email no está registrado, la validación pasa
+            return true;
+        }),
+    body('password').notEmpty()
+        .withMessage('Tienes que escribir una contraseña')
+        .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
+        .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/)
+        .withMessage('La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial'),
     body('confirmarPassword').notEmpty().withMessage('Tienes que repetir la contraseña')
         .bail().custom((value, { req }) => {
         if (value !== req.body.password) {
