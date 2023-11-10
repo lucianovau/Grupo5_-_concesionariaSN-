@@ -10,30 +10,32 @@
   <%- include('../partials/header') %>
     <main>
       <h1>Creación de Productos</h1>
+      
       <form id="productForm" action="/productos/create" method="POST" enctype="multipart/form-data">
+        
         <div class="posicionamientoForm">
           <label for="name">Nombre del producto:</label>
-          <input type="text" id="name" name="name" required /><br /><br />
+          <input type="text" id="name" name="name"  /><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="marca">Marca:</label>
-          <input type="text" id="marca" name="marca" required /><br /><br />
+          <input type="text" id="marca" name="marca"  /><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="modelo">Modelo:</label>
-          <input type="text" id="modelo" name="modelo" required /><br /><br />
+          <input type="text" id="modelo" name="modelo"  /><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="descripcion">Descripción:</label>
-          <textarea id="descripcion" name="descripcion" required></textarea><br /><br />
+          <textarea id="descripcion" name="descripcion" ></textarea><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="imageProduct">Imagen:</label>
-          <input type="file" multiple id="imageProduct" name="imageProduct" required /><br /><br />
+          <input type="file" multiple id="imageProduct" name="imageProduct"  /><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="category">Categoría:</label>
-          <input type="text" id="category" name="category" required /><br /><br />
+          <input type="text" id="category" name="category" /><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="colors">Colores:</label>
@@ -41,28 +43,64 @@
         </div>
         <div class="posicionamientoForm">
           <label for="price">Precio:</label>
-          <input type="number" id="price" name="price" step="0.01" required /><br /><br />
+          <input type="number" id="price" name="price" step="0.01"  /><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="fichaTecnica">Ficha tecnica:</label>
-          <textarea id="fichaTecnica" name="fichaTecnica" required></textarea><br /><br />
+          <textarea id="fichaTecnica" name="fichaTecnica"></textarea><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="caracteristicas">Caracteristicas:</label>
-          <textarea id="caracteristicas" name="caracteristicas" required></textarea><br /><br />
+          <textarea id="caracteristicas" name="caracteristicas" ></textarea><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="seguridad">Seguridad:</label>
-          <textarea id="seguridad" name="seguridad" required></textarea><br /><br />
+          <textarea id="seguridad" name="seguridad" ></textarea><br /><br />
         </div>
         <div class="posicionamientoForm">
           <label for="confort">Confort:</label>
-          <textarea id="confort" name="confort" required></textarea><br /><br />
+          <textarea id="confort" name="confort" ></textarea><br /><br />
         </div>
+        <ul id="errors" style="display: none;" class="errors"></ul>
         <button id="botonGuardar" type="submit">Guardar Producto</button>
       </form>
     </main>
     <%- include('../partials/footer') %>
+    <script>
+      window.addEventListener('load', () => {
+
+          let name = document.querySelector('#name');
+          let description = document.querySelector('#descripcion');
+          let form = document.querySelector('#productForm');
+          let imagen = document.querySelector('#imageProduct');
+
+          let errors = [];
+
+          form.addEventListener('submit', (e)=>{
+            if(name.value == '' || name.value.length < 2){
+                e.preventDefault()
+                errors.push('Debe ingresar un nombre valido')
+            }
+            if(description.value.length < 20){
+              e.preventDefault()
+              errors.push('Debe ingresar una descripcion de al menos 20 caracteres')
+            }
+            if(imagen.value == ''){
+              e.preventDefault()
+              errors.push('Debe ingresar 6 imagenes')
+            }
+            if(errors.length > 0){
+                let list = document.querySelector('#errors')
+                list.innerHTML = ''
+                for(error of errors){
+                  list.innerHTML += '<li>'+ error +'</li>'
+                }
+                list.style.display = 'flex'
+            }
+            errors = []
+          })
+      })
+    </script>
 </body>
 
 </html>

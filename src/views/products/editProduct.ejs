@@ -43,6 +43,7 @@
           <label for="price">Precio:</label>
           <input type="number" id="price" name="price" step="0.01" value="<%=producto.price%>" required />
         </div>
+        <ul id="errors" style="display: none;" class="errors"></ul>
         <button id="botonGuardar" type="submit">Guardar Producto</button>
       </form>
       <form action="/detalleProd/<%=producto.id%>/edit?_method=DELETE" method="POST" enctype="multiport/form-data">
@@ -50,6 +51,41 @@
       </form>
     </main>
     <%- include('../partials/footer') %>
+    <script>
+      window.addEventListener('load', () => {
+
+          let name = document.querySelector('#name');
+          let description = document.querySelector('#description');
+          let form = document.querySelector('#productForm');
+          let imagen = document.querySelector('#image');
+
+          let errors = [];
+
+          form.addEventListener('submit', (e)=>{
+            if(name.value == '' || name.value.length < 2){
+                e.preventDefault()
+                errors.push('Debe ingresar un nombre valido')
+            }
+            if(description.value.length < 20){
+              e.preventDefault()
+              errors.push('Debe ingresar una descripcion de al menos 20 caracteres')
+            }
+            if(imagen.value == ''){
+              e.preventDefault()
+              errors.push('Debe ingresar 6 imagenes')
+            }
+            if(errors.length > 0){
+                let list = document.querySelector('#errors')
+                list.innerHTML = ''
+                for(error of errors){
+                  list.innerHTML += '<li>'+ error +'</li>'
+                }
+                list.style.display = 'flex'
+            }
+            errors = []
+          })
+      })
+    </script>
 </body>
 
 </html>
