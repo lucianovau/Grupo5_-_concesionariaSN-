@@ -19,27 +19,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false,
         },
-        img1: {
-            type: dataTypes.STRING(100),
-            allowNull: false,
-        },
-        img2: {
-            type: dataTypes.STRING(100),
-            allowNull: false,
-        },
-        img3: {
-            type: dataTypes.STRING(100),
-            allowNull: false,
-        },
-        img4: {
-            type: dataTypes.STRING(100),
-            allowNull: false,
-        },
-        img5: {
-            type: dataTypes.STRING(100),
-            allowNull: false,
-        },
-        img6: {
+        foto: {
             type: dataTypes.STRING(100),
             allowNull: false,
         },
