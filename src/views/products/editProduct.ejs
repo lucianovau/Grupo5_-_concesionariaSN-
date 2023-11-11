@@ -70,10 +70,6 @@
               e.preventDefault()
               errors.push('Debe ingresar una descripcion de al menos 20 caracteres')
             }
-            if(imagen.value == ''){
-              e.preventDefault()
-              errors.push('Debe ingresar 6 imagenes')
-            }
             if(errors.length > 0){
                 let list = document.querySelector('#errors')
                 list.innerHTML = ''

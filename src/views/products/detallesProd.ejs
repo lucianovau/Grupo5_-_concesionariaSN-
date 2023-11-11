@@ -11,7 +11,7 @@
     <main>
       <div class="contenedor">
         <section class="product-info">
-          <img class="img-principal" src="<%= producto.img1 %>" alt="Imagen del Producto" class="product-image"
+          <img class="img-principal" src="<% let img = producto.img.split(' ')  %> <%= img[0] %> " alt="Imagen del Producto" class="product-image"
             width="700px" height="500px">
           <div class="product-details">
             <h1 class="product-title">
@@ -28,18 +28,12 @@
         </section>
         <section id="fotos" class="container">
           <div class="fotos">
-            <img src="<%= producto.img2 %>" alt="foto-interior">
-            <img src="<%= producto.img3 %>" alt="foto-lateral2">
-            <img src="<%= producto.img4 %>" alt="foto-atras">
-            <img src="<%= producto.img5 %>" alt="foto-adelante">
-            <img src="<%= producto.img6 %>" alt="foto-360">
-
-          <!-- width="150px" height="150px" -->
-          <!-- width="150px" height="150px" -->
-          <!-- width="150px" height="150px" -->
-          <!-- width="150px" height="150px" -->
-          <!-- width="150px" height="150px" -->
-
+            <% let img1 = img.slice(1, 6) %>
+            <% img1.forEach(img => { %>
+                <img src="<%= img %>" alt="foto">
+           <% }) %>
+            
+    
           </div>
           <div class="botones">
             <div class="botones-arriba">

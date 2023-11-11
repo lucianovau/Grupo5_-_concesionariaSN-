@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false,
         },
-        foto: {
+        img: {
             type: dataTypes.STRING(100),
             allowNull: false,
         },
@@ -37,10 +37,6 @@ module.exports = (sequelize, dataTypes) => {
         color: {
             type: dataTypes.STRING(100),
             allowNull: false,
-        },
-        id_fichaTecnica: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
-            references: { model: 'fichatecnica', key: 'id' }            
         }
     };
     let config = {
