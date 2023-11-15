@@ -38,7 +38,8 @@ const controllerProductos = {
    },
    // Guarda el nuevo producto
     store: (req, res) => {
-       
+      const imagenes = req.files.map(file => '/img/productImg/' + file.filename);
+      
         db.Product.create({
           name: req.body.name,
           marca: req.body.marca,
@@ -48,12 +49,7 @@ const controllerProductos = {
           color: req.body.colors,
           price: req.body.price,
           fichaTecnica: req.body.fichaTecnica,
-          img1: ('/img/productImg/' + req.files[0].filename),
-          img2: ('/img/productImg/' + req.files[1].filename),
-          img3: ('/img/productImg/' + req.files[2].filename),
-          img4: ('/img/productImg/' + req.files[3].filename),
-          img5: ('/img/productImg/' + req.files[4].filename),
-          img6: ('/img/productImg/' + req.files[5].filename)
+          foto: imagenes.join('" "')
         }) 
         .then(()=>{
           res.redirect('/productos')
