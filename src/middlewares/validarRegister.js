@@ -2,6 +2,7 @@ const express = require('express');
 const multer = require('multer');
 const path = require('path');
 const { body } = require('express-validator');
+const db = require('../../database/models')
 
 const validations = [
     body('nombre').notEmpty().withMessage('El nombre debe tener al menos 2 caracteres'),
@@ -11,8 +12,8 @@ const validations = [
         .isEmail().withMessage('Debes ingresar un formato válido')
         .custom(async (value, { req }) => {
             // Verifica si el email ya está registrado en la base de datos
-            const existingUser = await User.findOne({ email: value });
-
+            const existingUser = await db.User.findOne({where: { email: value }});
+            console.log(value)
             if (existingUser) {
                 throw new Error('Este email ya está registrado');
             }

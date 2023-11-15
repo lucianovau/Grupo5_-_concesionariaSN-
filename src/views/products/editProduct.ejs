@@ -43,6 +43,19 @@
           <label for="price">Precio:</label>
           <input type="number" id="price" name="price" step="0.01" value="<%=producto.price%>" required />
         </div>
+        <div class="posicionamientoForm">
+          <label for="caracteristicas">Caracteristicas:</label>
+          <% let caracteristicas = producto.caracteristicas.split('//')%>
+          <textarea id="caracteristicas" name="caracteristicas"><%= caracteristicas[0] %> </textarea>
+        </div>
+        <div class="posicionamientoForm">
+          <label for="seguridad">Seguridad:</label>
+          <textarea id="seguridad" name="seguridad" ><%= caracteristicas[2] %></textarea>
+        </div>
+        <div class="posicionamientoForm">
+          <label for="confort">Confort:</label>
+          <textarea id="confort" name="confort" ><%= caracteristicas[1] %> </textarea>
+        </div>
         <ul id="errors" style="display: none;" class="errors"></ul>
         <button id="botonGuardar" type="submit">Guardar Producto</button>
       </form>

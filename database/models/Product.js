@@ -37,6 +37,10 @@ module.exports = (sequelize, dataTypes) => {
         color: {
             type: dataTypes.STRING(100),
             allowNull: false,
+        },
+        caracteristicas: {
+            type: dataTypes.STRING(100),
+            allowNull: false,
         }
     };
     let config = {

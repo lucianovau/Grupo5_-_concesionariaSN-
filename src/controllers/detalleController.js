@@ -41,6 +41,7 @@ const controller = {
         const idProd = req.params.id;
         let imagenes = req.files.map(file => '/img/productImg/' + file.filename);
         if(imagenes == true){
+          let caracteristicas = `${req.body.caracteristicas} // ${req.body.confort} // ${req.body.seguridad}` 
           db.Product.update({
             name: req.body.name,
             marca: req.body.marca,
@@ -49,9 +50,8 @@ const controller = {
             category: req.body.category,
             color: req.body.colors,
             price: req.body.price,
-            fichaTecnica: req.body.fichaTecnica,
-            img: imagenes.join(' ')
-           
+            img: imagenes.join(' '),
+            caracteristicas: caracteristicas
         }, {
           where: {id: idProd}
         })
@@ -62,6 +62,7 @@ const controller = {
           console.log(err)
         })
         }else {
+          let caracteristicas = `${req.body.caracteristicas} // ${req.body.confort} // ${req.body.seguridad}` 
           db.Product.update({
             name: req.body.name,
             marca: req.body.marca,
@@ -70,7 +71,7 @@ const controller = {
             category: req.body.category,
             color: req.body.colors,
             price: req.body.price,
-            fichaTecnica: req.body.fichaTecnica
+            caracteristicas: caracteristicas
         }, {
           where: {id: idProd}
         })
