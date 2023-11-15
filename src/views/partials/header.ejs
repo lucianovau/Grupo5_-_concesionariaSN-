@@ -107,8 +107,8 @@
         <% }else{ %>
             productos
        <% } %>">Productos</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Ayuda</a></li>
+        <li><a href="#" id="contacto">Contacto</a></li>
+        <li><a href="#" id="ayuda">Ayuda</a></li>
       </ul>
     </nav>
     <form action="/" method="POST">
@@ -123,4 +123,64 @@
   <div class="capa"></div>
 </header>
 
+<dialog id="modal" >
+  <button class="cerrar" id="cerrar">X</button>
+  <h2>¡Contactanos!</h2>
+  <div id="contactoForm">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre">
+      <label for="apellido">Apellido</label>
+      <input type="text" id="Apellido" name="apellido">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email">
+      <label for="telefono">Telefono</label>
+      <input type="text" id="telefono" name="telefono">
+      <label for="auto">Auto por el que consulta</label>
+      <input type="text" id="auto" name="auto">
+      <label for="consulta">Consulta</label>
+      <textarea name="consulta" id="consulta" cols="10" rows="10"></textarea>
+      <button type="submit" class="cerrar" id="enviar">Enviar</button>
+  </div>
+</dialog>
+
+<dialog id="modal2">
+  <button class="cerrar" id="cerrar2">X</button>
+  <div id="contenidoAyuda"> 
+    <h2>Ayuda</h2>
+  <p>Si necesitas ayuda, o mayor asistencia en tu compra comunicate al:</p>
+  <h3>3364584569</h3>
+  </div> 
+</dialog>
+
 <script src="/js/clearMode.js"></script>
+<script>
+  const abrir = document.querySelector('#contacto')
+  const cerrar = document.querySelector('#cerrar')
+  const enviar = document.querySelector('#enviar')
+  const modal = document.querySelector('#modal')
+
+  abrir.addEventListener('click', ()=>{
+    modal.showModal()
+  })
+
+  cerrar.addEventListener('click', ()=>{
+    modal.close()
+  })
+  
+  enviar.addEventListener('click', ()=>{
+    modal.close()
+  })
+
+  const abrirAyuda = document.querySelector('#ayuda')
+  const cerrarAyuda = document.querySelector('#cerrar2')
+  const modalAyuda = document.querySelector('#modal2')
+
+  abrirAyuda.addEventListener('click', ()=>{
+    modalAyuda.showModal()
+  })
+
+  cerrarAyuda.addEventListener('click', ()=>{
+    modalAyuda.close()
+  })
+  
+</script>
