@@ -38,19 +38,20 @@ const controllerProductos = {
    },
    // Guarda el nuevo producto
     store: (req, res) => {
-      const imagenes = req.files.map(file => '/img/productImg/' + file.filename);
-      
+       let imagenes = req.files.map(file => '/img/productImg/' + file.filename);
+       let caracteristicas = `${req.body.caracteristicas} // ${req.body.confort} // ${req.body.seguridad}` 
         db.Product.create({
           name: req.body.name,
           marca: req.body.marca,
           modelo: req.body.modelo,
+          img: imagenes.join(' '),
           descripcion: req.body.descripcion,
           category: req.body.category,
-          color: req.body.colors,
           price: req.body.price,
-          fichaTecnica: req.body.fichaTecnica,
-          foto: imagenes.join('" "')
-        }) 
+          color: req.body.colors,
+          caracteristicas: caracteristicas
+          
+        })
         .then(()=>{
           res.redirect('/productos')
         })
@@ -61,3 +62,5 @@ const controllerProductos = {
 } 
 
 module.exports = controllerProductos;
+
+

@@ -20,8 +20,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false,
         },
-        foto: {
-            type: dataTypes.STRING(2000),
+        img: {
+            type: dataTypes.STRING(100),
             allowNull: false,
         },
         descripcion: {
@@ -39,9 +39,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false,
         },
-        id_fichaTecnica: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
-            references: { model: 'fichatecnica', key: 'id' }            
+        caracteristicas: {
+            type: dataTypes.STRING(100),
+            allowNull: false,
         }
     };
     let config = {

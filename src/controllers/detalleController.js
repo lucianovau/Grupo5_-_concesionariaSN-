@@ -39,7 +39,10 @@ const controller = {
    // Envia el formulario de edicion
    store: (req, res) => {
         const idProd = req.params.id;
-        db.Product.update({
+        let imagenes = req.files.map(file => '/img/productImg/' + file.filename);
+        if(imagenes == true){
+          let caracteristicas = `${req.body.caracteristicas} // ${req.body.confort} // ${req.body.seguridad}` 
+          db.Product.update({
             name: req.body.name,
             marca: req.body.marca,
             modelo: req.body.modelo,
@@ -47,13 +50,8 @@ const controller = {
             category: req.body.category,
             color: req.body.colors,
             price: req.body.price,
-            fichaTecnica: req.body.fichaTecnica,
-            img1: ('/img/productImg/' + req.files[0].filename),
-            img2: ('/img/productImg/' + req.files[1].filename),
-            img3: ('/img/productImg/' + req.files[2].filename),
-            img4: ('/img/productImg/' + req.files[3].filename),
-            img5: ('/img/productImg/' + req.files[4].filename),
-            img6: ('/img/productImg/' + req.files[5].filename)
+            img: imagenes.join(' '),
+            caracteristicas: caracteristicas
         }, {
           where: {id: idProd}
         })
@@ -63,6 +61,28 @@ const controller = {
         .catch((err)=>{
           console.log(err)
         })
+        }else {
+          let caracteristicas = `${req.body.caracteristicas} // ${req.body.confort} // ${req.body.seguridad}` 
+          db.Product.update({
+            name: req.body.name,
+            marca: req.body.marca,
+            modelo: req.body.modelo,
+            descripcion: req.body.description,
+            category: req.body.category,
+            color: req.body.colors,
+            price: req.body.price,
+            caracteristicas: caracteristicas
+        }, {
+          where: {id: idProd}
+        })
+        .then(()=>{
+          res.redirect('/productos')
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
+        }
+        
    },
    // Borra un producto
    delete: (req, res) => {
