@@ -5,7 +5,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
-            autoIncrement: true
+            autoIncrement: true,
+            initialAutoIncrement: 1
         },
         name: {
             type: dataTypes.STRING(100),
