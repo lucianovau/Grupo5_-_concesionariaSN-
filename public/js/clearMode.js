@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let miH4 = document.querySelectorAll('h4');
     let miFooter = document.querySelector('footer');
     let iconos = document.querySelectorAll('.modoClaroIcon');
+    let pCarrusel = document.querySelectorAll('.textCarrusel')
 
     function modoClaro (){
         if(miBody){
@@ -31,11 +32,25 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < iconos.length; i++){
             iconos[i].style.color = '#666';
         }
+
+        //se mantienen en blanco
+        for (let i = 0; i < pCarrusel.length; i++){
+            pCarrusel[i].style.color = 'white';
+        }
             } else {
                 miBody.style.backgroundColor = '';
-                texto.style.color = '';
-                miH1.style.color = '';
-                miH4.style.color = '';
+                for (let i = 0; i < texto.length; i++){
+                    texto[i].style.color = 'white';
+                }
+                for (let i = 0; i < miH1.length; i++){
+                    miH1[i].style.color = 'white';
+                }
+                for (let i = 0; i < miH4.length; i++){
+                    miH4[i].style.color = 'white';
+                }
+                for (let i = 0; i < iconos.length; i++){
+                    iconos[i].style.color = 'white';
+                }
                 miFooter.style.background = '';
 
             }
