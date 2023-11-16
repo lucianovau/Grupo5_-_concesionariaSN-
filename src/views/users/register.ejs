@@ -79,8 +79,8 @@
                 </div>
                 <% } %>
             </div>
-            
-            <div class="grupo-formulario">   
+
+            <div class="grupo-formulario">
               <input type="checkbox" id="terminos" name="terminos">
               <label for="terminos" class="etiqueta-checkbox">Acepto los términos y condiciones</label>
               <% if(locals.errors && errors.terminos){ %>
@@ -101,64 +101,64 @@
         </div>
       </section>
 
-      
+
     </main>
     <%- include('../partials/footer') %>
-    <script >
-      window.addEventListener('load', ()=>{
+      <script>
+        window.addEventListener('load', () => {
 
-        let form = document.querySelector('#registro')
-        let name = document.querySelector('#nombre');
-        let lastname = document.querySelector('#apellido');
-        let email = document.querySelector('#email');
-        let foto = document.querySelector('#foto');
-        let password = document.querySelector('#password');
-        let password2 = document.querySelector('#confirmarPassword');
-        let terms = document.querySelector('#terminos');
+          let form = document.querySelector('#registro')
+          let name = document.querySelector('#nombre');
+          let lastname = document.querySelector('#apellido');
+          let email = document.querySelector('#email');
+          let foto = document.querySelector('#foto');
+          let password = document.querySelector('#password');
+          let password2 = document.querySelector('#confirmarPassword');
+          let terms = document.querySelector('#terminos');
 
-        let errors = []
-        
-        form.addEventListener('submit', (e)=>{
-            
-            if(name.value == '' || lastname.value == '' || email.value == '' || password.value == '' || password2.value == ''){
-                e.preventDefault()
-                errors.push('Los campos no pueden estar vacios')
-            }
-            if(name.value.length < 2 || lastname.value.length < 2){
+          let errors = []
+
+          form.addEventListener('submit', (e) => {
+
+            if (name.value == '' || lastname.value == '' || email.value == '' || password.value == '' || password2.value == '') {
               e.preventDefault()
-                errors.push('Su nombre y/o apellido debera tener al menos 2 caracteres')
+              errors.push('Los campos no pueden estar vacios')
             }
-           if(password.value.length < 8){
-                e.preventDefault()
-                errors.push('La contraseña debe tener al menos 8 caracteres')
-           }
-           if(password.value != password2.value){
-                e.preventDefault()
-                errors.push('La contraseña debe coincidir')
-           }
-           if(terms.value.checked == false){
-                e.preventDefault()
-                errors.push('Debe aceptar los terminos y condiciones')
-           }
-           if(foto.value == ''){
-                e.preventDefault()
-                errors.push('Debe ingresar una foto')
-           }
+            if (name.value.length < 2 || lastname.value.length < 2) {
+              e.preventDefault()
+              errors.push('Su nombre y/o apellido debera tener al menos 2 caracteres')
+            }
+            if (password.value.length < 8) {
+              e.preventDefault()
+              errors.push('La contraseña debe tener al menos 8 caracteres')
+            }
+            if (password.value != password2.value) {
+              e.preventDefault()
+              errors.push('La contraseña debe coincidir')
+            }
+            if (terms.value.checked == false) {
+              e.preventDefault()
+              errors.push('Debe aceptar los terminos y condiciones')
+            }
+            if (foto.value == '') {
+              e.preventDefault()
+              errors.push('Debe ingresar una foto')
+            }
 
-           if(errors.length > 0){
-            let list = document.querySelector('#errors')
-            list.innerHTML = ''
-              for(error of errors){
-                list.innerHTML += '<li>'+ error +'</li>'
+            if (errors.length > 0) {
+              let list = document.querySelector('#errors')
+              list.innerHTML = ''
+              for (error of errors) {
+                list.innerHTML += '<li>' + error + '</li>'
               }
               list.style.display = 'flex'
             }
-          errors = []
+            errors = []
+          })
+
+
         })
-       
-        
-      })
-    </script>
+      </script>
 </body>
 
 </html>

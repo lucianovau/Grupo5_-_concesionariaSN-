@@ -1,22 +1,28 @@
+// const User = require('../../database/models/User'); 
 
-function userLoggedMiddleware(req, res, next) {
-    res.locals.isLogged = false;
-    
-    // let emailInCookie = req.cookies.userEmail;
-    // let userFromCookie = User.findByField('email', emailInCookie);
+// async function userLoggedMiddleware(req, res, next) {
+//     res.locals.isLogged = false;
 
-    // if (userFromCookie) {
-    //     res.session.userLogged = userFromCookie;
-    // }
+//     // Verificar si hay un correo electrónico en las cookies
+//     const emailInCookie = req.cookies.userEmail;
 
-    // if (req.session.userLogged) {
-    //     res.locals.isLogged = true;
-    //     res.locals.userLogged = req.session.userLogged;
-    // }
-    
-    
+//     if (emailInCookie) {
+//         try {
+//             // Intentar encontrar al usuario en la base de datos por correo electrónico
+//             const userFromCookie = await User.findByField('email', emailInCookie);
 
-    next();
-} 
+//             if (userFromCookie) {
+//                 // Si se encuentra el usuario, almacenar la información en la sesión
+//                 req.session.userLogged = userFromCookie;
+//                 res.locals.isLogged = true;
+//                 res.locals.userLogged = userFromCookie;
+//             }
+//         } catch (error) {
+//             console.error('Error al buscar al usuario en la base de datos:', error);
+//         }
+//     }
 
-module.exports = userLoggedMiddleware;
+//     next();
+// }
+
+// module.exports = userLoggedMiddleware;
