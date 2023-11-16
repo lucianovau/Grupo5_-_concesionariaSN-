@@ -1,9 +1,8 @@
-let fs = require('fs');
 let path = require('path');
-const multer = require('multer');
-const sequelize = require('sequelize')
+const { Op } = require("sequelize");
 
 const db = require('../../database/models');
+let rutaproducto = true;
 
 const controllerProductos = {
     // muestra todos los productos
@@ -33,7 +32,7 @@ const controllerProductos = {
     }
         let ruta = path.resolve(__dirname, '../views/products/createProduct');
         res.render(ruta, {
-            logged
+            logged, rutaproducto
         });
    },
    // Guarda el nuevo producto
@@ -58,6 +57,19 @@ const controllerProductos = {
         .catch((err)=>{
           console.log(err)
         })
+   },
+   search: (req, res) => {
+      let ruta = path.resolve(__dirname, '../views/products/productos');
+      let searchValue = req.body.buscar
+      db.Product.findAll({ where: { [Op.or]: [{marca: searchValue},  {name: searchValue}, {modelo: searchValue}, {category: searchValue}, {color: searchValue}, {descripcion: searchValue}, {price: searchValue}]}})
+      .then((productos)=>{
+        if(productos){
+          res.render(ruta, {productos, rutaproducto})
+        }
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
    }
 } 
 

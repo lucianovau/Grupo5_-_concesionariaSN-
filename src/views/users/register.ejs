@@ -24,8 +24,7 @@
           <form action="/user/register" method="POST" enctype="multipart/form-data" id="registro">
             <div class="grupo-formulario">
               <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" class="input"
-                value="<%= locals.oldData ? oldData.nombre : null %>">
+              <input type="text" id="nombre" name="nombre" class="input" value="<%= locals.oldData ? oldData.nombre : null %>">
               <% if(locals.errors && errors.nombre){ %>
                 <div class="text-error">
                   <%= errors.nombre.msg %>
@@ -34,8 +33,7 @@
             </div>
             <div class="grupo-formulario">
               <label for="apellido">Apellido:</label>
-              <input type="text" id="apellido" name="apellido" class="input"
-                value="<%= locals.oldData ? oldData.apellido : null %>">
+              <input type="text" id="apellido" name="apellido" class="input" value="<%= locals.oldData ? oldData.apellido : null %>">
               <% if(locals.errors && errors.apellido){ %>
                 <div class="text-error">
                   <%= errors.apellido.msg %>
@@ -124,8 +122,8 @@
                 e.preventDefault()
                 errors.push('Los campos no pueden estar vacios')
             }
-            if(name.value.length < 2 || lastname.value.length < 2){
-              e.preventDefault()
+            if((name.value.length < 2) || (lastname.value.length < 2)){
+                e.preventDefault()
                 errors.push('Su nombre y/o apellido debera tener al menos 2 caracteres')
             }
            if(password.value.length < 8){

@@ -30,7 +30,7 @@ const controller = {
         let ruta = path.resolve(__dirname, '../views/products/editProduct')
         db.Product.findByPk(req.params.id)
           .then((producto)=>{
-               res.render(ruta, {producto, logged})
+               res.render(ruta, {producto, logged, rutaDetalle})
           })
           .catch((err)=>{
                console.log(err)
