@@ -403,13 +403,13 @@ li a{
     }
 
     .head img{
-        width: 50%;
+        width: 40%;
         margin: auto 0px;
     }
 
 
     .iconos {
-        width: 50%;
+        width: auto;
         flex-wrap: nowrap;
         justify-content: flex-end;
     }
@@ -429,5 +429,11 @@ li a{
 
     header nav{
         display: none;
+    }
+
+    .switch {
+        top: 0;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }

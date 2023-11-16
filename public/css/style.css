@@ -33,7 +33,7 @@ main{
   width: 400px;
   left: 10%;
 }
-.carousel-caption h5, p{
+.carousel-caption h5, .carousel-caption p{
   color: #fff;
   margin-top: 5%;
 }
@@ -288,19 +288,26 @@ main{
     bottom: 100px;
     margin: 15px 15px;
     width: 120px;
-    border: solid 1px red;
+    /* border: solid 1px red; */
   }
   .textCard{
-    margin-top: 70px;
+    margin-top: 10px;
   }
   .imgCard{
-    height: 150px;
+    height: 100px;
   }
   .tarjetas{
     color: #fff;
     margin: 5px;
     flex-wrap: wrap;
   }
+  .info-extra{
+    margin-top: 0px;
+    background-size: 100% 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
   .info-extra img{
     height: 100%;
   }    
@@ -318,14 +325,27 @@ main{
   .carousel-indicators {
     position: relative;
   }
-  .carousel-caption h5, p{
+
+  .carousel-caption {
+    width: 280px;
+    top: 0;
+    bottom: 0;
+    left: 5%;
+  }
+
+  .carousel-caption h5, .carousel-caption p{
     color: #fff;
     position: relative;
-    top: -70px;
-    left: -90px;
+    /* top: -70px; */
+    /* left: -90px; */
   }
+  
+  .carousel-caption h5{
+    font-size: 15px;
+  }
+
   .carousel-caption p{
-    font-size: 25px;
+    font-size: 13px;
   }
 
 
@@ -344,15 +364,43 @@ main{
 
   .d-block {
     height: auto;
+    bottom: auto;
   }
 
   .conteCard {
     width: auto;
     margin: 0px;
   }
+  
+    .carousel-caption h5 {
+      font-size: 20px;
+      left: -90px;
+    }
+
+  .carousel-caption p {
+    display: none;
+  }
 
   .info-extra {
     margin-top: 0px;
+    background-image: none;
   }
+
+  .info-extra img{
+    margin-top: 0px;
+    background-image: url(/img/fondoSectionHome.png);
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+    background-position: center;
+    margin-top: 40px;
+    background-size: 100% 190%;
+  }
+
+  .textCard {
+    margin-bottom: 70px;
+    margin-top: 10px;
+}
+
 }
   
