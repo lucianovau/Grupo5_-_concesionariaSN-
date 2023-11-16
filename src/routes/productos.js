@@ -11,4 +11,5 @@ router.get('/', controllerProductos.productos);
 router.get('/create', controllerProductos.create);
 router.post('/create', upload.array('imageProduct', 6), controllerProductos.store);
 router.post('/search', controllerProductos.search);
+router.get('/:marca', controllerProductos.filter)
 module.exports = router

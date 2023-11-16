@@ -11,8 +11,7 @@ router.get('/:id', controllerProductos.detalleId);
 router.get('/:id/edit', controllerProductos.edit);
 router.put('/:id/edit', upload.array('imageProduct', 6), controllerProductos.store);
 router.get('/:id/delete', controllerProductos.delete);
-router.post('/consultar')
-router.post('/compartir')
+router.post('/consultar', controllerProductos.consultar)
 router.post('/reservar', controllerProductos.reserve)
 
 module.exports = router

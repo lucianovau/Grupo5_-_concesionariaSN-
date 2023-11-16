@@ -70,6 +70,20 @@ const controllerProductos = {
       .catch((err)=>{
         console.log(err)
       })
+   },
+   filter: (req, res) => {
+    let ruta = path.resolve(__dirname, '../views/products/productos');
+    let marcas = req.params.marca;
+    
+    db.Product.findAll({where:{marca: marcas}})
+      .then((productos)=>{
+        if(productos){
+          res.render(ruta, {productos, rutaproducto})
+        }
+      })
+      .catch((err)=>{
+        console.log(err)
+    })
    }
 } 
 

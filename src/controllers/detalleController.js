@@ -103,11 +103,21 @@ const controller = {
       db.Product.findByPk(idProd)
       .then((producto)=>{
           let ruta = path.resolve(__dirname, '../views/products/productCart')
-          return res.render(ruta, {producto})
+          return res.render(ruta, {producto, rutaDetalle})
       })
       .catch((err)=>{
           console.log(err)
       })
+   },
+   // Consultar
+   consultar: (req, res) => {
+      let idProd = req.body.id;
+      db.Product.findByPk(idProd)
+        .then((producto) => {
+          let consulta = true 
+          let ruta = path.resolve(__dirname, '../views/products/detallesProd')
+          res.render(ruta, {producto, consulta, rutaDetalle})
+        })
    }
 }
 

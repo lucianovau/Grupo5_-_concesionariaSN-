@@ -259,6 +259,9 @@ li a{
   #modal h2{
     margin-left: 25%;
   }
+  #modal3 h2{
+    margin-left: 25%;
+  }
   #contactoForm{
     display: flex;
     flex-direction: column;
@@ -280,7 +283,24 @@ li a{
     background-color: white;
 
    }
+   #cerrar1{
+    border: none;
+    background-color: white;
+    color: black;
+   }
    #enviar{
+    width: 50%;
+    padding: 10px 0;
+    margin: 20px 10px 10px 10px;
+    font-weight: bold;
+    background-color: #da0000;
+    color: #cfd3d8;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 5px 4px 4px rgba(78, 78, 78, 0.2);
+   }
+   #enviar1{
     width: 50%;
     padding: 10px 0;
     margin: 20px 10px 10px 10px;

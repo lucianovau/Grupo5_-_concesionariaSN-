@@ -123,6 +123,28 @@
   <div class="capa"></div>
 </header>
 
+<% if(locals.consulta) { %>
+  <dialog id="modal3" >
+    <button class="cerrar" id="cerrar1">X</button>
+    <h2>¡Contactanos!</h2>
+    <div id="contactoForm">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre2" name="nombre">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="Apellido2" name="apellido">
+        <label for="email">Email</label>
+        <input type="text" id="email2" name="email">
+        <label for="telefono">Telefono</label>
+        <input type="text" id="telefono" name="telefono">
+        <label for="auto">Auto por el que consulta</label>
+        <input type="text" id="auto" name="auto" value="<%= producto.name %>">
+        <label for="consulta">Consulta</label>
+        <textarea name="consulta" id="consulta" cols="10" rows="10"></textarea>
+        <button type="submit" class="cerrar" id="enviar1">Enviar</button>
+    </div>
+  </dialog>
+  <% } %>
+
 <dialog id="modal" >
   <button class="cerrar" id="cerrar">X</button>
   <h2>¡Contactanos!</h2>
@@ -154,6 +176,7 @@
 
 <script src="/js/clearMode.js"></script>
 <script>
+  // contacto
   const abrir = document.querySelector('#contacto')
   const cerrar = document.querySelector('#cerrar')
   const enviar = document.querySelector('#enviar')
@@ -170,6 +193,25 @@
   enviar.addEventListener('click', ()=>{
     modal.close()
   })
+
+  // consulta
+
+  const cerrar1 = document.querySelector('#cerrar1')
+  const enviar1 = document.querySelector('#enviar1')
+  const consulta = document.querySelector('#modal3')
+  consulta.showModal();
+
+  cerrar1.addEventListener('click', ()=>{
+    consulta.close()
+    window.location.replace('http://localhost:3000/productos')
+  })
+
+  enviar1.addEventListener('click', ()=>{
+    consulta.close()
+    window.location.replace('http://localhost:3000/productos')
+  })
+
+  //ayuda
 
   const abrirAyuda = document.querySelector('#ayuda')
   const cerrarAyuda = document.querySelector('#cerrar2')
