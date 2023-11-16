@@ -124,7 +124,7 @@
               e.preventDefault()
               errors.push('Los campos no pueden estar vacios')
             }
-            if (name.value.length < 2 || lastname.value.length < 2) {
+            if ((name.value.length < 2) || (lastname.value.length < 2)) {
               e.preventDefault()
               errors.push('Su nombre y/o apellido debera tener al menos 2 caracteres')
             }
