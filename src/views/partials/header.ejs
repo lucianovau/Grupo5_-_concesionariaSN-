@@ -128,11 +128,11 @@
     <button class="cerrar" id="cerrar1">X</button>
     <h2>¡Contactanos!</h2>
     <div id="contactoForm">
-        <label for="nombre">Nombre</label>
+        <label for="nombre2">Nombre</label>
         <input type="text" id="nombre2" name="nombre">
-        <label for="apellido">Apellido</label>
+        <label for="Apellido2">Apellido</label>
         <input type="text" id="Apellido2" name="apellido">
-        <label for="email">Email</label>
+        <label for="email2">Email</label>
         <input type="text" id="email2" name="email">
         <label for="telefono">Telefono</label>
         <input type="text" id="telefono" name="telefono">
@@ -149,11 +149,11 @@
   <button class="cerrar" id="cerrar">X</button>
   <h2>¡Contactanos!</h2>
   <div id="contactoForm">
-    <label for="nombre">Nombre</label>
+    <label for="nombre2">Nombre</label>
     <input type="text" id="nombre2" name="nombre">
-    <label for="apellido">Apellido</label>
+    <label for="Apellido2">Apellido</label>
     <input type="text" id="Apellido2" name="apellido">
-    <label for="email">Email</label>
+    <label for="email2">Email</label>
     <input type="text" id="email2" name="email">
     <label for="telefono">Telefono</label>
     <input type="text" id="telefono" name="telefono">
@@ -199,17 +199,23 @@
   const cerrar1 = document.querySelector('#cerrar1')
   const enviar1 = document.querySelector('#enviar1')
   const consulta = document.querySelector('#modal3')
-  consulta.showModal();
+  if(consulta){
+    
+    consulta.showModal();
 
-  cerrar1.addEventListener('click', ()=>{
-    consulta.close()
-    window.location.replace('http://localhost:3000/productos')
-  })
+    cerrar1.addEventListener('click', ()=>{
+      consulta.close()
+      window.location.replace('http://localhost:3000/productos')
+    })
 
-  enviar1.addEventListener('click', ()=>{
-    consulta.close()
-    window.location.replace('http://localhost:3000/productos')
-  })
+    enviar1.addEventListener('click', ()=>{
+      consulta.close()
+      window.location.replace('http://localhost:3000/productos')
+    })
+  }
+  
+
+  
 
   //ayuda
 

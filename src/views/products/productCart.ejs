@@ -10,6 +10,7 @@
     <%- include('../partials/header') %>
     <main>      
       <!-- SECTION PRODUCTO  -->
+      <% if(locals.producto){ %>
       <section class="sectionProducto">
         <div class="contenedorSectionProducto">
 
@@ -87,6 +88,48 @@
         
       </div>
     </section>  
+    <% } else { %>
+      <section class="sectionProducto">
+        <div class="contenedorSectionProducto">
+
+          <div class="tituloProducto">
+            <p>Productos</p>
+          </div>
+          
+           
+        </div>
+        
+        <div class="envioProducto">
+          <div class="envioTextoProducto">
+            <p>Envio</p>
+          </div>
+          <div class="precioTextoProducto">
+          </div>
+        </div>
+      </div>
+      </section>
+  
+      <!-- SECTION RESUMEN DE COMPRA  -->
+    
+      <section class="sectionCompra">
+        <div class="contenedorCompra">
+          <h3 class="titulo-resumen">Resumen de Compra</h3>
+          
+          <div class="resumenCompra">
+            <div class="contenedorItemResumen">
+            
+          </div>
+          
+          <div class="itemResumen">
+            <label for="totalProductoCompra" name="totalProductoCompra">Total:</label>
+          </div>
+        </div>
+        
+        <button class="boton-resumen">Continuar compra</button>
+        
+      </div>
+    </section> 
+      <% } %>
     </main>
     <%- include('../partials/footer') %>
   </body>
