@@ -177,6 +177,11 @@ main {
   display: none;
 }
 
+
+.cajasContenedorFicha{
+  display: block;
+}
+
 .cajasContenedor {
   display: flex;
   justify-content: start;

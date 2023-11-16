@@ -28,12 +28,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
-
-// function fichaTecnica(){
-//     let btnFichaTec = document.getElementsById('ficha-tecnica');
-//     let btnContenedor = document.getElementById('contenedorDetalles');
-
-//     btnHome.addEventListener('click', function(){
-//         btnContenedor.classList.toggle('mostrarTexto');
-//       });
-// }
