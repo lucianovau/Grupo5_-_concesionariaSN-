@@ -40,7 +40,7 @@ const controller = {
    store: (req, res) => {
         const idProd = req.params.id;
         let imagenes = req.files.map(file => '/img/productImg/' + file.filename);
-        if(imagenes == true){
+        if(imagenes){
           let caracteristicas = `${req.body.caracteristicas} // ${req.body.confort} // ${req.body.seguridad}` 
           db.Product.update({
             name: req.body.name,
