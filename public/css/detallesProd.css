@@ -172,7 +172,17 @@ main {
   text-shadow: 2px 2px 4px rgba(109, 39, 39, 0.74);
   box-shadow: 10px 5px 6px rgb(151, 88, 88, 0.829);
 }
-.cajas {
+
+.cajas{
+  display: none;
+}
+
+
+.cajasContenedorFicha{
+  display: block;
+}
+
+.cajasContenedor {
   display: flex;
   justify-content: start;
   align-items: center;

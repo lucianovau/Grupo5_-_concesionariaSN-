@@ -3,6 +3,7 @@ const arrData = require('../data/users.json');
 const path = require('path');
 const fs = require('fs');
 const { hashSync } = require('bcryptjs');
+const db = require('../../database/models')
 
 const pathFile = path.join(__dirname, '..', 'data', 'users.json');
 
@@ -11,7 +12,7 @@ const validateLogin = [
         .isEmail().withMessage('Debes ingresar un formato valido').bail()
         .custom(async (value) => {
         // Verifica si el email existe en la base de datos
-        const user = await User.findOne({ email: value });
+        const user = await db.User.findOne({ email: value });
         if (!user) {
         throw new Error('El email no está registrado');
         }

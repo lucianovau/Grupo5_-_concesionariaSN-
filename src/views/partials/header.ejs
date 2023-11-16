@@ -2,7 +2,7 @@
   <div class="head">
     <img src="/img/logo2.png" alt="Logo">
     <div class="iconos">
-      <p class="nombreIcono">¡ BIENVENIDO !</p>
+      <p class="nombreIcono">¡ BIENVENIDO/A <%if(locals.user){ %> <%= user.nombre %> <% } %> !</p>
       <% if(!locals.logged) { %>
         <li>
           <ul class="perfilHover">
@@ -37,45 +37,45 @@
             </div>
           </ul>
           <ul class="carritoHover">
-              <i id="carritoDeCompras" class="fas fa-shopping-cart" style="color: #ff0000;"></i>
-              <div class="carritoDeComprasTexto">
-                <p>
-                  Registrate para acceder al carrito
-                </p>
-              </div>
+            <i id="carritoDeCompras" class="fas fa-shopping-cart" style="color: #ff0000;"></i>
+            <div class="carritoDeComprasTexto">
+              <p>
+                Registrate para acceder al carrito
+              </p>
+            </div>
           </ul>
         </li>
         <%} else {%>
-        <li>
-          <ul class="perfilHover">
-          <a href="<% if(locals.rutaproducto){ %>
+          <li>
+            <ul class="perfilHover">
+              <a href="<% if(locals.rutaproducto){ %>
                     profile
                     <% }else if(locals.rutaDetalle){ %>
                       ../user/profile
                       <% }else{ %>
                         user/profile
                         <% } %>"><i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
-          </a>
-          <div class="listaMenuPerfil cerrarSesion">
-            <ul>
-              <a href="<% if(locals.rutaproducto){ %>
+              </a>
+              <div class="listaMenuPerfil cerrarSesion">
+                <ul>
+                  <a href="<% if(locals.rutaproducto){ %>
                 logout
                 <% }else if(locals.rutaDetalle){ %>
                   ../user/logout
                   <% }else{ %>
                     user/logout
                     <% } %>"> Cerrar Sesión </a>
-              </ul>
-          </div>
-          </ul>
-        </li>
-        <% } %>
-        <% if(locals.logged) { %>
-          <li>
+                </ul>
+              </div>
+            </ul>
+          </li>
+          <% } %>
+            <% if(locals.logged) { %>
+              <li>
 
-            <ul class="carritoHover">
-              
-              <a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
+                <ul class="carritoHover">
+
+                  <a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
                 ../productCart
                 <% }else{ %>
                   productCart
@@ -107,13 +107,13 @@
         <% }else{ %>
             productos
        <% } %>">Productos</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Ayuda</a></li>
+        <li><a href="#" id="contacto">Contacto</a></li>
+        <li><a href="#" id="ayuda">Ayuda</a></li>
       </ul>
     </nav>
-    <form action="/" method="POST">
+    <form action="/productos/search" method="POST" id="buscador">
       <button type="submit" id="boton"><i class="fas fa-search" style="color: #ff0000;"></i></button>
-      <input type="text" placeholder="Buscar..." name="Buscar" id="buscar">
+      <input type="text" placeholder="Buscar..." name="buscar" id="buscar">
     </form>
   </div>
 
@@ -123,4 +123,112 @@
   <div class="capa"></div>
 </header>
 
+<% if(locals.consulta) { %>
+  <dialog id="modal3" >
+    <button class="cerrar" id="cerrar1">X</button>
+    <h2>¡Contactanos!</h2>
+    <div id="contactoForm">
+        <label for="nombre2">Nombre</label>
+        <input type="text" id="nombre2" name="nombre">
+        <label for="Apellido2">Apellido</label>
+        <input type="text" id="Apellido2" name="apellido">
+        <label for="email2">Email</label>
+        <input type="text" id="email2" name="email">
+        <label for="telefono">Telefono</label>
+        <input type="text" id="telefono" name="telefono">
+        <label for="auto">Auto por el que consulta</label>
+        <input type="text" id="auto" name="auto" value="<%= producto.name %>">
+        <label for="consulta">Consulta</label>
+        <textarea name="consulta" id="consulta" cols="10" rows="10"></textarea>
+        <button type="submit" class="cerrar" id="enviar1">Enviar</button>
+    </div>
+  </dialog>
+  <% } %>
+
+<dialog id="modal" >
+  <button class="cerrar" id="cerrar">X</button>
+  <h2>¡Contactanos!</h2>
+  <div id="contactoForm">
+    <label for="nombre2">Nombre</label>
+    <input type="text" id="nombre2" name="nombre">
+    <label for="Apellido2">Apellido</label>
+    <input type="text" id="Apellido2" name="apellido">
+    <label for="email2">Email</label>
+    <input type="text" id="email2" name="email">
+    <label for="telefono">Telefono</label>
+    <input type="text" id="telefono" name="telefono">
+    <label for="auto">Auto por el que consulta</label>
+    <input type="text" id="auto" name="auto">
+    <label for="consulta">Consulta</label>
+    <textarea name="consulta" id="consulta" cols="10" rows="10"></textarea>
+    <button type="submit" class="cerrar" id="enviar">Enviar</button>
+  </div>
+</dialog>
+
+<dialog id="modal2">
+  <button class="cerrar" id="cerrar2">X</button>
+  <div id="contenidoAyuda">
+    <h2>Ayuda</h2>
+    <p>Si necesitas ayuda, o mayor asistencia en tu compra comunicate al:</p>
+    <h3>3364584569</h3>
+  </div>
+</dialog>
+
 <script src="/js/clearMode.js"></script>
+<script>
+  // contacto
+  const abrir = document.querySelector('#contacto')
+  const cerrar = document.querySelector('#cerrar')
+  const enviar = document.querySelector('#enviar')
+  const modal = document.querySelector('#modal')
+
+  abrir.addEventListener('click', () => {
+    modal.showModal()
+  })
+
+  cerrar.addEventListener('click', () => {
+    modal.close()
+  })
+
+  enviar.addEventListener('click', () => {
+    modal.close()
+  })
+
+  // consulta
+
+  const cerrar1 = document.querySelector('#cerrar1')
+  const enviar1 = document.querySelector('#enviar1')
+  const consulta = document.querySelector('#modal3')
+  if(consulta){
+    
+    consulta.showModal();
+
+    cerrar1.addEventListener('click', ()=>{
+      consulta.close()
+      window.location.replace('http://localhost:3000/productos')
+    })
+
+    enviar1.addEventListener('click', ()=>{
+      consulta.close()
+      window.location.replace('http://localhost:3000/productos')
+    })
+  }
+  
+
+  
+
+  //ayuda
+
+  const abrirAyuda = document.querySelector('#ayuda')
+  const cerrarAyuda = document.querySelector('#cerrar2')
+  const modalAyuda = document.querySelector('#modal2')
+
+  abrirAyuda.addEventListener('click', () => {
+    modalAyuda.showModal()
+  })
+
+  cerrarAyuda.addEventListener('click', () => {
+    modalAyuda.close()
+  })
+
+</script>

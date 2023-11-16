@@ -27,7 +27,7 @@
     <section class="lista-recomendados">
       <% productos.forEach((producto=>{ %>
         <article class="producto">
-          <img src="<%= producto.img1 %>" alt="Auto">
+          <img src="<% let img = producto.img.split(' ')  %> <%= img[0] %> " alt="Auto">
           <h2><%= producto.name%></h2>
           <p><%= producto.descripcion %></p>
           <span class="precio"><%= producto.price %> </span>

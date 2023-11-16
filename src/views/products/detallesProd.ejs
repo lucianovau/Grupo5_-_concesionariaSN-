@@ -42,60 +42,55 @@
                   <button type="submit" class="boton">Consultar</button>
                 </form>
                 <form action="../user/login">
-                  <button type="submit" class="boton">Compartir</button>
+                  <button type="submit" class="boton-destacado">Reservar</button>
                 </form>
-              </div>
-              <form action="../user/login">
-                <button type="submit" class="boton-destacado">Reservar</button>
-              </form>
               <% } else { %>
                 <form action="../detalleProd/consultar" method="POST">
                 <input class="invisible" type="number" name="id" value="<%= producto.id %>">
                 <button type="submit" class="boton">Consultar</button>
-              </form>
-              <form action="../detalleProd/compartir" method="POST">
-                <input class="invisible" type="number" name="id" value="<%= producto.id %>">
-                <button type="submit" class="boton">Compartir</button>
-              </form>
-            </div>
-            <form action="../detalleProd/reservar" method="POST">
-              <input class="invisible" type="number" name="id" value="<%= producto.id %>">
-              <button type="submit" class="boton-destacado">Reservar</button>
-            </form>
+                </form>
+                <form action="../detalleProd/reservar" method="POST">
+                  <input class="invisible" type="number" name="id" value="<%= producto.id %>">
+                  <button type="submit" class="boton-destacado">Reservar</button>
+                </form>
              <% } %>
     
           </div>
         </section>
         <section class="carac-tecn">
-          <div class="cajas">
-            <div class="contenedorDetalles">  
-              <div class="h2Detalles">
-                <h2>CARACTERISTICAS</h2>
-              </div>
-              <div class="bloque">
-                <%= producto.caract %>
-              </div>
-            </div>
-            <div class="contenedorDetalles">  
-              <div class="h2Detalles">
-                <h2>CONFORT</h2>
-              </div>
-              <div class="bloque">
-                <%= producto.confort %>
-              </div>
-            </div>
-            <div class="contenedorDetalles">  
-              <div class="h2Detalles">
-                <h2>SEGURIDAD</h2>
-              </div>
-              <div class="bloque">
-                <%= producto.seguridad %>
-              </div>
-            </div>
-          </div>
+        
             <div class="ficha-tecnica">
-              <p class="txtFichaTecnica">Ficha técnica</p>
+              <p id="fichaTecnicaBtn" class="txtFichaTecnica">Ficha técnica</p>
             </div>
+              
+              <div class="cajas" id="cajasFicha">
+
+                  <div class="contenedorDetalles">  
+                    <div class="h2Detalles">
+                      <h2>CARACTERISTICAS</h2>
+                    </div>
+                    <div class="bloque">
+                      <% let caracteristicas = producto.caracteristicas.split('//')%>
+                      <%= caracteristicas[0] %>
+                    </div>
+                  </div>
+                <div class="contenedorDetalles">  
+                  <div class="h2Detalles">
+                    <h2>CONFORT</h2>
+                  </div>
+                  <div class="bloque">
+                    <%= caracteristicas[1] %>
+                  </div>
+                </div>
+                <div class="contenedorDetalles">  
+                  <div class="h2Detalles">
+                    <h2>SEGURIDAD</h2>
+                  </div>
+                  <div class="bloque">
+                    <%= caracteristicas[2] %>
+                  </div>
+                </div>
+              </div>
         </section>
       </div>
     </main>
@@ -117,6 +112,15 @@
       </div>
 
       <script src="../script.js"></script>
+
+      <script>
+    let btnFichaTec = document.getElementById('fichaTecnicaBtn');
+    let btnContenedor = document.getElementById('cajasFicha');
+
+    btnFichaTec.addEventListener('click', function(){
+        btnContenedor.classList.toggle('cajasContenedorFicha');
+    })
+      </script>
 </body>
 
 </html>

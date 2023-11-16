@@ -48,7 +48,7 @@ const controller = {
                     apellido: req.body.apellido,
                     email: req.body.email, 
                     terminos: req.body.terminos,
-                    foto: '/img/productImg/' + req.file.filename,
+                    foto: '/img/users/' + req.file.filename,
                     password: bcryptjs.hashSync(req.body.password,10),
                 })
                     .then(()=>{

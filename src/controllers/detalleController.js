@@ -30,7 +30,7 @@ const controller = {
         let ruta = path.resolve(__dirname, '../views/products/editProduct')
         db.Product.findByPk(req.params.id)
           .then((producto)=>{
-               res.render(ruta, {producto, logged})
+               res.render(ruta, {producto, logged, rutaDetalle})
           })
           .catch((err)=>{
                console.log(err)
@@ -40,7 +40,8 @@ const controller = {
    store: (req, res) => {
         const idProd = req.params.id;
         let imagenes = req.files.map(file => '/img/productImg/' + file.filename);
-        if(imagenes == true){
+        if(imagenes){
+          let caracteristicas = `${req.body.caracteristicas} // ${req.body.confort} // ${req.body.seguridad}` 
           db.Product.update({
             name: req.body.name,
             marca: req.body.marca,
@@ -49,9 +50,8 @@ const controller = {
             category: req.body.category,
             color: req.body.colors,
             price: req.body.price,
-            fichaTecnica: req.body.fichaTecnica,
-            img: imagenes.join(' ')
-           
+            img: imagenes.join(' '),
+            caracteristicas: caracteristicas
         }, {
           where: {id: idProd}
         })
@@ -62,6 +62,7 @@ const controller = {
           console.log(err)
         })
         }else {
+          let caracteristicas = `${req.body.caracteristicas} // ${req.body.confort} // ${req.body.seguridad}` 
           db.Product.update({
             name: req.body.name,
             marca: req.body.marca,
@@ -70,7 +71,7 @@ const controller = {
             category: req.body.category,
             color: req.body.colors,
             price: req.body.price,
-            fichaTecnica: req.body.fichaTecnica
+            caracteristicas: caracteristicas
         }, {
           where: {id: idProd}
         })
@@ -102,11 +103,21 @@ const controller = {
       db.Product.findByPk(idProd)
       .then((producto)=>{
           let ruta = path.resolve(__dirname, '../views/products/productCart')
-          return res.render(ruta, {producto})
+          return res.render(ruta, {producto, rutaDetalle})
       })
       .catch((err)=>{
           console.log(err)
       })
+   },
+   // Consultar
+   consultar: (req, res) => {
+      let idProd = req.body.id;
+      db.Product.findByPk(idProd)
+        .then((producto) => {
+          let consulta = true 
+          let ruta = path.resolve(__dirname, '../views/products/detallesProd')
+          res.render(ruta, {producto, consulta, rutaDetalle})
+        })
    }
 }
 
