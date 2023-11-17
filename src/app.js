@@ -34,16 +34,16 @@ const mainRutas = require('./routes/main')
 const productosRutas = require('./routes/productos');
 const detalleRutas = require('./routes/detalle');
 const userRutas = require('./routes/users');
+const apiProductRoutes = require('./routes/api/productRouter');
+const apiUserRoutes = require('./routes/api/userRouter');
 
 app.use('/', mainRutas);
 app.use('/productos', productosRutas);
 app.use('/detalleProd', detalleRutas);
 app.use('/user', userRutas);
+app.use('/api/products', apiProductRoutes);
+app.use('/api/users', apiUserRoutes);
 
-//Error 404
-// app.use((res, req, next) =>{
-//     res.status(404),render('not-found');
-// })
 
 app.use((req,res,next) => {
     res.status(404).render('../src/views/not-found')
