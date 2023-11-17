@@ -66,15 +66,16 @@ textarea {
   width: 100%;
   margin-bottom: 20px;
 }
-.errors{
-  flex-direction: column;
-  align-items: left;
-  width: 100%;
-}
-.errors li{
-  width: 100%;
-  color: #fff;
-}
 
-@media ((min-width: 481px)) {
+.errores{
+  color: red;
+  width: 100%
+}
+.erroresInput{
+  background-color: red;
+  color: white;
+}
+.passInput{
+  background-color: rgb(95, 245, 95);
+  color: white;
 }
