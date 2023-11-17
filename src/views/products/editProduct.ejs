@@ -10,91 +10,81 @@
   <%- include('../partials/header') %>
     <main>
       <h1>Edición de Productos</h1>
-      <form id="productForm" action="/detalleProd/<%=producto.id%>/edit?_method=PUT " method="POST" enctype="multipart/form-data">
+      <form id="productForm" action="/detalleProd/<%= locals.oldData ? oldData.id : producto.id %>/edit?_method=PUT " method="POST" enctype="multipart/form-data">
         <div class="posicionamientoForm">
           <label for="name">Nombre del producto:</label>
-          <input type="text" id="name" name="name" value="<%=producto.name%>" required />
+          <input type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : producto.name %>" > 
+          <li style="display: none;" id="error1" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="marca">Marca:</label>
-          <input type="text" id="marca" name="marca" value="<%=producto.marca%>" required />
+          <input type="text" id="marca" name="marca" value="<%= locals.oldData ? oldData.marca : producto.marca %>"  />
+          <li style="display: none;" id="error2" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="modelo">Modelo:</label>
-          <input type="text" id="modelo" name="modelo" value="<%=producto.modelo%>" required />
+          <input type="text" id="modelo" name="modelo" value="<%= locals.oldData ? oldData.modelo : producto.modelo %>"  />
+          <li style="display: none;" id="error3" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
-          <label for="description">Descripción:</label>
-          <textarea id="description" name="description" required><%=producto.descripcion%></textarea>
+          <label for="descripcion">Descripción:</label>
+          <textarea id="descripcion" name="description" ><%= locals.oldData ? oldData.descripcion : producto.descripcion %></textarea>
+          <li style="display: none;" id="error4" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="image">Imagen:</label>
           <input type="file" multiple id="image" name="imageProduct" value="" accept="image/*" />
+          <li style="display: none;" id="error5" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="category">Categoría:</label>
-          <input type="text" id="category" name="category" value="<%=producto.category%>" required />
+          <input type="text" id="category" name="category" value="<%= locals.oldData ? oldData.category : producto.category %>"  />
+          <li style="display: none;" id="error6" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="colors">Colores:</label>
-          <input type="text" id="colors" name="colors" value="<%=producto.color%>"/>
+          <input type="text" id="colors" name="colors" value="<%= locals.oldData ? oldData.colors : producto.color %>"/>
+          <li style="display: none;" id="error7" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="price">Precio:</label>
-          <input type="number" id="price" name="price" step="0.01" value="<%=producto.price%>" required />
+          <input type="number" id="price" name="price" step="0.01" value="<%= locals.oldData ? oldData.price : producto.price %>"  />
+          <li style="display: none;" id="error8" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="caracteristicas">Caracteristicas:</label>
-          <% let caracteristicas = producto.caracteristicas.split('//')%>
-          <textarea id="caracteristicas" name="caracteristicas"><%= caracteristicas[0] %> </textarea>
+          <% if(locals.producto) { let caracteristicas = producto.caracteristicas.split('//')}%>
+          <textarea id="caracteristicas" name="caracteristicas"><%= locals.oldData ? oldData.caracteristicas : caracteristicas[0] %> </textarea>
+          <li style="display: none;" id="error9" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="seguridad">Seguridad:</label>
-          <textarea id="seguridad" name="seguridad" ><%= caracteristicas[2] %></textarea>
+          <textarea id="seguridad" name="seguridad" ><%= locals.oldData ? oldData.seguridad : caracteristicas[2] %></textarea>
+          <li style="display: none;" id="error10" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="confort">Confort:</label>
-          <textarea id="confort" name="confort" ><%= caracteristicas[1] %> </textarea>
+          <textarea id="confort" name="confort" ><%= locals.oldData ? oldData.confort : caracteristicas[1] %> </textarea>
+          <li style="display: none;" id="error11" class="errores"></li>
         </div>
-        <ul id="errors" style="display: none;" class="errors"></ul>
+        <% if(locals.errors ){ %>
+          <div class="text-error">
+            <% if(errors.name){ %>
+              <p><%= errors.name.msg %></p> 
+             <% } %>
+             <% if(errors.descripcion){ %>
+              <p><%= errors.descripcion.msg %></p> 
+             <% } %>
+          </div>
+          <% } %>
         <button id="botonGuardar" type="submit">Guardar Producto</button>
       </form>
-      <form action="/detalleProd/<%=producto.id%>/edit?_method=DELETE" method="POST" enctype="multiport/form-data">
+      <form action="/detalleProd/<%= locals.oldData ? oldData.id : producto.id %>/delete" method="POST" enctype="multiport/form-data">
         <button id="botonGuardar" type="submit">Borrar Producto</button>
       </form>
     </main>
     <%- include('../partials/footer') %>
-    <script>
-      window.addEventListener('load', () => {
-
-          let name = document.querySelector('#name');
-          let description = document.querySelector('#description');
-          let form = document.querySelector('#productForm');
-          let imagen = document.querySelector('#image');
-
-          let errors = [];
-
-          form.addEventListener('submit', (e)=>{
-            if(name.value == '' || name.value.length < 2){
-                e.preventDefault()
-                errors.push('Debe ingresar un nombre valido')
-            }
-            if(description.value.length < 20){
-              e.preventDefault()
-              errors.push('Debe ingresar una descripcion de al menos 20 caracteres')
-            }
-            if(errors.length > 0){
-                let list = document.querySelector('#errors')
-                list.innerHTML = ''
-                for(error of errors){
-                  list.innerHTML += '<li>'+ error +'</li>'
-                }
-                list.style.display = 'flex'
-            }
-            errors = []
-          })
-      })
-    </script>
+    <script src="/js/validarFrontEdit.js"></script>
 </body>
 
 </html>
