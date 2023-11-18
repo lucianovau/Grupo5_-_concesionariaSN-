@@ -1,5 +1,6 @@
 let fs = require('fs');
 let path = require('path');
+const { validationResult } = require('express-validator');
 
 const db = require('../../database/models');
 
@@ -37,52 +38,62 @@ const controller = {
           })
    },
    // Envia el formulario de edicion
-   store: (req, res) => {
-        const idProd = req.params.id;
-        let imagenes = req.files.map(file => '/img/productImg/' + file.filename);
-        if(imagenes){
-          let caracteristicas = `${req.body.caracteristicas} // ${req.body.confort} // ${req.body.seguridad}` 
-          db.Product.update({
-            name: req.body.name,
-            marca: req.body.marca,
-            modelo: req.body.modelo,
-            descripcion: req.body.description,
-            category: req.body.category,
-            color: req.body.colors,
-            price: req.body.price,
-            img: imagenes.join(' '),
-            caracteristicas: caracteristicas
-        }, {
-          where: {id: idProd}
-        })
-        .then(()=>{
-          res.redirect('/productos')
-        })
-        .catch((err)=>{
-          console.log(err)
-        })
-        }else {
-          let caracteristicas = `${req.body.caracteristicas} // ${req.body.confort} // ${req.body.seguridad}` 
-          db.Product.update({
-            name: req.body.name,
-            marca: req.body.marca,
-            modelo: req.body.modelo,
-            descripcion: req.body.description,
-            category: req.body.category,
-            color: req.body.colors,
-            price: req.body.price,
-            caracteristicas: caracteristicas
-        }, {
-          where: {id: idProd}
-        })
-        .then(()=>{
-          res.redirect('/productos')
-        })
-        .catch((err)=>{
-          console.log(err)
-        })
-        }
-        
+  store: (req, res) => {
+        const resultValidation = validationResult(req);
+        let ruta = path.resolve(__dirname, '../views/products/editProduct');
+          
+        if(resultValidation.errors.length > 0){
+            res.render(ruta, { 
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                rutaDetalle
+            })
+        }else{
+          const idProd = req.params.id;
+          let imagenes = req.files.map(file => '/img/productImg/' + file.filename);
+          if(imagenes){
+            let caracteristicas = `${req.body.caracteristicas} // ${req.body.confort} // ${req.body.seguridad}` 
+                db.Product.update({
+                  name: req.body.name,
+                  marca: req.body.marca,
+                  modelo: req.body.modelo,
+                  descripcion: req.body.description,
+                  category: req.body.category,
+                  color: req.body.colors,
+                  price: req.body.price,
+                  img: imagenes.join(' '),
+                  caracteristicas: caracteristicas
+              }, {
+                where: {id: idProd}
+              })
+                  .then(()=>{
+                    res.redirect('/productos')
+                  })
+                  .catch((err)=>{
+                    console.log(err)
+                  })
+          }else {
+            let caracteristicas = `${req.body.caracteristicas} // ${req.body.confort} // ${req.body.seguridad}` 
+              db.Product.update({
+                name: req.body.name,
+                marca: req.body.marca,
+                modelo: req.body.modelo,
+                descripcion: req.body.description,
+                category: req.body.category,
+                color: req.body.colors,
+                price: req.body.price,
+                caracteristicas: caracteristicas
+            }, {
+              where: {id: idProd}
+            })
+            .then(()=>{
+              res.redirect('/productos')
+            })
+            .catch((err)=>{
+              console.log(err)
+            })
+          }
+      }
    },
    // Borra un producto
    delete: (req, res) => {

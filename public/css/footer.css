@@ -11,6 +11,8 @@ footer{
     align-items: center;
     height: 250px;
     color: white;
+    position: relative;
+    z-index: 5;
 }
 
 #Copyright{

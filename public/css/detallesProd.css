@@ -1,11 +1,14 @@
 @import url(centralize.css);
 @import url(header.css);
 @import url(footer.css);
+
 .product-info {
   display: flex;
   justify-content: center;
   position: relative;
+  align-items: center;
 }
+
 .product-details {
   width: 50%;
   height: auto;
@@ -17,12 +20,17 @@
   margin: 20px 10px;
   color: #f9fcff;
 }
+
 .contenedor {
-  background-image: url(../img/background6.jpg);
-  background-size: cover;
-  object-fit: contain;
-  width: 100%;
+  background-image: url("/img/img-fondo-detalles.png");
+  background-repeat: repeat-y;
+  background-size: 100%;
+  box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.9) inset;
+  -webkit-box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.9) inset;
+  -moz-box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.9) inset;
 }
+
+
 .product-title {
   font-size: 30px;
   font-weight: bold;
@@ -45,13 +53,16 @@
   display: flex;
   margin: 10px;
   padding: 5px 20px 5px 50px;
+  border-radius: 11% 6% 6% 11%;
 }
+
 .product-image {
   position: absolute;
   right: 45%;
   top: 40%;
   z-index: 1;
 }
+
 .compartir {
   border: 1mm ridge rgba(211, 211, 210, 0.651);
   padding: 3px 6px;
@@ -74,10 +85,13 @@ main {
   margin: 2px;
   position: relative;
   object-fit: cover;
+  border-radius: 15%;
 }
 #fotos button {
   position: relative;
   margin: 5px 25px;
+  width: 100%;
+  border: 2px solid black;
 }
 
 .container {
@@ -112,12 +126,19 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 30%;
 }
 
 
 .botones-arriba {
   display: flex;
   gap: 10px; /* Espacio entre los botones "Consultar" y "Compartir" */
+  flex-direction: column;
+  width: 80%;
+}
+
+.botones-arriba form{
+  width: 100%;
 }
 
 .boton {
@@ -150,25 +171,20 @@ main {
 }
 
 .carac-tecn {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 1px;
   padding-top: 30px;
-  background-size: cover;
 }
 
 .bloque {
-  width: 15%;
-  min-height: 400px;
+  padding: 30px 50px;
   background-image: linear-gradient(to bottom, #000000, #3b1414);
   border: solid 1px #474747;
   border-radius: 15px;
-  padding: 10px;
   text-align: center;
   justify-content: center;
-  font-size: 16px;
-  margin-top: 10px;
+  font-size: 20px;
   color: #cfd3d8;
+  margin: 20px;
   text-shadow: 2px 2px 4px rgba(109, 39, 39, 0.74);
   box-shadow: 10px 5px 6px rgb(151, 88, 88, 0.829);
 }
@@ -177,9 +193,9 @@ main {
   display: none;
 }
 
-
 .cajasContenedorFicha{
   display: block;
+  margin-bottom: 50px;
 }
 
 .cajasContenedor {
@@ -198,33 +214,23 @@ main {
 
 .h2Detalles{
   position: relative;
-  /* height: 400px; */
-  width: 200px;
   display: flex;
   justify-content: center;
-  /* top: 0; */
-  /* bottom: 0; */
-  /* right: 0; */
-  /* left: 0; */
-  /* margin: 0px auto; */
 }
  .invisible{
   display: none; 
  }
 
 .cajas h2 {
-  margin-left: 110px;
   position: relative;
   width: auto;
   color: #cfd3d8;
   text-shadow: 4px 4px 6px rgb(151, 88, 88);
-  text-orientation: upright;
-  transform: rotate(-0.25turn);
-  /* margin: 2px 0; */
+  margin-top: 35px;
+  margin-bottom: -5px;
 }
 
 .ficha-tecnica {
-  width: 90%;
   align-self: center;
   cursor: pointer;
   font-size: 16px;
@@ -283,10 +289,8 @@ textarea {
   margin-bottom: 10px;
 }
 
-button {
+.boton-destacado, .boton {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -336,6 +340,10 @@ button {
     flex-wrap: wrap;
   }
 
+  .product-description{
+    text-align: center;
+  }
+
   .product-details{
     width: 95%;
     margin: 20px 0px;
@@ -379,11 +387,14 @@ button {
     width: 80%;
     gap: 20px;
     margin: 25px 0px;
+
   }
   
   #fotos button {
+    width: 100%;
     position: relative;
     margin: auto;
+    border: 2px black solid;
   }
 
   .botones-arriba {
@@ -391,6 +402,7 @@ button {
     gap: 10px;
     width: 100%;
     align-items: center;
+    justify-content: center;
   }
 
   .botones-arriba .boton{
@@ -402,18 +414,19 @@ button {
 /* SECTION FICHA TÉCNICA    */
 
   .cajas{
-    flex-direction: column;
+    margin-bottom: 20px;
   }
 
   .cajas h2 {
     transform: none;
     margin: auto;
+    text-shadow: 2px 1px 2px black;
   }
 
   .bloque{
     width: 80%;
-    min-height: 200px;
-    margin-top: auto;
+    padding: 35px 20px;
+    margin: 0 auto;
   }
 
   .h2Detalles{
@@ -429,9 +442,10 @@ button {
 
   .ficha-tecnica{
     margin: auto;
-    width: auto;
+    width: 90%;
     margin-top: 40px;
     margin-bottom: 15px;
+    border-radius: 30px;
   }
 
 }
@@ -440,6 +454,7 @@ button {
 
   #fotos img {
     width: 40%;
+    padding: 3px;
   }
 
   .bloque{
