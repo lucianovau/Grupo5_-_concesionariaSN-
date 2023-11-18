@@ -97,6 +97,14 @@ button{
     text-transform: uppercase;
 }
 
+.contenedor-password{
+    margin-top: 5px;
+    display: flex;
+    position: relative;
+    width: 85%;
+    box-shadow: 5px 5px 15px black;
+}
+
 #password{
     width: 100%;
     box-shadow: none;
@@ -104,14 +112,6 @@ button{
 
 #password, .boton-passsword{
     margin: 0px;
-}
-
-.contenedor-password{
-    margin-top: 5px;
-    display: flex;
-    position: relative;
-    width: 85%;
-    box-shadow: 5px 5px 15px black;
 }
 
 .boton-passsword{
