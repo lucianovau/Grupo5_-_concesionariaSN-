@@ -68,6 +68,7 @@ main{
     width: 100%;
     border-radius: 5px;
     padding: 0 10px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .input{
@@ -193,8 +194,8 @@ label{
   /* --------------------------- Responsive ------------------------ */
 
 
-@media (min-width: 1028px){
-    main{
+  @media (min-width: 1028px){
+  main{
         display: flex;
         flex-direction: row;
     }
@@ -242,4 +243,55 @@ label{
     /* #derecha{
         /* width: 50%; */
     /* } */
+  }
+
+  @media (max-width: 360px){
+    
+    #derecha{
+        width: 100%;
+        padding: 0px;
+        right: 0;
+    }
+
+    #ingresa {
+        margin-top: 10px;
+        margin-bottom: auto; 
+        align-self: center;
+    }
+
+    #ingresa a {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .contenedor-formulario-registro {
+        width: 85%;
+    }
+
+    .grupo-formulario .input {
+        height: 30px;
+    }
+
+    .form-password{
+        justify-content: space-between;
+    }
+
+    #foto {
+        padding: 0;
+    }
+
+    #terminos{
+        width: 6%;
+    }
+
+    .etiqueta-checkbox {
+        font-size: 12px;
+        text-transform: uppercase;
+        text-align: center;    
+        margin: 10px 0px;
+    }
+
+    .boton2{
+        font-size: 8px;
+    }
 }
