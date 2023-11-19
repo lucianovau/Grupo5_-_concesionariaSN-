@@ -15,7 +15,7 @@
       </section>
 
       <section id="derecha">
-        <p id="ingresa"><a href="login">¿Ya estás registrado?  →  Ingresa aquí</a></p>
+        <p id="ingresa"><a href="login">¿Ya estás registrado? → Ingresa aquí</a></p>
         <p>
         <h1>Crea tu cuenta</h1>
         </p>
@@ -102,7 +102,7 @@
                     <%= errors.terminos.msg %>
                   </div>
                   <% } %>
-                </div>
+              </div>
             </div>
             <ul id="errors" style="display: none ;" class="errors"></ul>
             <button type="submit" id="boton1" class="input">Crear cuenta</button>
@@ -119,10 +119,11 @@
 
     </main>
     <%- include('../partials/footer') %>
+
       <script>
 
         // OCUTAR Password
-        
+
         var botonPasssword = document.getElementById('boton-passsword');
         var botonConfirmPasssword = document.getElementById('boton-confirmar-passsword');
 
@@ -134,8 +135,8 @@
 
         var ocultarPassword = document.getElementById('ocultar-password')
         var ocultarConfirmarPassword = document.getElementById('ocultar-confirmar-password')
-    
-        botonPasssword.addEventListener("click", function(){
+
+        botonPasssword.addEventListener("click", function () {
           if (password.type === "password") {
             password.type = "text";
             mostrarPassword.style.display = 'flex';
@@ -148,8 +149,8 @@
           }
         })
 
-//      OCUTAR Confirmar Password
-        botonConfirmPasssword.addEventListener("click", function(){
+        //      OCUTAR Confirmar Password
+        botonConfirmPasssword.addEventListener("click", function () {
           if (confirmarPassword.type === "password") {
             confirmarPassword.type = "text";
             mostrarConfirmarPassword.style.display = 'flex';
