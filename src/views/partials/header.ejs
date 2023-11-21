@@ -11,6 +11,8 @@
               login
               <% }else if(locals.rutaDetalle){ %>
                 ../user/login
+                <% }else if(locals.rutaEdit){ %>
+                  ../../user/login
                 <% }else{ %>
                   user/login
                   <% } %>"><i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
@@ -21,6 +23,8 @@
                   login
                   <% }else if(locals.rutaDetalle){ %>
                     ../user/login
+                  <% } else if(locals.rutaEdit){ %>
+                    ../../user/login
                     <% }else{ %>
                       user/login
                       <% } %>">Iniciar Sesión</a>
@@ -30,6 +34,8 @@
                   register
                   <% }else if(locals.rutaDetalle){ %>
                     ../user/register
+                    <% } else if(locals.rutaEdit){ %>
+                      ../../user/register
                     <% }else{ %>
                       user/register
                     <% } %>">Registrarse</a>
@@ -52,6 +58,8 @@
                     profile
                     <% }else if(locals.rutaDetalle){ %>
                       ../user/profile
+                      <% } else if(locals.rutaEdit){ %>
+                        ../../user/profile
                       <% }else{ %>
                         user/profile
                         <% } %>"><i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
@@ -62,6 +70,8 @@
                 logout
                 <% }else if(locals.rutaDetalle){ %>
                   ../user/logout
+                  <% } else if(locals.rutaEdit){ %>
+                    ../../user/logout
                   <% }else{ %>
                     user/logout
                     <% } %>"> Cerrar Sesión </a>
@@ -77,6 +87,8 @@
 
                   <a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
                 ../productCart
+                <% } else if(locals.rutaEdit){ %>
+                  ../../productCart
                 <% }else{ %>
                   productCart
                   <% } %>"><i class="fas fa-shopping-cart" style="color: #ff0000;"></i></a>
@@ -99,11 +111,15 @@
       <ul>
         <li><a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
               ../home
+              <% } else if(locals.rutaEdit){ %>
+                ../../home
           <% }else{ %>
               home
          <% } %>">Inicio</a></li>
         <li><a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
             ../productos
+            <% } else if(locals.rutaEdit){ %>
+              ../../productos
         <% }else{ %>
             productos
        <% } %>">Productos</a></li>

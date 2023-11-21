@@ -53,7 +53,7 @@
         </div>
         <div class="posicionamientoForm">
           <label for="caracteristicas">Caracteristicas:</label>
-          <% if(locals.producto) { let caracteristicas = producto.caracteristicas.split('//')}%>
+          <%  let caracteristicas = producto.caracteristicas.split('//')%>
           <textarea id="caracteristicas" name="caracteristicas"><%= locals.oldData ? oldData.caracteristicas : caracteristicas[0] %> </textarea>
           <li style="display: none;" id="error9" class="errores"></li>
         </div>

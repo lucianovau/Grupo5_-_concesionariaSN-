@@ -15,6 +15,7 @@
           <form id="Iniciar" action="/user/login" method="POST">
             <input type="email" id="email" name="email" class="inicio iniput" placeholder="Email"
               value="<%= (locals.old && old.email) ? old.email : '' %>">
+              <li style="display: none;" id="error1" class="errores"></li>
             <% if(locals.errors && errors.email){ %>
               <div class="text-error">
                 <%= errors.email.msg %>
@@ -29,7 +30,7 @@
                   <i class="fas fa-eye ojoPasswordBoton" id="ocultar-password"></i>
                   <i class="fas fa-eye-slash ojoPasswordBoton" id="mostrar-password"></i>
                 </button>
-                
+
                 <% if(locals.errors && errors.password){ %>
                   <div class="text-error">
                     <%= errors.password.msg %>
@@ -37,6 +38,7 @@
                   <% } %>
                 
                 </div>
+                <li style="display: none;" id="error2" class="errores"></li>
                   
                     <p class="inicio">
                       <input type="checkbox" id="sesion-iniciada" name="sesion" class="iniput">
@@ -48,7 +50,7 @@
                         <% } %>
                     </p>
 
-                    <ul id="errors" style="display: none ;" class="errors"></ul>
+                    
                     <button type="submit" class="inicio" id="boton1">Iniciar Sesión</button>
 
                     <p class="inicio">
@@ -68,59 +70,8 @@
     <%- include('../partials/footer') %>
 </body>
 
-<!-- BOTON OCULTAR/VER TEXTO PASSWORD -->
 
-<script>
-
-    var botonPasssword = document.getElementById('boton-passsword');
-    var password = document.getElementById('password');
-    var mostrarPassword = document.getElementById('mostrar-password');
-    var ocultarPassword = document.getElementById('ocultar-password')
-    
-    botonPasssword.addEventListener("click", function(){
-      if (password.type === "password") {
-        password.type = "text";
-        mostrarPassword.style.display = 'flex';
-        ocultarPassword.style.display = 'none';
-        
-      } else {
-        password.type = "password";
-        ocultarPassword.style.display = 'flex';
-        mostrarPassword.style.display = 'none';
-      }
-    })
-
-    // validaciones
-    window.addEventListener('load', ()=>{
-
-      let form = document.querySelector('#Iniciar')
-      let email = document.querySelector('#email');
-      let password = document.querySelector('#password');
-
-      let errors = []
-
-      form.addEventListener('submit', (e)=>{
-          if(email.value == '' || password.value == ''){
-              e.preventDefault()
-              errors.push('Los campos no pueden estar vacios')  
-          }
-          if(password.value.length < 8){
-              e.preventDefault()
-              errors.push('La contraseña debe tener al menos 8 caracteres')
-        }
-
-        if(errors.length > 0){
-          let list = document.querySelector('#errors')
-          list.innerHTML = ''
-            for(error of errors){
-              list.innerHTML += '<li>'+ error +'</li>'
-            }
-            list.style.display = 'flex'
-          }
-        errors = []
-      })
-      })
-  </script>
+<script src="/js/scriptLogin.js"></script>
   
 
 </html>

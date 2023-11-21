@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/register.css">
@@ -26,40 +25,24 @@
               <label for="nombre">Nombre:</label>
               <input type="text" id="nombre" name="nombre" class="input"
                 value="<%= locals.oldData ? oldData.nombre : null %>">
-              <% if(locals.errors && errors.nombre){ %>
-                <div class="text-error">
-                  <%= errors.nombre.msg %>
-                </div>
-                <% } %>
+                <li style="display: none;" id="error1" class="errores"></li>
             </div>
             <div class="grupo-formulario">
               <label for="apellido">Apellido:</label>
               <input type="text" id="apellido" name="apellido" class="input"
                 value="<%= locals.oldData ? oldData.apellido : null %>">
-              <% if(locals.errors && errors.apellido){ %>
-                <div class="text-error">
-                  <%= errors.apellido.msg %>
-                </div>
-                <% } %>
+                <li style="display: none;" id="error2" class="errores"></li>
             </div>
             <div class="grupo-formulario">
               <label for="email">Email:</label>
               <input type="text" id="email" name="email" class="input"
                 value="<%= locals.oldData ? oldData.email : null %>">
-              <% if(locals.errors && errors.email){ %>
-                <div class="text-error">
-                  <%= errors.email.msg %>
-                </div>
-                <% } %>
+                <li style="display: none;" id="error3" class="errores"></li>
             </div>
             <div class="grupo-formulario">
               <label for="foto">Foto de perfil:</label>
               <input type="file" id="foto" name="foto" class="input">
-              <% if(locals.errors && errors.foto){ %>
-                <div class="text-error" style=" width: 200px;">
-                  <%= errors.foto.msg %>
-                </div>
-                <% } %>
+              <li style="display: none;" id="error4" class="errores"></li>
             </div>
             <div class="grupo-formulario">
               <label for="password">Contraseña:</label>
@@ -71,11 +54,7 @@
                   <i class="fas fa-eye-slash ojoPasswordBoton" id="mostrar-password"></i>
                 </button>
               </div>
-              <% if(locals.errors && errors.password){ %>
-                <div class="text-error">
-                  <%= errors.password.msg %>
-                </div>
-                <% } %>
+              <li style="display: none;" id="error5" class="errores"></li>
             </div>
             <div class="grupo-formulario">
               <label for="confirmarPassword">Confirmar contraseña:</label>
@@ -87,25 +66,40 @@
                   <i class="fas fa-eye-slash ojoPasswordBoton" id="mostrar-confirmar-password"></i>
                 </button>
               </div>
-              <% if(locals.errors && errors.confirmarPassword){ %>
-                <div class="text-error">
-                  <%= errors.confirmarPassword.msg %>
-                </div>
-                <% } %>
+              <li style="display: none;" id="error6" class="errores"></li>
             </div>
 
             <div class="grupo-formulario">
               <div class="form-password">
                 <input type="checkbox" id="terminos" name="terminos">
                 <label for="terminos" class="etiqueta-checkbox">Acepto los términos y condiciones</label>
-                <% if(locals.errors && errors.terminos){ %>
-                  <div class="text-error">
-                    <%= errors.terminos.msg %>
-                  </div>
-                  <% } %>
                 </div>
             </div>
-            <ul id="errors" style="display: none ;" class="errors"></ul>
+            <% if(locals.errors){ %>
+              <div class="text-error">
+                <% if(errors.nombre){ %>
+                  <p><%= errors.nombre.msg %></p> 
+                 <% } %>
+                 <% if(errors.apellido){ %>
+                  <p><%= errors.apellido.msg %></p> 
+                 <% } %>
+                 <% if(errors.email){ %>
+                  <p><%= errors.email.msg %></p> 
+                 <% } %>
+                 <% if(errors.foto){ %>
+                  <p><%= errors.foto.msg %></p> 
+                 <% } %>
+                 <% if(errors.password){ %>
+                  <p><%= errors.password.msg %></p> 
+                 <% } %>
+                 <% if(errors.confirmarPassword){ %>
+                  <p><%= errors.confirmarPassword.msg %></p> 
+                 <% } %>
+                 <% if(errors.terminos){ %>
+                  <p><%= errors.terminos.msg %></p> 
+                 <% } %>
+              </div>
+              <% } %>
             <button type="submit" id="boton1" class="input">Crear cuenta</button>
             <div class="grupo-formulario" id="redes">
               <button type="submit" class="boton2 input">Ingresa con Facebook <i class="fab fa-facebook-f"
@@ -120,108 +114,6 @@
 
     </main>
     <%- include('../partials/footer') %>
-      <script>
-
-        // OCUTAR Password
-        
-        var botonPasssword = document.getElementById('boton-passsword');
-        var botonConfirmPasssword = document.getElementById('boton-confirmar-passsword');
-
-        var password = document.getElementById('password');
-        var confirmarPassword = document.getElementById('confirmarPassword');
-
-        var mostrarPassword = document.getElementById('mostrar-password');
-        var mostrarConfirmarPassword = document.getElementById('mostrar-confirmar-password');
-
-        var ocultarPassword = document.getElementById('ocultar-password')
-        var ocultarConfirmarPassword = document.getElementById('ocultar-confirmar-password')
-    
-        botonPasssword.addEventListener("click", function(){
-          if (password.type === "password") {
-            password.type = "text";
-            mostrarPassword.style.display = 'flex';
-            ocultarPassword.style.display = 'none';
-
-          } else {
-            password.type = "password";
-            ocultarPassword.style.display = 'flex';
-            mostrarPassword.style.display = 'none';
-          }
-        })
-
-//      OCUTAR Confirmar Password
-        botonConfirmPasssword.addEventListener("click", function(){
-          if (confirmarPassword.type === "password") {
-            confirmarPassword.type = "text";
-            mostrarConfirmarPassword.style.display = 'flex';
-            ocultarConfirmarPassword.style.display = 'none';
-
-          } else {
-            confirmarPassword.type = "password";
-            ocultarConfirmarPassword.style.display = 'flex';
-            mostrarConfirmarPassword.style.display = 'none';
-          }
-        })
-
-
-
-
-
-
-        window.addEventListener('load', () => {
-
-          let form = document.querySelector('#registro')
-          let name = document.querySelector('#nombre');
-          let lastname = document.querySelector('#apellido');
-          let email = document.querySelector('#email');
-          let foto = document.querySelector('#foto');
-          let password = document.querySelector('#password');
-          let password2 = document.querySelector('#confirmarPassword');
-          let terms = document.querySelector('#terminos');
-
-          let errors = []
-
-          form.addEventListener('submit', (e) => {
-
-            if (name.value == '' || lastname.value == '' || email.value == '' || password.value == '' || password2.value == '') {
-              e.preventDefault()
-              errors.push('Los campos no pueden estar vacios')
-            }
-            if ((name.value.length < 2) || (lastname.value.length < 2)) {
-              e.preventDefault()
-              errors.push('Su nombre y/o apellido debera tener al menos 2 caracteres')
-            }
-            if (password.value.length < 8) {
-              e.preventDefault()
-              errors.push('La contraseña debe tener al menos 8 caracteres')
-            }
-            if (password.value != password2.value) {
-              e.preventDefault()
-              errors.push('La contraseña debe coincidir')
-            }
-            if (terms.value.checked == false) {
-              e.preventDefault()
-              errors.push('Debe aceptar los terminos y condiciones')
-            }
-            if (foto.value == '') {
-              e.preventDefault()
-              errors.push('Debe ingresar una foto')
-            }
-
-            if (errors.length > 0) {
-              let list = document.querySelector('#errors')
-              list.innerHTML = ''
-              for (error of errors) {
-                list.innerHTML += '<li>' + error + '</li>'
-              }
-              list.style.display = 'flex'
-            }
-            errors = []
-          })
-
-
-        })
-      </script>
+    <script src="/js/scriptRegister.js"></script>
 </body>
-
 </html>

@@ -96,7 +96,7 @@ window.addEventListener('load', () => {
         error4.style.display = 'none'
       };
       // validaciones imagen
-      if(imagen.value == '' || getFileExtension(imagen.value)!= 'jpg' || getFileExtension(imagen.value)!= 'jpeg' || getFileExtension(imagen.value)!= 'png'){
+      if(imagen.value == '' || (getFileExtension(imagen.value)!= 'jpg' && getFileExtension(imagen.value)!= 'jpeg' && getFileExtension(imagen.value)!= 'png')){
         e.preventDefault();
         errors.push(1);
         if(errors.length > 0){

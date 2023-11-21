@@ -5,6 +5,7 @@ const { validationResult } = require('express-validator');
 const db = require('../../database/models');
 
 const rutaDetalle = true
+const rutaEdit = true
 
 const controller = {
     // Muestra el detalle de un producto 
@@ -31,7 +32,7 @@ const controller = {
         let ruta = path.resolve(__dirname, '../views/products/editProduct')
         db.Product.findByPk(req.params.id)
           .then((producto)=>{
-               res.render(ruta, {producto, logged, rutaDetalle})
+               res.render(ruta, {producto, logged, rutaEdit})
           })
           .catch((err)=>{
                console.log(err)

@@ -134,13 +134,17 @@ button{
     display: none;
 }
 
-.errors{
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+.errores{
+    color: red;
+    width: 100%
   }
-  .errors li{
-    width: 100%;
+  .erroresInput{
+    background-color: red;
+    color: white;
+  }
+  .passInput{
+    background-color: rgb(95, 245, 95);
+    color: white;
   }
 @media ((min-width: 481px) and (max-width: 768px)){
     .inicio{
