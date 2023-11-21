@@ -1,16 +1,22 @@
 @import url(centralize.css);
 @import url(header.css);
 @import url(footer.css);
+
+body{
+    background-color: black;
+}
+
 section{
     height: 100%;
     width: 100%;
     color: white
 }
 main{
-    background: url('../img/background6.jpg');
-    background-size: cover;
+    background: url('../img/background-register.png');
+    background-size: 100%;
     display: flex;
     justify-content: space-around;
+    background-size: 70% 50%;
 }
 
 .perfil{
@@ -19,6 +25,7 @@ main{
     position: absolute;
     z-index: 1;
     text-align: center;
+    background-repeat: repeat;
 }
 .perfil img{
     width: 100%;
@@ -68,6 +75,7 @@ main{
     width: 100%;
     border-radius: 5px;
     padding: 0 10px;
+    border-radius: 5px;
 }
 
 .input{
@@ -140,11 +148,14 @@ label{
     display: flex;
 }
 
+#password, #confirmarPassword{
+    border-radius: 5px 0px 0px 5px;
+}
+
 /* OCULTAR Password */
 
 #password, #confirmarPassword{
     width: 100%;
-    box-shadow: none;
 }
 
 #password, #confirmarPassword,  .boton-passsword, .boton-confirmar-passsword{
@@ -195,8 +206,8 @@ label{
   /* --------------------------- Responsive ------------------------ */
 
 
-@media (min-width: 1028px){
-    main{
+  @media (min-width: 1028px){
+  main{
         display: flex;
         flex-direction: row;
     }
@@ -244,4 +255,101 @@ label{
     /* #derecha{
         /* width: 50%; */
     /* } */
+  }
+
+/* --------------------> TABLET <----------------------- */
+
+@media (min-width: 361px){
+    
+    main{
+        background-size: 77%;
+    }
+
+    main{
+        background-size: 50%;
+    }
+    
+    #fondoMobile{
+        display: none;
+    }
+
+    #ingresa {
+        align-self: center;
+    }
+
+    #ingresa a{
+        font-size: 12px;
+    }
+
+    #foto {
+        color: black;
+    }
+
+    .etiqueta-checkbox {
+        font-size: larger;
+        margin-left: 0px;
+    }
+
+}
+
+/* --------------------> MOBILE <----------------------- */
+
+
+  @media (max-width: 360px){
+
+    main{
+        background-size: 100%;
+    }
+
+    #fondoLaptop {
+        display: none;
+    }
+    
+    #derecha{
+        width: 100%;
+        padding: 0px;
+        right: 0;
+    }
+
+    #ingresa {
+        margin-top: 10px;
+        margin-bottom: auto; 
+        align-self: center;
+    }
+
+    #ingresa a {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .contenedor-formulario-registro {
+        width: 85%;
+    }
+
+    .grupo-formulario .input {
+        height: 30px;
+    }
+
+    .form-password{
+        justify-content: space-between;
+    }
+
+    #foto {
+        padding: 0;
+    }
+
+    #terminos{
+        width: 6%;
+    }
+
+    .etiqueta-checkbox {
+        font-size: 12px;
+        text-transform: uppercase;
+        text-align: center;    
+        margin: 10px 0px;
+    }
+
+    .boton2{
+        font-size: 8px;
+    }
 }
