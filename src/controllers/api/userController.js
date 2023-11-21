@@ -40,14 +40,12 @@ const controller = {
                     nombre = user.nombre
                     apellido = user.apellido
                     email = user.email
-                    foto = user.foto
 
                     const result = {
                         id,
                         nombre,
                         apellido,
                         email,
-                        foto
                     }
                     res.json(result)
                 }   
@@ -56,6 +54,14 @@ const controller = {
                 console.error('Error al obtener la información de usuarios:', error);
             res.status(500).json({ error: 'Error interno del servidor' });
             })
+    },
+    'img': (req, res) => {
+        let params = req.params.id
+        db.User.findByPk(params)
+            .then((result) => {
+                res.json(result.foto);
+            })
+        .catch((error) => { console.log('error')} )
     }
 }
 

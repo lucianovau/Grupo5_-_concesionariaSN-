@@ -1,4 +1,5 @@
 const db = require('../../../database/models');
+const { login } = require('../usersController');
 const sequelize = db.sequelize;
 
 
@@ -55,7 +56,6 @@ const controller = {
                     name = product.name
                     description = product.descripcion
                     marca = product.marca
-                    img = ''
                     modelo = product.modelo
                     category = product.category
                     price = product.price
@@ -67,7 +67,6 @@ const controller = {
                         name,
                         marca,
                         modelo,
-                        img,
                         descripcion,
                         category,
                         price,
@@ -76,6 +75,15 @@ const controller = {
         }
                     res.json(result);
 })
+        .catch((error) => { console.log('error')} )
+    },
+    'img': (req, res) => {
+        let params = req.params.id
+        db.Product.findByPk(params)
+            .then((result) => {
+                let variable = result.img.split(' ');
+                res.json(variable);
+            })
         .catch((error) => { console.log('error')} )
     }
 }
