@@ -53,7 +53,7 @@ app.use((req,res,next) => {
 
 
 // levantar el servidor
-let port = process.env.PORT || 3000
+let port = process.env.PORT || 3030
 app.listen(port, () => console.log(`servidor corriendo en el puerto ${port}`));
 
 
