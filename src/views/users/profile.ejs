@@ -3,7 +3,7 @@
 
 <head>
   <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/profile.css">
 </head>
 
 <body>
@@ -16,8 +16,8 @@
           </h2><% console.log(user) %>
           <img id="userImg" class="userImg" src="<%= user.foto %>">
           <div id="mailContainer" class="mailContainer">
-            <p>Email <%= user.email %>
-            </p>
+            <h2>Email: <%= user.email %>
+            </h2>
           </div>
         </form>
       </section>
