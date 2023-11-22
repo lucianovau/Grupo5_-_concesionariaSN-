@@ -140,10 +140,12 @@
 </header>
 
 <% if(locals.consulta) { %>
-  <dialog id="modal3" >
-    <button class="cerrar" id="cerrar1">X</button>
-    <h2>¡Contactanos!</h2>
-    <div id="contactoForm">
+  
+
+    <dialog id="modal3" >
+      <button class="cerrar" id="cerrar1">X</button>
+      <h2>¡Contactanos!</h2>
+      <div id="contactoForm">
         <label for="nombre2">Nombre</label>
         <input type="text" id="nombre2" name="nombre">
         <label for="Apellido2">Apellido</label>
@@ -160,33 +162,49 @@
     </div>
   </dialog>
   <% } %>
+  
 
-<dialog id="modal" >
-  <button class="cerrar" id="cerrar">X</button>
-  <h2>¡Contactanos!</h2>
-  <div id="contactoForm">
-    <label for="nombre2">Nombre</label>
-    <input type="text" id="nombre2" name="nombre">
-    <label for="Apellido2">Apellido</label>
-    <input type="text" id="Apellido2" name="apellido">
-    <label for="email2">Email</label>
-    <input type="text" id="email2" name="email">
-    <label for="telefono">Telefono</label>
-    <input type="text" id="telefono" name="telefono">
-    <label for="auto">Auto por el que consulta</label>
-    <input type="text" id="auto" name="auto">
-    <label for="consulta">Consulta</label>
-    <textarea name="consulta" id="consulta" cols="10" rows="10"></textarea>
-    <button type="submit" class="cerrar" id="enviar">Enviar</button>
-  </div>
-</dialog>
+    <dialog id="modal" class="modal-fondo">
+    <div class="modal-contacto" >
+      <button class="cerrar" id="cerrar">X</button>
+      <h2>¡Contactanos!</h2>
+      <div id="contactoForm">
+        <label for="nombre2">Nombre</label>
+        <input type="text" id="nombre2" name="nombre">
 
-<dialog id="modal2">
-  <button class="cerrar" id="cerrar2">X</button>
-  <div id="contenidoAyuda">
-    <h2>Ayuda</h2>
-    <p>Si necesitas ayuda, o mayor asistencia en tu compra comunicate al:</p>
-    <h3>3364584569</h3>
+        <label for="Apellido2">Apellido</label>
+        <input type="text" id="Apellido2" name="apellido">
+
+        <label for="email2">Email</label>
+        <input type="text" id="email2" name="email">
+
+        <label for="telefono">Telefono</label>
+        <input type="text" id="telefono" name="telefono">
+
+        <label for="auto">Auto por el que consulta</label>
+        <input type="text" id="auto" name="auto">
+
+        <!-- <label for="consulta">Consulta</label>
+        <textarea name="consulta" id="consulta" cols="10" rows="10"></textarea> -->
+
+        <label for="consulta">Consulta</label>
+      <textarea name="consulta" id="consulta" cols="30" rows="5"></textarea>
+
+        <button type="submit" class="cerrar" id="enviar">Enviar</button>
+      </div>
+    </div>
+    </dialog>
+  
+
+<dialog id="modal2" class="modal-fondo">
+  <div class="modal-contacto">
+
+    <button class="cerrar" id="cerrar2">X</button>
+    <div id="contenidoAyuda">
+      <h2>Ayuda</h2>
+      <h3>Si necesitas ayuda, o mayor asistencia en tu compra comunicate al:</h3>
+      <h2>3364584569</h2>
+    </div>
   </div>
 </dialog>
 
