@@ -148,16 +148,11 @@ video{
     display: flex;
 }
 
-
-
-
 .fas{
    font-size: 1.5rem;
    padding: 5px;
 }
-nav{
-    display: none;
-}
+
 form{
     width: 100%;
     height: 2.5rem;
@@ -370,17 +365,146 @@ li a{
    }
 
    #contenidoAyuda h2{
-    color: blue;
-    text-transform: uppercase;
-   }
+       color: blue;
+       text-transform: uppercase;
+    }
+    
+    #contenidoAyuda h3{
+        color: #ff0000;
+        font-size: 1rem;
+        margin: 20px 0px;
+    }
+    
+    
+/* --------------------> RESPONSIVE <-------------------- */
 
-   #contenidoAyuda h3{
-    color: #ff0000;
-    font-size: 1rem;
-    margin: 20px 0px;
-   }
 
+
+    
+/* CELULAR */
+
+@media (max-width: 360px){
+    
+    #burger{
+        display: flex;
+        border: none;
+        background: none;
+        color: red;
+        font-size: 2rem;
+        padding: 10px;
+        margin-right: 5px;
+    }
+
+    nav{
+        display: none;
+        background-color: black;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        margin-top: 15%;
+    }
+
+    nav li a{
+        border: 1px red solid;
+        margin: 0px 10px;
+        padding: 10px;
+    }
+
+    nav ol, nav ul {
+        padding-left: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    
+    .nombreIcono{
+        display: none;
+    }
+
+    .head{
+        padding: 10px 0px;
+        flex-wrap: nowrap;
+    }
+
+    .head img{
+        width: 40%;
+        margin: auto 0px;
+    }
+    
+    
+    .iconos {
+        width: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    .iconos a{
+        width: auto;
+    }
+    
+    .iconos ul{
+        padding: -1px;
+    }
+
+    #barra {
+        position: relative;
+        margin-top: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        z-index: 10;
+    }
+
+    #buscador{
+        margin-top: auto;
+    }
+    
+    .switch {
+        top: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .modal-contacto {
+        padding-top: 10px;
+    }
+
+    #contactoForm label{
+        font-size: 12px;
+    }
+
+    #cerrar, #cerrar2 {
+        margin: auto;
+        width: 15%;
+    }
+}
+
+/* TABLET */
+
+@media (min-width: 360px){
+
+    
+    #burger{
+        display: none;
+    }
+
+    #cerrar, #cerrar2{
+        width: 8%;
+    }
+
+    #enviar {
+        font-size: 18px;
+    }
+}
+
+/* --------------------> LAPTOP <-------------------- */
+    
 @media (min-width: 768px){
+
+    .head{
+        height: 15rem;
+        margin-top: 0px;
+    }
+
     #barra{
         display: flex;
         flex-direction: row;
@@ -424,67 +548,5 @@ li a{
     .head{
         height: 10rem;
         
-    }
-    #burger{
-        display: none;
-    }
-}
-@media (min-width: 1024px){
-    .head{
-        height: 15rem;
-        margin-top: 0px;
-    }
-}
-    
-/* CELULAR */
-    
-@media (max-width: 360px){
-    
-    #burger{
-        display: none;
-    }
-
-    .nombreIcono{
-        display: none;
-    }
-
-    .head{
-        padding: 10px 0px;
-        flex-wrap: nowrap;
-    }
-
-    .head img{
-        width: 40%;
-        margin: auto 0px;
-    }
-
-
-    .iconos {
-        width: auto;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-    }
-
-    .iconos a{
-        width: auto;
-    }
-
-    .iconos ul{
-        padding: -1px;
-    }
-
-    #barra{
-        position: relative;
-        z-index: 10;
-    }
-
-    header nav{
-        display: none;
-    }
-
-    .switch {
-        top: 0;
-        margin-top: auto;
-        margin-bottom: auto;
     }
 }

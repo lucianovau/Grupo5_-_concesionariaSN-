@@ -107,6 +107,11 @@
     </div>
   </div>
   <div id="barra">
+    
+    <button class="burger" id="burger">
+      <i class="fa-solid fa-gear"></i>
+    </button>
+
     <nav>
       <ul>
         <li><a href="<% if(locals.rutaproducto || locals.rutaDetalle){ %>
@@ -209,7 +214,16 @@
 </dialog>
 
 <script src="/js/clearMode.js"></script>
+
+
 <script>
+
+  // menu-mobile
+  document.querySelector('#burger').addEventListener('click', function() {
+   document.querySelector('nav').style.display = 
+   (document.querySelector('nav').style.display == 'block') ? 'none' : 'block';
+});
+
   // contacto
   const abrir = document.querySelector('#contacto')
   const cerrar = document.querySelector('#cerrar')
