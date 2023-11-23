@@ -395,6 +395,16 @@ li a{
         margin-right: 5px;
     }
 
+    .burgerClick{
+        transform: rotate(-90deg);
+        transition: 1.2s;
+    }
+
+    .burgerClick2{
+        transform: rotate(0deg);
+        transition: 1.2s;
+    }
+
     nav{
         display: none;
         background-color: black;

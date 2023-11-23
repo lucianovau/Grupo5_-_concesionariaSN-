@@ -220,9 +220,19 @@
 
   // menu-mobile
   document.querySelector('#burger').addEventListener('click', function() {
-   document.querySelector('nav').style.display = 
-   (document.querySelector('nav').style.display == 'block') ? 'none' : 'block';
-});
+    let nav = document.querySelector('nav').style.display; 
+    let burger = document.getElementById('burger');
+    
+    if (nav === 'block'){
+      document.querySelector('nav').style.display = 'none';
+      burger.classList.add('burgerClick2');
+      burger.classList.remove('burgerClick');
+    } else {
+      document.querySelector('nav').style.display = 'block';
+      burger.classList.add('burgerClick');
+      burger.classList.remove('burgerClick2');
+    }
+  });
 
   // contacto
   const abrir = document.querySelector('#contacto')
