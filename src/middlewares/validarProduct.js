@@ -7,16 +7,20 @@ const validationProduct = [
     body('name').notEmpty().withMessage('El nombre debe tener al menos 5 caracteres').isLength({ min: 5 }),
     body('descripcion').notEmpty().withMessage('la descripcion debe tener al menos 20 caracteres').isLength({ min: 20 }),
     body('imageProduct').custom(((value, { req })=>{
-        let file = req.file;
+        let file = req.files;
+        console.log(file)
         let acceptedExtension = ['.jpg', '.png', '.gif', '.jpeg']
 
         if(!file){
             throw new Error('Tienes que subir una imagen');
         }else{
-            let fileExtension = path.extname(file.originalname);
+            file.forEach(file => {
+                let fileExtension = path.extname(file.originalname);
             if(!acceptedExtension.includes(fileExtension)){
                 throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtension.join(', ')}`);
             }
+            });
+            
         }
         return true;
         }))

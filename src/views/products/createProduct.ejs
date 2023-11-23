@@ -15,22 +15,22 @@
         
         <div class="posicionamientoForm">
           <label for="name">Nombre del producto:</label>
-          <input type="text" id="name" name="name">
+          <input type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>">
           <li style="display: none;" id="error1" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="marca">Marca:</label>
-          <input type="text" id="marca" name="marca">
+          <input type="text" id="marca" name="marca" value="<%= locals.oldData ? oldData.marca : null %>">
           <li style="display: none;" id="error2" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="modelo">Modelo:</label>
-          <input type="text" id="modelo" name="modelo">
+          <input type="text" id="modelo" name="modelo" value="<%= locals.oldData ? oldData.modelo : null %>">
           <li style="display: none;" id="error3" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="descripcion">Descripción:</label>
-          <textarea id="descripcion" name="descripcion" ></textarea>
+          <textarea id="descripcion" name="descripcion"><%= locals.oldData ? oldData.descripcion : null %></textarea>
           <li style="display: none;" id="error4" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
@@ -40,32 +40,32 @@
         </div>
         <div class="posicionamientoForm">
           <label for="category">Categoría:</label>
-          <input type="text" id="category" name="category">
+          <input type="text" id="category" name="category" value="<%= locals.oldData ? oldData.category : null %>">
           <li style="display: none;" id="error6" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="colors">Colores:</label>
-          <input type="text" id="colors" name="colors">
+          <input type="text" id="colors" name="colors" value="<%= locals.oldData ? oldData.colors : null %>">
           <li style="display: none;" id="error7" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="price">Precio:</label>
-          <input type="number" id="price" name="price" step="0.01">
+          <input type="number" id="price" name="price" step="0.01" value="<%= locals.oldData ? oldData.price : null %>">
           <li style="display: none;" id="error8" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="caracteristicas">Caracteristicas:</label>
-          <textarea id="caracteristicas" name="caracteristicas"></textarea>
+          <textarea id="caracteristicas" name="caracteristicas"><%= locals.oldData ? oldData.caracteristicas : null %></textarea>
           <li style="display: none;" id="error9" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="seguridad">Seguridad:</label>
-          <textarea id="seguridad" name="seguridad" ></textarea>
+          <textarea id="seguridad" name="seguridad"><%= locals.oldData ? oldData.seguridad : null %></textarea>
           <li style="display: none;" id="error10" class="errores"></li>
         </div>
         <div class="posicionamientoForm">
           <label for="confort">Confort:</label>
-          <textarea id="confort" name="confort" ></textarea>
+          <textarea id="confort" name="confort" ><%= locals.oldData ? oldData.confort : null %></textarea>
           <li style="display: none;" id="error11" class="errores"></li>
         </div>
         <% if(locals.errors ){ %>
