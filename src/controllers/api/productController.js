@@ -29,7 +29,7 @@ const controller = {
                     name: product.name,
                     description: product.descripcion,
                     categories: product.marca,
-                    detail: `/api/products/${product.id}`
+                    detail: `http://localhost:3030/detalleProd/${product.id}`
                 }));
 
                 // Crear el objeto literal de respuesta
@@ -48,7 +48,7 @@ const controller = {
             })
     },
     'detail': (req, res) => { 
-        let id, name, marca, modelo, img, descripcion, category, price, color, caracteristicas
+        let id, name, marca, modelo, descripcion, category, price, color, caracteristicas, detail
         db.Product.findByPk(req.params.id)
             .then(
                 product => {
@@ -61,6 +61,8 @@ const controller = {
                     price = product.price
                     color = product.color
                     caracteristicas = product.caracteristicas
+                    detail = `http://localhost:3030/detalleProd/${product.id}`
+
                 
                 const result = {
                         id,
@@ -71,7 +73,8 @@ const controller = {
                         category,
                         price,
                         color,
-                        caracteristicas
+                        caracteristicas,
+                        detail
         }
                     res.json(result);
 })
