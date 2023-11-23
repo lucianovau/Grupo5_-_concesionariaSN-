@@ -14,11 +14,12 @@ const validationProduct = [
         if(!file){
             throw new Error('Tienes que subir una imagen');
         }else{
+
             file.forEach(file => {
                 let fileExtension = path.extname(file.originalname);
-            if(!acceptedExtension.includes(fileExtension)){
-                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtension.join(', ')}`);
-            }
+                if(!acceptedExtension.includes(fileExtension)){
+                    throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtension.join(', ')}`);
+                }
             });
             
         }
