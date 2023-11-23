@@ -4,6 +4,7 @@ const { validationResult } = require('express-validator');
 
 const db = require('../../database/models');
 let rutaproducto = true;
+let rutaEdit = true;
 
 const controllerProductos = {
     // muestra todos los productos
@@ -90,7 +91,7 @@ const controllerProductos = {
     db.Product.findAll({where:{marca: marcas}})
       .then((productos)=>{
         if(productos){
-          res.render(ruta, {productos, rutaproducto})
+          res.render(ruta, {productos, rutaEdit})
         }
       })
       .catch((err)=>{
