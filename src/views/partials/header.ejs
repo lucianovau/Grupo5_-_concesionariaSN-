@@ -5,9 +5,9 @@
       <p class="nombreIcono">¡ BIENVENIDO/A <%if(locals.user){ %> <%= user.nombre %> <% } %> !</p>
       <% if(!locals.logged) { %>
         <li>
-          <ul class="perfilHover">
+          <ul id="perfilHoverNoLogueado" class="perfilHover">
 
-            <a href="<% if(locals.rutaproducto){ %>
+            <!-- <a href="<% if(locals.rutaproducto){ %>
               login
               <% }else if(locals.rutaDetalle){ %>
                 ../user/login
@@ -15,9 +15,10 @@
                   ../../user/login
                 <% }else{ %>
                   user/login
-                  <% } %>"><i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
+                  <% } %>"> -->
+                  <i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
             </a>
-            <div class="listaMenuPerfil">
+            <div class="listaMenuPerfil" id="menu-profile-no-logueado">
               <ul>
                 <a href="<% if(locals.rutaproducto){ %>
                   login
@@ -53,8 +54,8 @@
         </li>
         <%} else {%>
           <li>
-            <ul class="perfilHover">
-              <a href="<% if(locals.rutaproducto){ %>
+            <ul id="perfilHover" class="perfilHover">
+              <!-- <a href="<% if(locals.rutaproducto){ %>
                     profile
                     <% }else if(locals.rutaDetalle){ %>
                       ../user/profile
@@ -62,9 +63,21 @@
                         ../../user/profile
                       <% }else{ %>
                         user/profile
-                        <% } %>"><i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
-              </a>
-              <div class="listaMenuPerfil cerrarSesion">
+                        <% } %>"> -->
+              <i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
+              <!-- </a> -->
+              <div id="menu-profile" class="listaMenuPerfil cerrarSesion">
+                <ul class="perfil-clase-mobile">
+                  <a href="<% if(locals.rutaproducto){ %>
+                profile
+                <% }else if(locals.rutaDetalle){ %>
+                  ../user/profile
+                  <% } else if(locals.rutaEdit){ %>
+                    ../../user/profile
+                  <% }else{ %>
+                    user/profile
+                    <% } %>"> Perfil </a>
+                </ul>
                 <ul>
                   <a href="<% if(locals.rutaproducto){ %>
                 logout
@@ -213,12 +226,12 @@
   </div>
 </dialog>
 
+
 <script src="/js/clearMode.js"></script>
 
 
 <script>
 
-  // menu-mobile
   document.querySelector('#burger').addEventListener('click', function() {
     let nav = document.querySelector('nav').style.display; 
     let burger = document.getElementById('burger');
@@ -233,7 +246,62 @@
       burger.classList.remove('burgerClick2');
     }
   });
+
   
+  // ---------------> menu-mobile <---------------
+
+  // menu-mobile NO-LOGUEADO 
+  
+  document.addEventListener('DOMContentLoaded', () => {
+  const menuProfileNoLogueado = document.getElementById("menu-profile-no-logueado");
+  const clickMenuProfileNoLogueado = document.getElementById("perfilHoverNoLogueado");
+
+  const handleDocumentClick = (event) => {
+    const targetElement = event.target;
+    if (
+      !menuProfileNoLogueado.contains(targetElement) &&
+      !clickMenuProfileNoLogueado.contains(targetElement)
+    ) {
+      menuProfileNoLogueado.classList.remove('visible');
+    }
+  };
+
+  clickMenuProfileNoLogueado.addEventListener('click', () => {
+    menuProfileNoLogueado.classList.toggle('visible');
+  });
+
+  document.addEventListener('click', handleDocumentClick);
+});
+
+
+
+  // menu-mobile LOGUEADO 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuProfile = document.getElementById("menu-profile");
+  const clickMenuProfile = document.getElementById("perfilHover");
+
+  const handleDocumentClick = (event) => {
+    const targetElement = event.target;
+    if (
+      !menuProfile.contains(targetElement) &&
+      !clickMenuProfile.contains(targetElement)
+    ) {
+      menuProfile.classList.remove('visible');
+    }
+  };
+
+  clickMenuProfile.addEventListener('click', () => {
+    menuProfile.classList.toggle('visible');
+  });
+
+  document.addEventListener('click', handleDocumentClick);
+});
+
+
+    // -----------------------------------------
+
   // contacto
   const abrir = document.querySelector('#contacto')
   const cerrar = document.querySelector('#cerrar')

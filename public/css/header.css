@@ -91,17 +91,15 @@ video{
     background: #131111;
     margin: 0 20px ;
     position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 60px; 
-    margin-right: 53px;
+    bottom: 0;
+    right: 7.5%;
+    align-items: center;
 }
 
 .listaMenuPerfil ul:hover{
     background: #8d99ae;
     border-radius: 10px;
     width: 100%;
-    align-items: center;
 }
 
 .listaMenuPerfil ul a{
@@ -112,9 +110,6 @@ video{
     margin-right: 70px;
 }
 
-.perfilHover:hover > .listaMenuPerfil{
-    display: flex;
-}
 
 #carritoDeCompras{
     padding: 0px;
@@ -124,15 +119,14 @@ video{
     border: 1px solid white;
     border-radius: 10px;
     width: 150px;
+    position: absolute;
     color: #8d99ae;
     display: none;
     flex-direction: column; 
     background: #131111;
     margin: 0 20px ;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    margin-top: 60px; 
+    right: 3.5%;
+    bottom: 0;
 }
 
 .carritoDeComprasTexto p{    
@@ -426,6 +420,25 @@ li a{
         padding-bottom: 15px;
     }
 
+    .listaMenuPerfil {
+        margin: auto;
+        bottom: auto;
+        left: 0;
+        right: 0;
+    }
+
+    .listaMenuPerfil.visible {
+        display: flex;
+      }
+
+    .listaMenuPerfil ul:hover{
+        background: none
+    }
+
+    .carritoDeComprasTexto {
+        bottom: auto;
+    }
+
     
     .nombreIcono{
         display: none;
@@ -497,24 +510,6 @@ li a{
         display: none;
     }
 
-    #cerrar, #cerrar2{
-        width: 8%;
-    }
-
-    #enviar {
-        font-size: 18px;
-    }
-}
-
-/* --------------------> LAPTOP <-------------------- */
-    
-@media (min-width: 768px){
-
-    .head{
-        height: 15rem;
-        margin-top: 0px;
-    }
-
     #barra{
         display: flex;
         flex-direction: row;
@@ -535,6 +530,17 @@ li a{
         display: flex;
         flex-direction: row;
     }
+
+    .listaMenuPerfil {
+        margin: auto;
+        right: 15%;
+        bottom: 15%;
+    }
+
+    .listaMenuPerfil ul a {
+        justify-content: center;
+    }
+
     ul{
         display: flex;
         flex-direction: row;
@@ -548,15 +554,61 @@ li a{
         justify-content: center;
         width: 25%;
     }
-    .fas{
-        font-size: 3.5rem;
-        padding: 15px;
+
+
+    .listaMenuPerfil.visible {
+        display: flex;
+      }
+
+    .listaMenuPerfil ul:hover{
+        background: none
     }
-    .fa-search{
-        font-size: 1rem;
+
+    #cerrar, #cerrar2{
+        width: 8%;
     }
+
+    #enviar {
+        font-size: 18px;
+    }
+
+    .carritoDeComprasTexto {
+        z-index: 1;
+        top: 30%;
+        height: auto;
+        right: 4%;
+        bottom: auto;
+    }
+    
     .head{
         height: 10rem;
         
+    }
+}
+
+/* --------------------> LAPTOP <-------------------- */
+    
+@media (min-width: 900px){
+
+    .head{
+        height: 15rem;
+        margin-top: 0px;
+    }
+
+    .listaMenuPerfil {
+        margin: auto;
+        right: 10%;
+        bottom: auto;
+        top: 20%;
+    }
+
+    
+    .perfilHover:hover > .listaMenuPerfil{
+        display: flex;
+    }
+
+    .carritoDeComprasTexto {
+        top: 20%;
+        right: 3%;
     }
 }
