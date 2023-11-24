@@ -11,6 +11,7 @@
     <h1 class="titulo">Productos</h1>
     
     <section class="lista-productos">
+      <% if(productos.length > 0) { %>
       <% productos.forEach((producto=>{ %>
         <article class="producto">
           <img src="<% let img = producto.img.split(' ')  %> <%= img[0] %> " alt="Auto">
@@ -34,6 +35,11 @@
           <a href="/detalleProd/<%=producto.id%>" class="btn">Ver Detalles</a>
         </article>
       <% })) %>   
+      <% } else { %>
+          <li class="error-search-vacio">
+            <%= "No se han encontrado resultados con la búsqueda" %>
+          </li>
+      <% } %>   
     
     </section>
     

@@ -159,8 +159,12 @@ form{
     height: 100%;
     width: 83%;
     border: none;
-    background: #00000083;
+    background: #00000083;    
+    color: white;
+    text-transform: uppercase;
+    padding-left: 10px;
 }
+
 #boton{
     height: 100%;
     width: 15%;

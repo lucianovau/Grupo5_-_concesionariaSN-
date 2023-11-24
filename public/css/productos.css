@@ -70,6 +70,16 @@ article p{
     font-size: 14px;
 }
 
+.error-search-vacio{
+    margin: auto;
+    font-size: 1.5rem;
+    width: 75%;
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
 /* ------------------------------> RESPONSIVO <------------------------------ */
 
 /* ----------> TABLET <---------- */
@@ -92,6 +102,11 @@ article p{
 
     #productoDos{
         display: none;
+    }
+
+    .error-search-vacio {
+        font-size: 1.5rem;
+        width: 100%;
     }
 
     
@@ -146,5 +161,9 @@ article p{
     
     article:hover > img{
         padding: 0px;
+    }
+
+    .error-search-vacio {
+        font-size: 2.5rem;
     }
 }
