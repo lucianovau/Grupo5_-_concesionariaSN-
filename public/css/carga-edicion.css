@@ -13,13 +13,14 @@ main {
   padding: 50px 0;
 }
 
-.titulo-create{
+.titulo-create, .titulo-editar-producto{
   margin: 35px 20%;
   margin-top: 0;
   padding: 0;
   background-color: rgba(255,0,0,0.6);
   border: 1px solid red;
   border-radius: 15px;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -35,12 +36,15 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 400px;
   margin: 40px auto;
   padding: 20px;
   border: 1px solid #e90027;
   border-radius: 5px;
   background-color: rgba(0,0,0,0.9);
+}
+
+.btn-form-borrar{
+  width: 100%;
 }
 
 /* Estilos para las etiquetas */
@@ -65,18 +69,22 @@ textarea {
 }
 
 /* Estilos para el botón */
-#botonGuardar {
+#botonGuardar, #botonBorrar {
   background-color: #e90027;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin: auto;
+  font-size: 22px;
+  width: 300px;
 }
 
-#botonGuardar:hover {
+#botonGuardar:hover, #botonBorrar:hover{
   background-color: #0056b3;
 }
+
 
 /* Estilos para el posicionamiento de los elementos del formulario */
 .posicionamientoForm {
@@ -109,11 +117,11 @@ textarea {
     padding: 20px 0;
   }
 
-  form {
-    width: 80%;
+  #productForm {
+    width: 60%;
   }
 
-  form input{
+  #productForm input{
     font-size: 1rem;
     color: white;
   }
@@ -140,6 +148,23 @@ textarea {
   form input{
     font-size: 12px;
     color: black;
+  }
+
+  #botonGuardar, #botonBorrar {
+    background-color: #e90027;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+    font-size: 12px;
+    width: auto;
+  }
+
+  .btn-form-borrar {
+    width: 100%;
+    text-align: center;
   }
 
 }

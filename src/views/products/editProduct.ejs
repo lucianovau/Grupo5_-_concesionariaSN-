@@ -9,7 +9,7 @@
 <body>
   <%- include('../partials/header') %>
     <main>
-      <h1>Edición de Productos</h1>
+      <h1 class="titulo-editar-producto">Edición de Productos</h1>
       <form id="productForm" action="/detalleProd/<%= locals.oldData ? oldData.id : producto.id %>/edit?_method=PUT " method="POST" enctype="multipart/form-data">
         <div class="posicionamientoForm">
           <label for="name">Nombre del producto:</label>
@@ -77,10 +77,14 @@
              <% } %>
           </div>
           <% } %>
-        <button id="botonGuardar" type="submit">Guardar Producto</button>
+        <button id="botonGuardar" type="submit">Guardar Producto
+          <i class="fa-solid fa-floppy-disk"></i>
+        </button>
       </form>
-      <form action="/detalleProd/<%= locals.oldData ? oldData.id : producto.id %>/delete" method="POST" enctype="multiport/form-data">
-        <button id="botonBorrar" type="submit">Borrar Producto</button>
+      <form class="btn-form-borrar" action="/detalleProd/<%= locals.oldData ? oldData.id : producto.id %>/delete" method="POST" enctype="multiport/form-data">
+        <button id="botonBorrar" type="submit">Borrar Producto
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
       </form>
     </main>
     <%- include('../partials/footer') %>
