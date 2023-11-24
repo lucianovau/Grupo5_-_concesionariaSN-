@@ -142,7 +142,7 @@
                     error5.style.display = 'none'
                 };
             // validacion password
-                if(password.value != password2.value){
+                if((password.value != password2.value) || password2.value == ''){
                     e.preventDefault();
                     errors.push(1);
                     if(errors.length > 0){
