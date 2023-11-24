@@ -5,6 +5,7 @@ const { validationResult } = require('express-validator');
 const db = require('../../database/models');
 let rutaproducto = true;
 let rutaEdit = true;
+let rutaDetalle = true;
 
 const controllerProductos = {
     // muestra todos los productos
@@ -34,7 +35,7 @@ const controllerProductos = {
     }
         let ruta = path.resolve(__dirname, '../views/products/createProduct');
         res.render(ruta, {
-            logged, rutaproducto
+            logged, rutaDetalle
         });
    },
    // Guarda el nuevo producto
@@ -46,7 +47,7 @@ const controllerProductos = {
             res.render(ruta, { 
                 errors: resultValidation.mapped(),
                 oldData: req.body,
-                rutaproducto
+                rutaDetalle
             })
         }else{
           let imagenes = req.files.map(file => '/img/productImg/' + file.filename);

@@ -81,7 +81,7 @@
           <i class="fa-solid fa-floppy-disk"></i>
         </button>
       </form>
-      <form class="btn-form-borrar" action="/detalleProd/<%= locals.oldData ? oldData.id : producto.id %>/delete" method="POST" enctype="multiport/form-data">
+      <form class="btn-form-borrar" action="/detalleProd/<%= locals.oldData ? oldData.id : producto.id %>/delete" method="GET" enctype="multiport/form-data">
         <button id="botonBorrar" type="submit">Borrar Producto
           <i class="fa-solid fa-trash-can"></i>
         </button>
