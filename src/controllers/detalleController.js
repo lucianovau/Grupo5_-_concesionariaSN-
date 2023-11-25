@@ -108,14 +108,14 @@ const controller = {
         .catch((err)=>{
           console.log(err)
         })
-   },
+  },
    // Reservar
-   reserve: (req, res) => {
+  reserve: (req, res) => {
       let idProd = req.body.id;
       db.Product.findByPk(idProd)
       .then((producto)=>{
           let ruta = path.resolve(__dirname, '../views/products/productCart')
-          return res.render(ruta, {producto, rutaDetalle})
+          return res.render(ruta, {producto, rutaEdit})
       })
       .catch((err)=>{
           console.log(err)

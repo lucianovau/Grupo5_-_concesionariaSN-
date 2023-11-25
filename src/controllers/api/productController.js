@@ -88,7 +88,26 @@ const controller = {
                 res.json(variable);
             })
         .catch((error) => { console.log('error')} )
-    }
+    },
+    'obtenerProductos': async (req, res) => {
+        const { page = 1, limit = 10 } = req.query;
+
+        const offset = (page - 1) * limit;
+        const productos = await Producto.findAll({ limit, offset });
+
+        const totalProductos = await Producto.count();
+        const totalPages = Math.ceil(totalProductos / limit);
+
+        const nextPage = page < totalPages ? `/api/products/?page=${parseInt(page) + 1}` : null;
+        const prevPage = page > 1 ? `/api/products/?page=${parseInt(page) - 1}` : null;
+
+        res.json({
+            productos,
+            nextPage,
+            prevPage,
+        });
+        }
+
 }
 
 
