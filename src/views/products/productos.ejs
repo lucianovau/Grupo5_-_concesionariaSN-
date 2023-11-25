@@ -16,9 +16,10 @@
         <article class="producto">
           <img src="<% let img = producto.img.split(' ')  %> <%= img[0] %> " alt="Auto">
           <h2><%= producto.name%></h2>
-          <p><%= producto.descripcion %></p>
+          <p class="p-product"><%= producto.descripcion %></p>
           <span class="precio"><%= producto.price %> </span>
           <a href="/detalleProd/<%=producto.id%>" class="btn">Ver Detalles</a>
+          <button class="btn-agregarcarrito">Agregar al carrito</button>
         </article>
       <% })) %>
     </section>
@@ -30,9 +31,10 @@
         <article class="producto">
           <img src="<% let img = producto.img.split(' ')  %> <%= img[0] %> " alt="Auto">
           <h2><%= producto.name%></h2>
-          <p><%= producto.descripcion %></p>
+          <p class="p-product"><%= producto.descripcion %></p>
           <span class="precio"><%= producto.price %> </span>
           <a href="/detalleProd/<%=producto.id%>" class="btn">Ver Detalles</a>
+          <button class="btn-agregarcarrito">Agregar al carrito</button>
         </article>
       <% })) %>   
       <% } else { %>
@@ -45,6 +47,8 @@
     
   </main>
   <%- include('../partials/footer') %>
+
+  <script src="/js/clearMode.js"></script>
 </body>
 </html>
 

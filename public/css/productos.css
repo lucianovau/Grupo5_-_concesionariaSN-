@@ -36,16 +36,27 @@ article {
     color: red;
     text-align: center;
     padding: 30px 0px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 30px;
 }
 
 article img{
     width: 100%;
 }
 
+article p{
+    color: black;
+}
 .producto h2{
     padding: 12px;
 }
 
+.btn-agregarcarrito{
+    border-radius: 30px;
+    padding: 3px;
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
 /* ARTICULO HOVER */
 
 article:hover > img{
@@ -55,7 +66,7 @@ article:hover > img{
 }
 
 article:hover {
-    box-shadow: inset 1px 2px 11px 3px rgba(255,0,0,1);
+    box-shadow: inset 1px 2px 11px 5px rgba(255, 0, 0, 0.774);
     transition: all 0.3s;
 }
 
