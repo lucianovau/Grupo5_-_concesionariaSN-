@@ -38,10 +38,10 @@
           <div class="botones">
             <div class="botones-arriba">
               <% if(!locals.logged){ %>
-                <form action="../user/login">
+                <form action="../user/login" method="GET">
                   <button type="submit" class="boton">Consultar</button>
                 </form>
-                <form action="../user/login">
+                <form action="../user/login" method="GET">
                   <button type="submit" class="boton-destacado">Reservar</button>
                 </form>
               <% } else { %>

@@ -11,17 +11,17 @@ const controller = {
     // Muestra el detalle de un producto 
      detalleId: (req, res) => {
           let logged 
-    if (req.cookies.userEmail) {
-      logged = true
-    } 
-        let ruta = path.resolve(__dirname, '../views/products/detallesProd')
-        db.Product.findByPk(req.params.id || 1)
-          .then((producto)=>{
-               res.render(ruta, {producto, rutaDetalle, logged})
-          })
-          .catch((err)=>{
-               console.log(err)
-          })
+          if (req.cookies.userEmail) {
+            logged = true
+          } 
+          let ruta = path.resolve(__dirname, '../views/products/detallesProd')
+          db.Product.findByPk(req.params.id || 1)
+            .then((producto)=>{
+                res.render(ruta, {producto, rutaDetalle, logged})
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
    },
    // Muestra el formulario de edicion
      edit: (req, res) => {
@@ -123,12 +123,16 @@ const controller = {
    },
    // Consultar
    consultar: (req, res) => {
+      let logged 
+      if (req.cookies.userEmail) {
+        logged = true
+      } 
       let idProd = req.body.id;
       db.Product.findByPk(idProd)
         .then((producto) => {
           let consulta = true 
           let ruta = path.resolve(__dirname, '../views/products/detallesProd')
-          res.render(ruta, {producto, consulta, rutaDetalle})
+          res.render(ruta, {producto, consulta, rutaDetalle, logged})
         })
    }
 }
