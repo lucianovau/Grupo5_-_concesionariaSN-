@@ -78,7 +78,7 @@ const controllerProductos = {
       db.Product.findAll({ where: { [Op.or]: [{marca: searchValue},  {name: searchValue}, {modelo: searchValue}, {category: searchValue}, {color: searchValue}, {descripcion: searchValue}, {price: searchValue}]}})
       .then((productos)=>{
         if(productos){
-          res.render(ruta, {productos, rutaproducto})
+          res.render(ruta, {productos, rutaEdit})
         }
       })
       .catch((err)=>{
