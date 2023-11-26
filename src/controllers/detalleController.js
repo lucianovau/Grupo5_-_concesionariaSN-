@@ -109,10 +109,6 @@ const controller = {
           console.log(err)
         })
    },
-  
-  },
-
- 
    // Consultar
    consultar: (req, res) => {
       let logged 
