@@ -108,8 +108,28 @@ const controller = {
         .catch((err)=>{
           console.log(err)
         })
+<<<<<<< HEAD
    },
   
+=======
+  },
+   // Reservar
+  reserve: (req, res) => {
+      let logged 
+      if (req.cookies.userEmail) {
+        logged = true
+      } 
+      let idProd = req.body.id;
+      db.Product.findByPk(idProd)
+      .then((producto)=>{
+          let ruta = path.resolve(__dirname, '../views/products/productCart')
+          return res.render(ruta, {producto, rutaDetalle, logged })
+      })
+      .catch((err)=>{
+          console.log(err)
+      })
+   },
+>>>>>>> b05fdddb1de6271fccd40cc6331915658bdf4e94
    // Consultar
    consultar: (req, res) => {
       let logged 

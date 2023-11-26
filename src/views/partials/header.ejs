@@ -2,7 +2,9 @@
   <div class="head">
     <img src="/img/logo2.png" alt="Logo">
     <div class="iconos">
-      <p class="nombreIcono">¡ BIENVENIDO/A <%if(locals.user){ %> <%= user.nombre %> <% } %> !</p>
+      <p class="nombreIcono">¡ BIENVENIDO/A <%if(locals.user){ %>
+          <%= user.nombre %>
+            <% } %> !</p>
       <% if(!locals.logged) { %>
         <li>
           <ul id="perfilHoverNoLogueado" class="perfilHover">
@@ -16,7 +18,7 @@
                 <% }else{ %>
                   user/login
                   <% } %>"> -->
-                  <i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
+            <i class="fas fa-user-circle" class="perfilIcono" style="color: #ff0000;"></i>
             </a>
             <div class="listaMenuPerfil" id="menu-profile-no-logueado">
               <ul>
@@ -120,7 +122,7 @@
     </div>
   </div>
   <div id="barra">
-    
+
     <button class="burger" id="burger">
       <i class="fa-solid fa-gear"></i>
     </button>
@@ -158,202 +160,202 @@
 </header>
 
 <% if(locals.consulta) { %>
-  
 
-    <dialog id="modal3" >
-      <button class="cerrar" id="cerrar1">X</button>
-      <h2>¡Contactanos!</h2>
-      <div id="contactoForm">
-        <label for="nombre2">Nombre</label>
-        <input type="text" id="nombre2" name="nombre">
-        <label for="Apellido2">Apellido</label>
-        <input type="text" id="Apellido2" name="apellido">
-        <label for="email2">Email</label>
-        <input type="text" id="email2" name="email">
-        <label for="telefono">Telefono</label>
-        <input type="text" id="telefono" name="telefono">
-        <label for="auto">Auto por el que consulta</label>
-        <input type="text" id="auto" name="auto" value="<%= producto.name %>">
-        <label for="consulta">Consulta</label>
-        <textarea name="consulta" id="consulta" cols="10" rows="10"></textarea>
-        <button type="submit" class="cerrar" id="enviar1">Enviar</button>
+
+  <dialog id="modal3">
+    <button class="cerrar" id="cerrar1">X</button>
+    <h2>¡Contactanos!</h2>
+    <div id="contactoForm">
+      <label for="nombre2">Nombre</label>
+      <input type="text" id="nombre2" name="nombre">
+      <label for="Apellido2">Apellido</label>
+      <input type="text" id="Apellido2" name="apellido">
+      <label for="email2">Email</label>
+      <input type="text" id="email2" name="email">
+      <label for="telefono">Telefono</label>
+      <input type="text" id="telefono" name="telefono">
+      <label for="auto">Auto por el que consulta</label>
+      <input type="text" id="auto" name="auto" value="<%= producto.name %>">
+      <label for="consulta">Consulta</label>
+      <textarea name="consulta" id="consulta" cols="10" rows="10"></textarea>
+      <button type="submit" class="cerrar" id="enviar1">Enviar</button>
     </div>
   </dialog>
   <% } %>
-  
+
 
     <dialog id="modal" class="modal-fondo">
-    <div class="modal-contacto" >
-      <button class="cerrar" id="cerrar">X</button>
-      <h2>¡Contactanos!</h2>
-      <div id="contactoForm">
-        <label for="nombre2">Nombre</label>
-        <input type="text" id="nombre2" name="nombre">
+      <div class="modal-contacto">
+        <button class="cerrar" id="cerrar">X</button>
+        <h2>¡Contactanos!</h2>
+        <div id="contactoForm">
+          <label for="nombre2">Nombre</label>
+          <input type="text" id="nombre2" name="nombre">
 
-        <label for="Apellido2">Apellido</label>
-        <input type="text" id="Apellido2" name="apellido">
+          <label for="Apellido2">Apellido</label>
+          <input type="text" id="Apellido2" name="apellido">
 
-        <label for="email2">Email</label>
-        <input type="text" id="email2" name="email">
+          <label for="email2">Email</label>
+          <input type="text" id="email2" name="email">
 
-        <label for="telefono">Telefono</label>
-        <input type="text" id="telefono" name="telefono">
+          <label for="telefono">Telefono</label>
+          <input type="text" id="telefono" name="telefono">
 
-        <label for="auto">Auto por el que consulta</label>
-        <input type="text" id="auto" name="auto">
+          <label for="auto">Auto por el que consulta</label>
+          <input type="text" id="auto" name="auto">
 
-        <!-- <label for="consulta">Consulta</label>
+          <!-- <label for="consulta">Consulta</label>
         <textarea name="consulta" id="consulta" cols="10" rows="10"></textarea> -->
 
-        <label for="consulta">Consulta</label>
-      <textarea name="consulta" id="consulta" cols="30" rows="5"></textarea>
+          <label for="consulta">Consulta</label>
+          <textarea name="consulta" id="consulta" cols="30" rows="5"></textarea>
 
-        <button type="submit" class="cerrar" id="enviar">Enviar</button>
+          <button type="submit" class="cerrar" id="enviar">Enviar</button>
+        </div>
       </div>
-    </div>
     </dialog>
-  
-
-<dialog id="modal2" class="modal-fondo">
-  <div class="modal-contacto">
-
-    <button class="cerrar" id="cerrar2">X</button>
-    <div id="contenidoAyuda">
-      <h2>Ayuda</h2>
-      <h3>Si necesitas ayuda, o mayor asistencia en tu compra comunicate al:</h3>
-      <h2>3364584569</h2>
-    </div>
-  </div>
-</dialog>
 
 
-<script src="/js/clearMode.js"></script>
+    <dialog id="modal2" class="modal-fondo">
+      <div class="modal-contacto">
+
+        <button class="cerrar" id="cerrar2">X</button>
+        <div id="contenidoAyuda">
+          <h2>Ayuda</h2>
+          <h3>Si necesitas ayuda, o mayor asistencia en tu compra comunicate al:</h3>
+          <h2>3364584569</h2>
+        </div>
+      </div>
+    </dialog>
 
 
-<script>
-
-  document.querySelector('#burger').addEventListener('click', function() {
-    let nav = document.querySelector('nav').style.display; 
-    let burger = document.getElementById('burger');
-    
-    if (nav === 'block'){
-      document.querySelector('nav').style.display = 'none';
-      burger.classList.add('burgerClick2');
-      burger.classList.remove('burgerClick');
-    } else {
-      document.querySelector('nav').style.display = 'block';
-      burger.classList.add('burgerClick');
-      burger.classList.remove('burgerClick2');
-    }
-  });
-
-  
-  // ---------------> menu-mobile <---------------
-
-  // menu-mobile NO-LOGUEADO 
-  
-  document.addEventListener('DOMContentLoaded', () => {
-  const menuProfileNoLogueado = document.getElementById("menu-profile-no-logueado");
-  const clickMenuProfileNoLogueado = document.getElementById("perfilHoverNoLogueado");
-
-  const handleDocumentClick = (event) => {
-    const targetElement = event.target;
-    if (
-      !menuProfileNoLogueado.contains(targetElement) &&
-      !clickMenuProfileNoLogueado.contains(targetElement)
-    ) {
-      menuProfileNoLogueado.classList.remove('visible');
-    }
-  };
-
-  clickMenuProfileNoLogueado.addEventListener('click', () => {
-    menuProfileNoLogueado.classList.toggle('visible');
-  });
-
-  document.addEventListener('click', handleDocumentClick);
-});
+    <script src="/js/clearMode.js"></script>
 
 
+    <script>
 
-  // menu-mobile LOGUEADO 
+      document.querySelector('#burger').addEventListener('click', function () {
+        let nav = document.querySelector('nav').style.display;
+        let burger = document.getElementById('burger');
 
-
-document.addEventListener('DOMContentLoaded', () => {
-  const menuProfile = document.getElementById("menu-profile");
-  const clickMenuProfile = document.getElementById("perfilHover");
-
-  const handleDocumentClick = (event) => {
-    const targetElement = event.target;
-    if (
-      !menuProfile.contains(targetElement) &&
-      !clickMenuProfile.contains(targetElement)
-    ) {
-      menuProfile.classList.remove('visible');
-    }
-  };
-
-  clickMenuProfile.addEventListener('click', () => {
-    menuProfile.classList.toggle('visible');
-  });
-
-  document.addEventListener('click', handleDocumentClick);
-});
+        if (nav === 'block') {
+          document.querySelector('nav').style.display = 'none';
+          burger.classList.add('burgerClick2');
+          burger.classList.remove('burgerClick');
+        } else {
+          document.querySelector('nav').style.display = 'block';
+          burger.classList.add('burgerClick');
+          burger.classList.remove('burgerClick2');
+        }
+      });
 
 
-    // -----------------------------------------
+      // ---------------> menu-mobile <---------------
 
-  // contacto
-  const abrir = document.querySelector('#contacto')
-  const cerrar = document.querySelector('#cerrar')
-  const enviar = document.querySelector('#enviar')
-  const modal = document.querySelector('#modal')
+      // menu-mobile NO-LOGUEADO 
 
-  abrir.addEventListener('click', () => {
-    modal.showModal()
-  })
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuProfileNoLogueado = document.getElementById("menu-profile-no-logueado");
+        const clickMenuProfileNoLogueado = document.getElementById("perfilHoverNoLogueado");
 
-  cerrar.addEventListener('click', () => {
-    modal.close()
-  })
+        const handleDocumentClick = (event) => {
+          const targetElement = event.target;
+          if (
+            !menuProfileNoLogueado.contains(targetElement) &&
+            !clickMenuProfileNoLogueado.contains(targetElement)
+          ) {
+            menuProfileNoLogueado.classList.remove('visible');
+          }
+        };
 
-  enviar.addEventListener('click', () => {
-    modal.close()
-  })
+        clickMenuProfileNoLogueado.addEventListener('click', () => {
+          menuProfileNoLogueado.classList.toggle('visible');
+        });
 
-  // consulta
+        document.addEventListener('click', handleDocumentClick);
+      });
 
-  const cerrar1 = document.querySelector('#cerrar1')
-  const enviar1 = document.querySelector('#enviar1')
-  const consulta = document.querySelector('#modal3')
-  if(consulta){
-    
-    consulta.showModal();
 
-    cerrar1.addEventListener('click', ()=>{
-      consulta.close()
-    })
 
-    enviar1.addEventListener('click', ()=>{
-      consulta.close()
-      window.location.replace('http://localhost:3030/productos')
-    })
-  }
-  
+      // menu-mobile LOGUEADO 
 
-  
 
-  //ayuda
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuProfile = document.getElementById("menu-profile");
+        const clickMenuProfile = document.getElementById("perfilHover");
 
-  const abrirAyuda = document.querySelector('#ayuda')
-  const cerrarAyuda = document.querySelector('#cerrar2')
-  const modalAyuda = document.querySelector('#modal2')
+        const handleDocumentClick = (event) => {
+          const targetElement = event.target;
+          if (
+            !menuProfile.contains(targetElement) &&
+            !clickMenuProfile.contains(targetElement)
+          ) {
+            menuProfile.classList.remove('visible');
+          }
+        };
 
-  abrirAyuda.addEventListener('click', () => {
-    modalAyuda.showModal()
-  })
+        clickMenuProfile.addEventListener('click', () => {
+          menuProfile.classList.toggle('visible');
+        });
 
-  cerrarAyuda.addEventListener('click', () => {
-    modalAyuda.close()
-  })
+        document.addEventListener('click', handleDocumentClick);
+      });
 
-</script>
+
+      // -----------------------------------------
+
+      // contacto
+      const abrir = document.querySelector('#contacto')
+      const cerrar = document.querySelector('#cerrar')
+      const enviar = document.querySelector('#enviar')
+      const modal = document.querySelector('#modal')
+
+      abrir.addEventListener('click', () => {
+        modal.showModal()
+      })
+
+      cerrar.addEventListener('click', () => {
+        modal.close()
+      })
+
+      enviar.addEventListener('click', () => {
+        modal.close()
+      })
+
+      // consulta
+
+      const cerrar1 = document.querySelector('#cerrar1')
+      const enviar1 = document.querySelector('#enviar1')
+      const consulta = document.querySelector('#modal3')
+      if (consulta) {
+
+        consulta.showModal();
+
+        cerrar1.addEventListener('click', () => {
+          consulta.close()
+        })
+
+        enviar1.addEventListener('click', () => {
+          consulta.close()
+          window.location.replace('http://localhost:3030/productos')
+        })
+      }
+
+
+
+
+      //ayuda
+
+      const abrirAyuda = document.querySelector('#ayuda')
+      const cerrarAyuda = document.querySelector('#cerrar2')
+      const modalAyuda = document.querySelector('#modal2')
+
+      abrirAyuda.addEventListener('click', () => {
+        modalAyuda.showModal()
+      })
+
+      cerrarAyuda.addEventListener('click', () => {
+        modalAyuda.close()
+      })
+
+    </script>
