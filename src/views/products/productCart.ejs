@@ -10,42 +10,46 @@
     <%- include('../partials/header') %>
     <main>      
       <!-- SECTION PRODUCTO  -->
-      <% if(locals.producto){ %>
+      <% if(locals.productos){ %>
       <section class="sectionProducto">
         <div class="contenedorSectionProducto">
 
           <div class="tituloProducto">
             <p>Productos</p>
           </div>
-          
-          <div class="contenedorProducto">
-            <div class="contenedorIzq">
-              <div class="contenedorIzqImg">
-                <img class="imagen-producto" src="<% let img = producto.img.split(' ')  %> <%= img[0]  %> " alt="Auto">
+          <% productos.forEach((producto)=>{ %>
+            <div class="contenedorProducto">
+             
+              <div class="contenedorIzq">
+                <form action='/productCart/<%= producto.id%>/delete' method="GET">
+                  <button type="submit">X</button>
+                </form>
+                <div class="contenedorIzqImg">
+                  <img class="imagen-producto" src="<% let img = producto.img.split(' ')  %> <%= img[0]  %> " alt="Auto">
+                </div>
+                <div class="contenedorIzqTexto">   
+                  <h3 class="tituloIzq"><%= producto.name %></h3>
+                  <p><%= producto.descripcion %></p>
+                </div>
               </div>
-              <div class="contenedorIzqTexto">   
-                <h3 class="tituloIzq"><%= producto.name %></h3>
-                <p><%= producto.descripcion %></p>
+              
+              <div class="contenedorDer">
+              <div class="contenedorDerinputs">
+                <p>Cantidad:</p>
+                <button class="sumar">+</button>
+                <p id="cantidad">1</p>
+                <button class="restar">-</button>
               </div>
-            </div>
+              
+              <div class="contenedorDerinputs">
+                <p>Precio:</p>
+                <p id="precioAuto<%=producto.id%>" class="precio" style="background-color: black;"><%= producto.price %></p>
+              </div>
             
-            <div class="contenedorDer">
-            <div class="contenedorDerinputs">
-              <label for="cantidadDeProducto" name="cantidadDeProducto">Cantidad:</label>
-              <input type="number" id="cantidadDeProducto" name="cantidadDeProducto" min="0" value="1">
-            </div>
-            
-            <div class="contenedorDerinputs">
-              <label for="precioProducto" name="precioProducto">Precio:</label>
-              <input type="text" id="precioProducto" name="precioProducto" value="<%= producto.price %>">
-            </div>
-            
-            <div class="contenedorDerinputs" id="contenedorDerPrecioEnvio">
-              <label for="precioEnvio" name="precioEnvio">Precio de envío:</label>
-              <input type="text" id="precioEnvio" name="precioEnvio" value="0.00">
             </div>
           </div>
-        </div>
+         <% }) %>
+          
         
         <div class="envioProducto">
           <div class="envioTextoProducto">
@@ -53,7 +57,7 @@
           </div>
           <div class="precioTextoProducto">
             <p>$ </p>
-            <p>*****</p>
+            <p>5000</p>
           </div>
         </div>
       </div>
@@ -67,20 +71,25 @@
           
           <div class="resumenCompra">
             <div class="contenedorItemResumen">
-              <div class="itemResumen">
-                <label for="precioProductoCompra" name="precioProductoCompra">Producto:</label>
-                <input type="text" id="precioProductoCompra" name="precioProductoCompra" value="<%= producto.price %>">
-              </div>
+              <% productos.forEach((producto)=>{ %>
+                <div class="itemResumen">
+                  <p>Producto:</p>
+                  <p id="precio<%=producto.id%>" class="precioTotal" style="background-color: black;"><%= producto.price%></p>
+                </div>
+              <% }) %>
               
               <div class="itemResumen">
-                <label for="envioProductoCompra" name="envioProductoCompra">Envio:</label>
-                <input type="text" id="envioProductoCompra" name="envioProductoCompra" value="5.00">
+                <p>Envio:</p>
+                <p>5000</p>
             </div>
           </div>
-          
+          <% let total = 5000; %>
+           <% for(producto of productos){ %>
+             <% total += producto.price %>
+            <% } %>
           <div class="itemResumen">
-            <label for="totalProductoCompra" name="totalProductoCompra">Total:</label>
-            <input type="text" id="totalProductoCompra" name="totalProductoCompra" value="104.99">
+            <p>Total:</p>
+            <p id="total"><%= total %></p>
           </div>
         </div>
         
@@ -121,7 +130,7 @@
           </div>
           
           <div class="itemResumen">
-            <label for="totalProductoCompra" name="totalProductoCompra">Total:</label>
+            <p>Total:</p>
           </div>
         </div>
         
@@ -132,5 +141,49 @@
       <% } %>
     </main>
     <%- include('../partials/footer') %>
+    <script>
+      window.addEventListener('load', ()=>{
+        let sumar = document.querySelectorAll('.sumar');
+        let cantidad = document.querySelectorAll('#cantidad');
+        let restar = document.querySelectorAll('.restar');
+        let precio = document.querySelectorAll('.precio');
+        let precioTotal = document.querySelectorAll('.precioTotal')
+        let totalFinal = document.querySelector('#total')
+
+        sumar.forEach((suma, i)=>{
+          suma.addEventListener('click',()=>{
+              let cantidadCero = cantidad[i].innerText;
+              cantidadCero++
+              cantidad[i].innerText = cantidadCero
+              let total = precio[i].innerText * cantidad[i].innerText
+              precioTotal[i].innerText = total
+              Total()
+          })
+        })
+
+        restar.forEach((resta, i)=>{
+          resta.addEventListener('click', ()=>{
+            let cantidadCero = cantidad[i].innerText;
+            cantidadCero--
+            cantidad[i].innerText = cantidadCero
+            let total = precio[i].innerText * cantidad[i].innerText
+            precioTotal[i].innerText = total
+            Total()
+          })
+        })
+
+        function Total() {
+          let totalPr = 0;
+
+          precioTotal.forEach((precio) => {
+            let pr = precio.innerText;
+            totalPr += parseInt(pr);
+          });
+
+          totalFinal.innerText = totalPr;
+        }
+    
+      })
+    </script>
   </body>
   </html>

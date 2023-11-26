@@ -7,26 +7,23 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        product_id: {
+        products_id: {
             type: dataTypes.INTEGER(10),
             references: { model: 'Product', key: 'id' }
-        },
-        user_id: {
-            type: dataTypes.INTEGER(10),
-            references: { model: 'User', key: 'id' }
         },
         name_product: {
             type: dataTypes.STRING(50),
         },
-        totalPrice: {
+        price: {
             type: dataTypes.DECIMAL(10, 2),
-            defaultValue: 0.00
+        },
+        img: {
+            type: dataTypes.STRING(300)
         }
-
         }
     
     let config = {
-        tableName: "productCarts",
+        tableName: "productCart",
         timestamps: false
     };
 
