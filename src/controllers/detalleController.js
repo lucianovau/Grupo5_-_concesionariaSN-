@@ -108,22 +108,6 @@ const controller = {
         .catch((err)=>{
           console.log(err)
         })
-  },
-   // Reservar
-  reserve: (req, res) => {
-      let logged 
-      if (req.cookies.userEmail) {
-        logged = true
-      } 
-      let idProd = req.body.id;
-      db.Product.findByPk(idProd)
-      .then((producto)=>{
-          let ruta = path.resolve(__dirname, '../views/products/productCart')
-          return res.render(ruta, {producto, rutaDetalle, logged })
-      })
-      .catch((err)=>{
-          console.log(err)
-      })
    },
    // Consultar
    consultar: (req, res) => {

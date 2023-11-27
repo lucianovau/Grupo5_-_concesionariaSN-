@@ -62,7 +62,6 @@ const controllerProductos = {
               price: req.body.price,
               color: req.body.colors,
               caracteristicas: caracteristicas
-              
             })
             .then(()=>{
               res.redirect('/productos')
