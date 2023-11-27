@@ -98,7 +98,29 @@ const controllerProductos = {
       .catch((err)=>{
         console.log(err)
     })
-   }
+  },
+  
+  obtenerProductosPaginados: (req, res) => {
+        let logged = req.cookies.userEmail ? true : false;
+        let ruta = path.resolve(__dirname, '../views/products/productos');
+
+        const page = parseInt(req.query.page) || 1;
+        const perPage = parseInt(req.query.per_page) || 10;
+
+        const startIndex = (page - 1) * perPage;
+        const endIndex = startIndex + perPage;
+
+        db.Product.findAll()
+            .then((productos) => {
+                const paginatedProducts = productos.slice(startIndex, endIndex);
+                const totalPages = Math.ceil(productos.length / perPage);
+
+                res.render(ruta, { productos: paginatedProducts, logged, totalPages });
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    },
 } 
 
 module.exports = controllerProductos;

@@ -12,4 +12,5 @@ router.get('/create', controllerProductos.create);
 router.post('/create', upload.array('imageProduct', 6), validarProduct , controllerProductos.store);
 router.post('/search', controllerProductos.search);
 router.get('/:marca', controllerProductos.filter)
+router.get('/products', controllerProductos.obtenerProductosPaginados);
 module.exports = router
