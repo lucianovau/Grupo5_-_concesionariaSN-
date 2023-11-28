@@ -5,7 +5,7 @@ const { body } = require('express-validator');
 
 const validationProduct = [
     body('name').notEmpty().withMessage('El nombre debe tener al menos 5 caracteres').isLength({ min: 5 }),
-    body('descripcion').notEmpty().withMessage('la descripcion debe tener al menos 20 caracteres').isLength({ min: 20 }),
+    body('description').notEmpty().withMessage('la descripcion debe tener al menos 20 caracteres').isLength({ min: 20 }),
     body('imageProduct').custom(((value, { req })=>{
         let file = req.files;
         console.log(file)
