@@ -242,7 +242,7 @@ li a{
 
   /* pop-up contacto */
 
-  #modal, #modal2 {
+  #modal, #modal2, #modal3 {
     max-height: 100%;
     max-width: 100%;
   }
@@ -270,7 +270,8 @@ li a{
     transform: translate(-50%, -50%);
     display: block;
     overflow: auto;
-  }
+}
+.modal-contacto::-webkit-scrollbar {display: none;}
 
   #modal2 .modal-contacto {
     width: 60%;
@@ -282,10 +283,10 @@ li a{
   }
 
   #modal3 h2{
-    margin-left: 25%;
+    text-align: center;
   }
   #contactoForm{
-    margin-bottom: 150px;
+    margin-bottom: 200px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -304,7 +305,7 @@ li a{
   #contactoForm label {
     width: 90%;
   }
-   #cerrar, #cerrar2{
+   #cerrar, #cerrar2, #cerrar3{
     color: black;
     width: 5%;
     border-radius: 0px;
@@ -326,14 +327,14 @@ li a{
     box-shadow: 5px 4px 4px rgba(78, 78, 78, 0.2);
    }
    
-   #enviar:hover{
+   #enviar:hover, #enviar1:hover{
     background-color: #000;
     box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.8);
     color: red;
     border: 1px solid red
    }
    
-   #enviar1{
+   #enviar, #enviar1{
     width: 50%;
     padding: 10px 0;
     margin: 20px 10px 10px 10px;
