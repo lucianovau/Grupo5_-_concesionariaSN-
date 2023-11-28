@@ -34,7 +34,9 @@
           <p class="p-product"><%= producto.descripcion %></p>
           <span class="precio"><%= producto.price %> </span>
           <a href="/detalleProd/<%=producto.id%>" class="btn">Ver Detalles</a>
-          <button class="btn-agregarcarrito">Agregar al carrito</button>
+            <button class="btn-agregarcarrito" type="submit">Agregar al carrito</button>
+          
+          
         </article>
       <% })) %>   
       <% } else { %>
@@ -49,6 +51,7 @@
   <%- include('../partials/footer') %>
 
   <script src="/js/clearMode.js"></script>
+  <script src="/js/carrito.js"></script>
 </body>
 </html>
 

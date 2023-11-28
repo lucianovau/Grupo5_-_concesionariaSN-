@@ -39,9 +39,11 @@ main{
 .userImg {
     width: 200px;
     height: 200px;
-    border: solid 1px red;
+    border-width: 5px;
+    border-style: solid;
+    border-image: linear-gradient(to right, red, rgb(255, 187, 0));
+    border-image-slice: 1;
 }
-
 
 /* Estilos para el contenedor de correo */
 .mailContainer {

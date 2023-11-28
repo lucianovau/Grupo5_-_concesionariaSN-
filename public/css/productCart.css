@@ -135,12 +135,20 @@ body{
 
 .contenedorCompra{
     display: flex;
-    margin-bottom: 30px;
     background-color: #ff000085;
     flex-direction: column;
     align-items: stretch;
+    position: relative;
+    
 }
 
+.contenedorCompra .boton-resumen{
+    position: relative;
+    height: 40px;
+    background: #f00;
+    color: #fff;
+    border-radius: 30px;
+}
 .contenedorCompra h3{
     background-color: black;
     font-size: 15px;
