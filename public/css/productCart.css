@@ -388,9 +388,17 @@ body{
     .sectionProducto{   
         width: 70%;
     }
+    
+    .contenedorIzqTexto {
+        width: 100%;
+        text-align: center;
+    }
 
     .contenedorIzqTexto .tituloIzq{
         font-size: 2rem;
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
     }
 
     .contenedorProducto img {
