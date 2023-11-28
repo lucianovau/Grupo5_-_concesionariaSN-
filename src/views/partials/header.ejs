@@ -2,9 +2,9 @@
   <div class="head">
     <img src="/img/logo2.png" alt="Logo">
     <div class="iconos">
-      <p class="nombreIcono">¡ BIENVENIDO/A <%if(locals.user){ %>
+      <h2 class="nombreIcono">¡ BIENVENIDO/A <%if(locals.user){ %>
           <%= user.nombre %>
-            <% } %> !</p>
+            <% } %> !</h2>
       <% if(!locals.logged) { %>
         <li>
           <ul id="perfilHoverNoLogueado" class="perfilHover">
@@ -159,27 +159,31 @@
   <div class="capa"></div>
 </header>
 
+<!-- modal consulta -->
+
 <% if(locals.consulta) { %>
 
+  <dialog id="modal3" class="modal-fondo">
+    <div class="modal-contacto">
 
-  <dialog id="modal3">
-    <button class="cerrar" id="cerrar1">X</button>
-    <h2>¡Contactanos!</h2>
-    <div id="contactoForm">
-      <label for="nombre2">Nombre</label>
-      <input type="text" id="nombre2" name="nombre">
-      <label for="Apellido2">Apellido</label>
-      <input type="text" id="Apellido2" name="apellido">
-      <label for="email2">Email</label>
-      <input type="text" id="email2" name="email">
-      <label for="telefono">Telefono</label>
-      <input type="text" id="telefono" name="telefono">
-      <label for="auto">Auto por el que consulta</label>
-      <input type="text" id="auto" name="auto" value="<%= producto.name %>">
-      <label for="consulta">Consulta</label>
-      <textarea name="consulta" id="consulta" cols="10" rows="10"></textarea>
-      <button type="submit" class="cerrar" id="enviar1">Enviar</button>
+      <button class="cerrar" id="cerrar3">X</button>
+      <h2>¡Contactanos!</h2>
+      <div id="contactoForm">
+        <label for="nombre2">Nombre</label>
+        <input type="text" id="nombre2" name="nombre">
+        <label for="Apellido2">Apellido</label>
+        <input type="text" id="Apellido2" name="apellido">
+        <label for="email2">Email</label>
+        <input type="text" id="email2" name="email">
+        <label for="telefono">Telefono</label>
+        <input type="text" id="telefono" name="telefono">
+        <label for="auto">Auto por el que consulta</label>
+        <input type="text" id="auto" name="auto" value="<%= producto.name %>">
+        <label for="consulta">Consulta</label>
+        <textarea name="consulta" id="consulta" cols="10" rows="10"></textarea>
+        <button type="submit" class="cerrar" id="enviar1">Enviar</button>
     </div>
+  </div>
   </dialog>
   <% } %>
 
@@ -324,7 +328,7 @@
 
       // consulta
 
-      const cerrar1 = document.querySelector('#cerrar1')
+      const cerrar1 = document.querySelector('#cerrar3')
       const enviar1 = document.querySelector('#enviar1')
       const consulta = document.querySelector('#modal3')
       if (consulta) {

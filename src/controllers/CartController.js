@@ -28,21 +28,22 @@ const controller = {
     db.Product.findByPk(id)
         .then((producto)=>{
             db.ProductCart.create({
-                products_id: id,
+                products_id: producto.id,
                 name_product: producto.name,
                 price: producto.price,
                 img: producto.img
             })
-        })
-        .then(()=>{
-            return db.ProductCart.findAll()
-        })
-        .then((productos)=>{
-            res.render(ruta, { productos, logged, rutaDetalle});
+            .then(()=>{
+              return db.ProductCart.findAll()
+            })
+            .then((productos)=>{
+                res.render(ruta, { productos, logged, rutaDetalle});
+            })
         })
         .catch((err)=>{
-            console.log(err)
+          console.log(err)
         })
+  
   },
   delete: (req, res) => {
     let logged 

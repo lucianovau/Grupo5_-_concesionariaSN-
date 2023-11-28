@@ -19,23 +19,22 @@
           </div>
           <% productos.forEach((producto)=>{ %>
             <div class="contenedorProducto">
-             
+             <% console.log(producto)%>
               <div class="contenedorIzq">
-                <form action='/productCart/<%= producto.id%>/delete' method="GET">
-                  <button type="submit">X</button>
-                </form>
                 <div class="contenedorIzqImg">
+                  <form id="formCarritoDelete" onload="resize()" action='/productCart/<%= producto.id%>/delete' method="GET">
+                    <button id="btnCarritoDelete" on type="submit">x</button>
+                      </form>
                   <img class="imagen-producto" src="<% let img = producto.img.split(' ')  %> <%= img[0]  %> " alt="Auto">
                 </div>
                 <div class="contenedorIzqTexto">   
-                  <h3 class="tituloIzq"><%= producto.name %></h3>
-                  <p><%= producto.descripcion %></p>
+                  <p class="tituloIzq"><%= producto.name_product %></p>
                 </div>
               </div>
               
               <div class="contenedorDer">
-              <div class="contenedorDerinputs">
-                <p>Cantidad:</p>
+              <div class="contenedorDerinputs" id="contenedorCantidad">
+                <p class="cantidadP">Cantidad:</p>
                 <button class="sumar">+</button>
                 <p id="cantidad">1</p>
                 <button class="restar">-</button>
@@ -43,7 +42,7 @@
               
               <div class="contenedorDerinputs">
                 <p>Precio:</p>
-                <p id="precioAuto<%=producto.id%>" class="precio" style="background-color: black;"><%= producto.price %></p>
+                <p id="precioAuto<%=producto.id%>" class="precio"><%= producto.price %></p>
               </div>
             
             </div>
@@ -73,8 +72,8 @@
             <div class="contenedorItemResumen">
               <% productos.forEach((producto)=>{ %>
                 <div class="itemResumen">
-                  <p>Producto:</p>
-                  <p id="precio<%=producto.id%>" class="precioTotal" style="background-color: black;"><%= producto.price%></p>
+                  <p><%= producto.name_product %>:</p>
+                  <p id="precio<%=producto.id%>" class="precioTotal" ><%= producto.price%></p>
                 </div>
               <% }) %>
               
@@ -141,6 +140,24 @@
     </main>
     <%- include('../partials/footer') %>
     <script>
+
+      const resize = function() {
+        let textoDelete = '';
+        if (window.innerWidth >= 361) {
+          textoDelete = 'Eliminar producto';
+        } else {
+          textoDelete = 'x';
+        }
+      
+        document.querySelector('#btnCarritoDelete').innerText = textoDelete;
+      }
+
+        
+        resize();
+
+        window.addEventListener('resize', resize);
+
+
       window.addEventListener('load', ()=>{
         let sumar = document.querySelectorAll('.sumar');
         let cantidad = document.querySelectorAll('#cantidad');
