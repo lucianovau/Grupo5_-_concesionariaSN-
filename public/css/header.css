@@ -392,6 +392,8 @@ li a{
         font-size: 2rem;
         padding: 10px;
         margin-right: 5px;
+        width: 20%;
+        height: 20%;
     }
 
     .burgerClick{
@@ -483,6 +485,8 @@ li a{
     }
 
     #buscador{
+        display: flex;
+        flex-direction: row;
         margin-top: auto;
     }
     
@@ -496,11 +500,15 @@ li a{
         padding-top: 10px;
     }
 
+    .modal-contacto {
+        margin-bottom: 120px;
+    }
+
     #contactoForm label{
         font-size: 12px;
     }
 
-    #cerrar, #cerrar2 {
+    #cerrar, #cerrar2, #cerrar3 {
         margin: auto;
         width: 15%;
     }
