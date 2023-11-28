@@ -98,11 +98,11 @@ textarea {
 }
 .erroresInput{
   background-color: red;
-  color: white;
+  color: rgb(3, 3, 3);
 }
 .passInput{
   background-color: rgb(95, 245, 95);
-  color: white;
+  color:rgb(3, 3, 3);
 }
 
 
@@ -123,7 +123,7 @@ textarea {
 
   #productForm input{
     font-size: 1rem;
-    color: white;
+    color: rgb(3, 3, 3);
   }
 
 }
