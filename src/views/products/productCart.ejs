@@ -22,19 +22,19 @@
              <% console.log(producto)%>
               <div class="contenedorIzq">
                 <div class="contenedorIzqImg">
-                <form id="formCarritoDelete" action='/productCart/<%= producto.id%>/delete' method="GET">
-                  <button id="btnCarritoDelete" type="submit">X</button>
-                </form>
+                  <form id="formCarritoDelete" onload="resize()" action='/productCart/<%= producto.id%>/delete' method="GET">
+                    <button id="btnCarritoDelete" on type="submit">x</button>
+                      </form>
                   <img class="imagen-producto" src="<% let img = producto.img.split(' ')  %> <%= img[0]  %> " alt="Auto">
                 </div>
                 <div class="contenedorIzqTexto">   
-                  <h3 class="tituloIzq"><%= producto.name_product %></h3>
+                  <p class="tituloIzq"><%= producto.name_product %></p>
                 </div>
               </div>
               
               <div class="contenedorDer">
               <div class="contenedorDerinputs" id="contenedorCantidad">
-                <p>Cantidad:</p>
+                <p class="cantidadP">Cantidad:</p>
                 <button class="sumar">+</button>
                 <p id="cantidad">1</p>
                 <button class="restar">-</button>
@@ -72,7 +72,7 @@
             <div class="contenedorItemResumen">
               <% productos.forEach((producto)=>{ %>
                 <div class="itemResumen">
-                  <p>Producto:</p>
+                  <p><%= producto.name_product %>:</p>
                   <p id="precio<%=producto.id%>" class="precioTotal" ><%= producto.price%></p>
                 </div>
               <% }) %>

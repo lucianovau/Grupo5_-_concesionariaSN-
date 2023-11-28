@@ -226,11 +226,22 @@ main{
   }
 }
 
+/* media query para sacar el gris de las tarjetas  */
+
+@media ((max-width:800px)){
+  .imgCard{
+    filter: none;
+  }
+
+}
+
 @media ((max-width:767px)){
 
   .d-block {
     height: auto;
   }
+
+
 
   .slide{
     position: relative;
@@ -396,6 +407,7 @@ main{
     margin-top: 40px;
     background-size: 100% 190%;
   }
+
 
   .textCard {
     margin-bottom: 70px;

@@ -2,9 +2,9 @@
   <div class="head">
     <img src="/img/logo2.png" alt="Logo">
     <div class="iconos">
-      <p class="nombreIcono">¡ BIENVENIDO/A <%if(locals.user){ %>
+      <h2 class="nombreIcono">¡ BIENVENIDO/A <%if(locals.user){ %>
           <%= user.nombre %>
-            <% } %> !</p>
+            <% } %> !</h2>
       <% if(!locals.logged) { %>
         <li>
           <ul id="perfilHoverNoLogueado" class="perfilHover">

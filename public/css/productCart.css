@@ -76,6 +76,7 @@ body{
     height: 100%;
     /* border: solid 2px #f00; */
     position: relative;
+    flex-direction: column-reverse;
 }
 
 .contenedorProducto img{
@@ -86,6 +87,12 @@ body{
 .contenedorIzqImg{
     position: relative;
 
+}
+
+.contenedorIzqTexto .tituloIzq{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 .contenedorIzqTexto{
@@ -273,6 +280,16 @@ body{
 
     #formCarritoDelete{
         position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    #btnCarritoDelete {
+        padding: 2px 50px;
+        font-size: 12px;
+        background-color: red;
+        margin: 0px;
+        text-transform: uppercase;
     }
 
     /* PRODUCTO */
@@ -297,7 +314,7 @@ body{
 
     .contenedorIzqImg{
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column-reverse;
         width: 100%;
     }
 
@@ -372,21 +389,7 @@ body{
         width: 70%;
     }
 
-    .contenedorIzq {
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: auto;
-        border: none;
-        width: 60%;
-        width: 70%;
-        padding: 40px 10px;
-    }
-    .contenedorIzqImg{
-        width: 200px;
-        height: 200px;
-    }
-
-    .contenedorIzq h3 {
+    .contenedorIzqTexto .tituloIzq{
         font-size: 2rem;
     }
 
@@ -402,16 +405,9 @@ body{
     .contenedorIzqTexto{
         padding-left: 10px;
     }
-    
-    .contenedorDer{
-        flex-direction: row;
-        width: 40%;
-        align-items: center;
-    }
-    .contenedorDerinputs{
-        border: none;
-        text-align: center;
-        justify-content: center;
+
+    .cantidadP{
+        width: 80%;
     }
     
     #contenedorDerPrecioEnvio{
@@ -446,7 +442,7 @@ body{
     }
     
     .contenedorCompra {
-        height: 250px;
+        height: auto;
         margin-bottom: 0px;
     }
     
