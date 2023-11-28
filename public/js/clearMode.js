@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    let estiloClaro = sessionStorage.getItem('secret') === 'true'
+    let estiloClaro = localStorage.getItem('secret') === 'true'
 
     let tema = document.getElementById('miBoton');
     let miBody = document.querySelector('body');
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tema.addEventListener('click', function(){
         estiloClaro = !estiloClaro
 
-        sessionStorage.setItem('secret', estiloClaro)
+        localStorage.setItem('secret', estiloClaro)
 
         modoClaro()
     })
