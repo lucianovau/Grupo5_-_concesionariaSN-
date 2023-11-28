@@ -31,4 +31,14 @@ Aumentar el numero de reuniones semanales via Zoom o Meet. Este ultimo Sprint no
 -Continuar haciendo.
 Continuar comunicandonos, trabajando unidos para mejorar todo lo posible el trabajo. Este Sprint estuvo acompañado de un modulo y temas complejos, por lo que nos ha sido de mucha ayuda apoyarnos entre compañeros para entender todos los temas y desarrollar de manera mas eficiente el proyecto. 
 
+Retrospectiva del SPRINT5
+En este sprint sentimos que nos fusionamos como grupo y adoptamos una estrategia de trabajo en conjunto que nos permitio hacer grandes avances en el proyecto, optamos por armar un grupo definido por perfiles de trabajo, los encargados del Backend y los encargados del Front. Esto nos dio dinamismo y efectividad a la hora de codear.
 
+Retrospectiva del SPRINT6
+Continuamos con la metodologia de trabajo adoptada pero implementamos mayor cantidad de reuniones de trabajo para mejorar el desarrollo. el equipo se siente comodo y el avance se hace notar.
+
+Retrospectiva del SPRINT7
+Tuvimos inconvenientes de metodos y codigo pero pudimos resolvelos de manera grupal. Ya previendo la entrega final del proyecto hicimos hincapie en detalles de experiencia de usuario que era necesario arreglar
+
+Retrospectiva del SPRINT8
+El grupo demostro trabajar armonicamente, existe union y facilidad para desarrollar codigo a esta altura del curso.
