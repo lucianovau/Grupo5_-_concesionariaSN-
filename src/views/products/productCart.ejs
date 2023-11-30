@@ -139,23 +139,24 @@
       <% } %>
     </main>
     <%- include('../partials/footer') %>
-    <script>
-
-      const resize = function() {
-        let textoDelete = '';
-        if (window.innerWidth >= 361) {
-          textoDelete = 'Eliminar producto';
-        } else {
-          textoDelete = 'x';
-        }
-      
-        document.querySelector('#btnCarritoDelete').innerText = textoDelete;
+    
+  <script>
+    
+  const resize = function() {
+      let textoDelete = '';
+      if (window.innerWidth >= 361) {
+        textoDelete = 'Eliminar producto';
+      } else {
+        textoDelete = 'x';
       }
+      const btnCarritoDelete = document.querySelectorAll('#btnCarritoDelete');
+      btnCarritoDelete.forEach(btn => btn.innerText = textoDelete);
+    }
 
-        
-        resize();
-
-        window.addEventListener('resize', resize);
+    window.addEventListener('load', () => {
+      resize();
+      window.addEventListener('resize', resize);
+    });
 
 
       window.addEventListener('load', ()=>{
