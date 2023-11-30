@@ -11,6 +11,9 @@
     <main>      
       <!-- SECTION PRODUCTO  -->
       <% if(locals.productos){ %>
+        <% if(locals.productos.length > 0){ %>
+
+
       <section class="sectionProducto">
         <div class="contenedorSectionProducto">
 
@@ -96,7 +99,12 @@
     
     </section>  
     <% } else { %>
-      <section class="sectionProducto">
+      <h2 class="carrito-vacio">
+        <i class="fa-solid fa-cart-shopping"></i>
+        El carrito está vacío 
+        <i class="fa-solid fa-cart-shopping"></i>
+      </h2>
+    <!--   <section class="sectionProducto">
         <div class="contenedorSectionProducto">
 
           <div class="tituloProducto">
@@ -114,11 +122,11 @@
           </div>
         </div>
       </div>
-      </section>
+      </section> -->
   
       <!-- SECTION RESUMEN DE COMPRA  -->
     
-      <section class="sectionCompra">
+      <!-- <section class="sectionCompra">
         <div class="contenedorCompra">
           <h3 class="titulo-resumen">Resumen de Compra</h3>
           
@@ -135,28 +143,28 @@
         <button class="boton-resumen">Continuar compra</button>
         
       </div>
-    </section> 
+    </section>  -->
+      <% } %>
       <% } %>
     </main>
     <%- include('../partials/footer') %>
-    
-  <script>
-    
-  const resize = function() {
-      let textoDelete = '';
-      if (window.innerWidth >= 361) {
-        textoDelete = 'Eliminar producto';
-      } else {
-        textoDelete = 'x';
-      }
-      const btnCarritoDelete = document.querySelectorAll('#btnCarritoDelete');
-      btnCarritoDelete.forEach(btn => btn.innerText = textoDelete);
-    }
+    <script>
 
-    window.addEventListener('load', () => {
-      resize();
-      window.addEventListener('resize', resize);
-    });
+      const resize = function() {
+        let textoDelete = '';
+        if (window.innerWidth >= 361) {
+          textoDelete = 'Eliminar producto';
+        } else {
+          textoDelete = 'x';
+        }
+      
+        document.querySelector('#btnCarritoDelete').innerText = textoDelete;
+      }
+
+        
+        resize();
+
+        window.addEventListener('resize', resize);
 
 
       window.addEventListener('load', ()=>{

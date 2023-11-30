@@ -260,6 +260,15 @@ body{
     border: solid 1px white;
 }
 
+/* CARRITO VACIO */
+
+.carrito-vacio{
+    margin: auto;
+    padding: 200px 0;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
 
 
 
@@ -348,6 +357,11 @@ body{
 
     .itemResumen, .itemResumen input, .itemResumen label, .contenedorCompra button{
         font-size: 1rem;
+    }
+
+    .carrito-vacio{
+        font-size: 2rem;
+        padding: 50px 0px;
     }
     
 }
@@ -470,5 +484,10 @@ body{
     
     .envioProducto {
         margin-bottom: 0px;
+    }
+
+    .carrito-vacio{
+        font-size: 2rem;
+        padding: 20px 0px;
     }
 }
